@@ -1,6 +1,6 @@
 #!/usr/bin/env python3
 """
-aiogram GTM Telegram Bot с Supabase интеграцией
+aiogram GTM Telegram Bot с Supabase интеграцией (без Router, регистрация напрямую на Dispatcher)
 """
 import os
 import asyncio
@@ -11,10 +11,9 @@ from datetime import datetime
 from typing import List
 
 from dotenv import load_dotenv
-from aiogram import Bot, Dispatcher, F, Router
+from aiogram import Bot, Dispatcher, F
 from aiogram.types import (
     Message,
-    CallbackQuery,
     InlineKeyboardMarkup,
     InlineKeyboardButton,
     WebAppInfo
@@ -55,7 +54,6 @@ if not validate_supabase_config():
     logger.error("❌ Неверная конфигурация Supabase")
 
 bot = Bot(token=TELEGRAM_BOT_TOKEN)
-router = Router()
 
 
 def get_webapp_keyboard() -> InlineKeyboardMarkup:
@@ -76,7 +74,6 @@ async def get_or_create_referral_code(telegram_id: int) -> str:
     return code
 
 
-@router.message(Command("start"))
 async def cmd_start(message: Message):
     user = message.from_user
     # обработка реф-кода
@@ -120,7 +117,6 @@ async def save_user(user_id: int, username: str, first_name: str, last_name: str
         await supabase_client.create_user(user_data)
 
 
-@router.message(Command("check"))
 async def cmd_check(message: Message):
     user = message.from_user
     await message.answer("🔍 Проверяю подписки на каналы...")
@@ -168,7 +164,6 @@ async def cmd_check(message: Message):
     await message.answer("\n".join(lines))
 
 
-@router.message(Command("tickets"))
 async def cmd_tickets(message: Message):
     user = message.from_user
     stats = await supabase_client.get_user_stats(user.id)
@@ -183,7 +178,6 @@ async def cmd_tickets(message: Message):
     await message.answer(text)
 
 
-@router.message(Command("folder"))
 async def cmd_folder(message: Message):
     text = (
         "📁 Telegram папка GTM\n\n"
@@ -203,7 +197,6 @@ async def cmd_folder(message: Message):
     await message.answer(text)
 
 
-@router.message(Command("invite"))
 async def cmd_invite(message: Message):
     user = message.from_user
     code = await get_or_create_referral_code(user.id)
@@ -223,7 +216,6 @@ async def cmd_invite(message: Message):
     await message.answer(text, reply_markup=kb, parse_mode="HTML")
 
 
-@router.message(Command("help"))
 async def cmd_help(message: Message):
     text = (
         "🤖 GTM Bot - Помощь\n\n"
@@ -242,7 +234,6 @@ async def cmd_help(message: Message):
     await message.answer(text)
 
 
-@router.message(Command("stats"))
 async def cmd_stats(message: Message):
     if message.from_user.id != ADMIN_ID:
         await message.answer("❌ У вас нет доступа к этой команде")
@@ -259,16 +250,22 @@ async def cmd_stats(message: Message):
     await message.answer(text, parse_mode="HTML")
 
 
-@router.message(F.text == "🃏 Пригласить друзей")
-async def on_invite_button(message: Message):
-    await cmd_invite(message)
+def register_handlers(dp: Dispatcher):
+    dp.message.register(cmd_start, Command("start"))
+    dp.message.register(cmd_check, Command("check"))
+    dp.message.register(cmd_tickets, Command("tickets"))
+    dp.message.register(cmd_folder, Command("folder"))
+    dp.message.register(cmd_invite, Command("invite"))
+    dp.message.register(cmd_help, Command("help"))
+    dp.message.register(cmd_stats, Command("stats"))
+    dp.message.register(cmd_invite, F.text == "🃏 Пригласить друзей")
 
 
 async def main():
     if not TELEGRAM_BOT_TOKEN:
         raise RuntimeError("TELEGRAM_BOT_TOKEN not set")
     dp = Dispatcher()
-    dp.include_router(router)
+    register_handlers(dp)
     logger.info("🚀 Запуск GTM Supabase aiogram Bot...")
     await dp.start_polling(bot)
 
