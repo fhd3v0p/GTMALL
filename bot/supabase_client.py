@@ -26,7 +26,8 @@ class SupabaseClient:
         self.headers = {
             'apikey': self.api_key,
             'Authorization': f'Bearer {self.api_key}',
-            'Content-Type': 'application/json'
+            'Content-Type': 'application/json',
+            'Prefer': 'return=representation'
         }
     
     def _make_request(self, method: str, endpoint: str, data: Dict = None, params: Dict = None) -> Dict:
@@ -45,15 +46,18 @@ class SupabaseClient:
             else:
                 raise ValueError(f"Неподдерживаемый метод: {method}")
             
-            if response.status_code >= 200 and response.status_code < 300:
-                return response.json() if response.content else {}
+            if 200 <= response.status_code < 300:
+                try:
+                    return response.json() if response.content else {}
+                except Exception:
+                    return {}
             else:
-                logger.error(f"Ошибка Supabase API: {response.status_code} - {response.text}")
-                return {}
+                logger.error(f"Ошибка Supabase API {response.status_code} @ {endpoint} - {response.text}")
+                return {'error': response.text, 'status': response.status_code}
                 
         except Exception as e:
             logger.error(f"Ошибка запроса к Supabase: {e}")
-            return {}
+            return {'error': str(e)}
     
     async def create_user(self, user_data: Dict) -> Dict:
         """Создание пользователя"""
@@ -62,6 +66,8 @@ class SupabaseClient:
     async def get_user(self, telegram_id: int) -> Optional[Dict]:
         """Получение пользователя по telegram_id"""
         result = self._make_request('GET', f'users?telegram_id=eq.{telegram_id}&select=*')
+        if isinstance(result, dict) and result.get('error'):
+            return None
         return result[0] if result else None
     
     async def update_user(self, telegram_id: int, user_data: Dict) -> Dict:
@@ -85,6 +91,8 @@ class SupabaseClient:
     async def check_subscription(self, telegram_id: int, channel_id: int) -> bool:
         """Проверка подписки на канал"""
         result = self._make_request('GET', f'subscriptions?telegram_id=eq.{telegram_id}&channel_id=eq.{channel_id}')
+        if isinstance(result, dict) and result.get('error'):
+            return False
         return len(result) > 0
     
     async def add_subscription(self, telegram_id: int, channel_data: Dict) -> Dict:
@@ -99,7 +107,10 @@ class SupabaseClient:
     
     async def get_user_subscriptions(self, telegram_id: int) -> List[Dict]:
         """Получение подписок пользователя"""
-        return self._make_request('GET', f'subscriptions?telegram_id=eq.{telegram_id}')
+        result = self._make_request('GET', f'subscriptions?telegram_id=eq.{telegram_id}')
+        if isinstance(result, dict) and result.get('error'):
+            return []
+        return result
     
     async def create_referral_code(self, telegram_id: int, referral_code: str) -> Dict:
         """Создание реферального кода"""
@@ -112,6 +123,8 @@ class SupabaseClient:
     async def get_referral_by_code(self, referral_code: str) -> Optional[Dict]:
         """Получение реферала по коду"""
         result = self._make_request('GET', f'referrals?referral_code=eq.{referral_code}')
+        if isinstance(result, dict) and result.get('error'):
+            return None
         return result[0] if result else None
     
     async def add_referral_ticket(self, referral_code: str) -> Dict:
@@ -131,11 +144,16 @@ class SupabaseClient:
     
     async def get_artists(self) -> List[Dict]:
         """Получение всех артистов"""
-        return self._make_request('GET', 'artists?is_active=eq.true')
+        result = self._make_request('GET', 'artists?is_active=eq.true')
+        if isinstance(result, dict) and result.get('error'):
+            return []
+        return result
     
     async def get_artist(self, artist_id: int) -> Optional[Dict]:
         """Получение артиста по ID"""
         result = self._make_request('GET', f'artists?id=eq.{artist_id}')
+        if isinstance(result, dict) and result.get('error'):
+            return None
         return result[0] if result else None
     
     async def upload_file(self, file_path: str, storage_path: str, file_name: str) -> Dict:
@@ -150,10 +168,10 @@ class SupabaseClient:
                     return response.json()
                 else:
                     logger.error(f"Ошибка загрузки файла: {response.status_code} - {response.text}")
-                    return {}
+                    return {'error': response.text}
         except Exception as e:
             logger.error(f"Ошибка загрузки файла: {e}")
-            return {}
+            return {'error': str(e)}
     
     async def get_file_url(self, storage_path: str, file_name: str) -> str:
         """Получение URL файла"""
@@ -162,6 +180,8 @@ class SupabaseClient:
     async def get_total_tickets(self) -> int:
         """Получение общего количества билетов"""
         result = self._make_request('GET', 'users?select=total_tickets')
+        if isinstance(result, dict) and result.get('error'):
+            return 0
         total = sum(user.get('total_tickets', 0) for user in result)
         return total
     
@@ -185,15 +205,12 @@ class SupabaseClient:
     async def check_subscription_and_award_ticket(self, telegram_id: int, is_subscribed: bool) -> Dict:
         """Проверка подписки и начисление билета"""
         try:
-            # Вызываем PostgreSQL функцию
             data = {
                 'p_telegram_id': telegram_id,
                 'p_is_subscribed': is_subscribed
             }
-            
             url = f"{self.base_url}/rest/v1/rpc/check_subscription_and_award_ticket"
             response = requests.post(url, headers=self.headers, json=data)
-            
             if response.status_code == 200:
                 return response.json()
             else:

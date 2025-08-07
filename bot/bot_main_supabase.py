@@ -342,8 +342,7 @@ class GTMSupabaseBot:
                 'last_name': user.last_name,
                 'subscription_tickets': 0,
                 'referral_tickets': 0,
-                'total_tickets': 0,
-                'created_at': 'now()'
+                'total_tickets': 0
             }
             
             # Проверяем, существует ли пользователь
