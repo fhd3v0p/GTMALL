@@ -37,8 +37,8 @@ providers:
 # Настройки TLS с пользовательскими сертификатами
 tls:
   certificates:
-    - certFile: "/etc/traefik/ssl/domain.cert.pem"
-      keyFile: "/etc/traefik/ssl/private.key.pem"
+    - certFile: "/root/gtmall/ssl/domain.cert.pem"
+      keyFile: "/root/gtmall/ssl/private.key.pem"
 
 # Настройки логирования
 log:
