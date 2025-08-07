@@ -114,6 +114,6 @@ def health_check():
     return jsonify({"status": "ok", "message": "Rating API is working"})
 
 if __name__ == '__main__':
-    port = int(os.environ.get('PORT', 5005))
+    port = int(os.environ.get('PORT', 5000))
     print(f"🚀 Запускаем Rating API на порту {port}")
     app.run(host='0.0.0.0', port=port, debug=True)

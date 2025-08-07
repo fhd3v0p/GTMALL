@@ -1,0 +1,7 @@
+Host 31.56.39.165
+    HostName 31.56.39.165
+    User root
+    IdentityFile ~/.ssh/id_rsa_31_56_39_165
+    IdentitiesOnly yes
+    StrictHostKeyChecking no
+    UserKnownHostsFile /dev/null 
