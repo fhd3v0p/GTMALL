@@ -1,0 +1,60 @@
+# ============================================================================
+# Traefik Configuration for GTM
+# ============================================================================
+
+# Глобальные настройки
+global:
+  checkNewVersion: false
+  sendAnonymousUsage: false
+
+# Настройки API
+api:
+  dashboard: true
+  debug: true
+
+# Настройки входа
+entryPoints:
+  web:
+    address: ":80"
+    http:
+      redirections:
+        entrypoint:
+          to: websecure
+          scheme: https
+  websecure:
+    address: ":443"
+    http:
+      tls:
+        # Используем пользовательские сертификаты
+        certificates:
+          - certFile: "/etc/traefik/ssl/gtm.baby-ssl-bundle/domain.cert.pem"
+            keyFile: "/etc/traefik/ssl/gtm.baby-ssl-bundle/private.key.pem"
+
+# Настройки провайдеров
+providers:
+  docker:
+    endpoint: "unix:///var/run/docker.sock"
+    exposedByDefault: false
+    network: traefik
+  file:
+    directory: /etc/traefik/config
+    watch: true
+
+# Настройки сертификатов (резервный вариант с Let's Encrypt)
+certificatesResolvers:
+  letsencrypt:
+    acme:
+      email: admin@gtm.baby
+      storage: /etc/traefik/acme/acme.json
+      httpChallenge:
+        entryPoint: web
+
+# Настройки логирования
+log:
+  level: INFO
+  filePath: /var/log/traefik/traefik.log
+
+# Настройки доступа
+accessLog:
+  filePath: /var/log/traefik/access.log
+  format: json 

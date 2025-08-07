@@ -1,0 +1,53 @@
+# ============================================================================
+# Dynamic Configuration for Traefik
+# ============================================================================
+
+# HTTP Middleware для безопасности
+http:
+  middlewares:
+    # Безопасность заголовков
+    secure-headers:
+      headers:
+        frameDeny: true
+        sslRedirect: true
+        browserXssFilter: true
+        contentTypeNosniff: true
+        forceSTSHeader: true
+        stsIncludeSubdomains: true
+        stsPreload: true
+        stsSeconds: 31536000
+        customFrameOptionsValue: "SAMEORIGIN"
+        customRequestHeaders:
+          X-Forwarded-Proto: "https"
+    
+    # CORS для API
+    cors:
+      headers:
+        accessControlAllowMethods:
+          - GET
+          - POST
+          - PUT
+          - DELETE
+          - OPTIONS
+        accessControlAllowHeaders:
+          - "*"
+        accessControlAllowOriginList:
+          - "https://gtm.baby"
+          - "https://www.gtm.baby"
+        accessControlMaxAge: 100
+        addVaryHeader: true
+    
+    # Rate limiting
+    rate-limit:
+      rateLimit:
+        average: 100
+        burst: 50
+
+# TCP Middleware (если нужно)
+tcp:
+  middlewares:
+    # TCP rate limiting
+    tcp-rate-limit:
+      rateLimit:
+        average: 100
+        burst: 50 
