@@ -16,7 +16,7 @@ services:
       - /var/run/docker.sock:/var/run/docker.sock:ro
       - ./traefik/traefik.yml:/etc/traefik/traefik.yml:ro
       - ./traefik/config:/etc/traefik/config:ro
-      - ./gtm.baby-ssl-bundle:/etc/traefik/ssl/gtm.baby-ssl-bundle:ro
+      - /root/gtmall/ssl:/etc/traefik/ssl:ro
       - traefik_acme:/etc/traefik/acme
       - traefik_logs:/var/log/traefik
     networks:

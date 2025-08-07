@@ -36,9 +36,9 @@ providers:
 
 # Настройки TLS (правильная конфигурация для v2.10)
 tls:
-  certificates:
-    - certFile: "/etc/traefik/ssl/gtm.baby-ssl-bundle/domain.cert.pem"
-      keyFile: "/etc/traefik/ssl/gtm.baby-ssl-bundle/private.key.pem"
+      certificates:
+      - certFile: "/etc/traefik/ssl/domain.cert.pem"
+        keyFile: "/etc/traefik/ssl/private.key.pem"
 
 # Настройки логирования
 log:

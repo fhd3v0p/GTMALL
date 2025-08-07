@@ -39,8 +39,8 @@ tls:
   stores:
     default:
       defaultCertificate:
-        certFile: "/etc/traefik/ssl/gtm.baby-ssl-bundle/domain.cert.pem"
-        keyFile: "/etc/traefik/ssl/gtm.baby-ssl-bundle/private.key.pem"
+        certFile: "/etc/traefik/ssl/domain.cert.pem"
+        keyFile: "/etc/traefik/ssl/private.key.pem"
 
 # Настройки логирования
 log:
