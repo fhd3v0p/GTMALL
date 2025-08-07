@@ -39,6 +39,69 @@ SUBSCRIPTION_CHANNELS = [
     -1001973736826,
 ]
 
+@app.route('/api/referral-code', methods=['POST'])
+def get_or_create_referral_code():
+    try:
+        data = request.get_json() or {}
+        telegram_id = data.get('telegram_id')
+        if not telegram_id:
+            return jsonify({'success': False, 'error': 'telegram_id required'}), 400
+        # 1) get user
+        get_resp = requests.get(
+            f"{SUPABASE_URL}/rest/v1/users",
+            headers=supabase_headers,
+            params={
+                'telegram_id': f"eq.{telegram_id}",
+                'select': 'telegram_id,referral_code'
+            },
+            timeout=15
+        )
+        if get_resp.status_code not in (200, 206):
+            return jsonify({'success': False, 'error': 'Failed to query user', 'detail': get_resp.text}), 500
+        rows = get_resp.json() if get_resp.content else []
+        # 2) If exists and has code
+        if isinstance(rows, list) and rows:
+            user = rows[0]
+            code = user.get('referral_code')
+            if code:
+                return jsonify({'success': True, 'referral_code': code})
+            # 3) else create code and patch
+            import random, string
+            code = ''.join(random.choices(string.ascii_uppercase + string.digits, k=8))
+            patch_resp = requests.patch(
+                f"{SUPABASE_URL}/rest/v1/users",
+                headers={**supabase_headers, 'Prefer': 'return=representation'},
+                params={'telegram_id': f"eq.{telegram_id}"},
+                json={'referral_code': code},
+                timeout=15
+            )
+            if patch_resp.status_code in (200, 204):
+                return jsonify({'success': True, 'referral_code': code})
+            return jsonify({'success': False, 'error': 'Failed to set referral_code', 'detail': patch_resp.text}), 500
+        # 4) user doesn't exist -> insert with minimal fields
+        import random, string
+        code = ''.join(random.choices(string.ascii_uppercase + string.digits, k=8))
+        insert_resp = requests.post(
+            f"{SUPABASE_URL}/rest/v1/users",
+            headers={**supabase_headers, 'Prefer': 'return=representation'},
+            json={
+                'telegram_id': int(telegram_id),
+                'username': '',
+                'first_name': '',
+                'last_name': '',
+                'subscription_tickets': 0,
+                'referral_tickets': 0,
+                'total_tickets': 0,
+                'referral_code': code
+            },
+            timeout=15
+        )
+        if insert_resp.status_code in (200, 201):
+            return jsonify({'success': True, 'referral_code': code})
+        return jsonify({'success': False, 'error': 'Failed to create user', 'detail': insert_resp.text}), 500
+    except Exception as e:
+        return jsonify({'success': False, 'error': str(e)}), 500
+
 @app.route('/api/check-subscriptions', methods=['POST'])
 def check_subscriptions():
     """Проверить подписку пользователя на все каналы и начислить билет 1 раз"""
