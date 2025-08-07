@@ -1,8 +1,18 @@
-# Traefik Configuration
+# ============================================================================
+# Traefik Configuration for GTM (Fixed)
+# ============================================================================
+
+# Глобальные настройки
+global:
+  checkNewVersion: false
+  sendAnonymousUsage: false
+
+# Настройки API
 api:
   dashboard: true
-  insecure: false
+  debug: false
 
+# Настройки входа
 entryPoints:
   web:
     address: ":80"
@@ -13,48 +23,31 @@ entryPoints:
           scheme: https
   websecure:
     address: ":443"
+    http:
+      tls:
+        # Используем ТОЛЬКО пользовательские сертификаты
+        certificates:
+          - certFile: "/etc/traefik/ssl/gtm.baby-ssl-bundle/domain.cert.pem"
+            keyFile: "/etc/traefik/ssl/gtm.baby-ssl-bundle/private.key.pem"
 
+# Настройки провайдеров
 providers:
   docker:
     endpoint: "unix:///var/run/docker.sock"
     exposedByDefault: false
+    network: traefik
   file:
-    directory: "/etc/traefik/config"
+    directory: /etc/traefik/config
     watch: true
 
-# Middlewares
-http:
-  middlewares:
-    secure-headers:
-      headers:
-        frameDeny: true
-        sslRedirect: true
-        browserXssFilter: true
-        contentTypeNosniff: true
-        forceSTSHeader: true
-        stsIncludeSubdomains: true
-        stsPreload: true
-        stsSeconds: 31536000
-    cors:
-      headers:
-        accessControlAllowMethods:
-          - GET
-          - POST
-          - PUT
-          - DELETE
-          - OPTIONS
-        accessControlAllowHeaders:
-          - Authorization
-          - Content-Type
-        accessControlAllowOriginList:
-          - "*"
-        accessControlMaxAge: 86400
-    rate-limit:
-      rateLimit:
-        burst: 100
-        average: 50
+# Убираем Let's Encrypt - используем только пользовательские сертификаты
 
-# Logging
+# Настройки логирования
 log:
   level: INFO
-  filePath: "/var/log/traefik/traefik.log" 
+  filePath: /var/log/traefik/traefik.log
+
+# Настройки доступа
+accessLog:
+  filePath: /var/log/traefik/access.log
+  format: json 
