@@ -11,7 +11,7 @@ from datetime import datetime
 from typing import List
 
 from dotenv import load_dotenv
-from aiogram import Bot, Dispatcher, F
+from aiogram import Bot, Dispatcher, F, Router
 from aiogram.types import (
     Message,
     CallbackQuery,
@@ -55,7 +55,7 @@ if not validate_supabase_config():
     logger.error("❌ Неверная конфигурация Supabase")
 
 bot = Bot(token=TELEGRAM_BOT_TOKEN)
-router = Dispatcher()
+router = Router()
 
 
 def get_webapp_keyboard() -> InlineKeyboardMarkup:
@@ -95,7 +95,7 @@ async def cmd_start(message: Message):
         "🃏 Каталог топовых артистов\n"
         "🎰 Розыгрыш призов на >130,000₽\n"
         "🎱 Скидка 8% на услуги всех резидентов GTM\n"
-        "💞 Щедрая реферальная система\n\n"
+        "💞 Реферальная система\n\n"
         "Нажми «🔮 Open GTM», чтобы ворваться!"
     )
     await message.answer(welcome_message, reply_markup=get_webapp_keyboard())
