@@ -23,12 +23,6 @@ entryPoints:
           scheme: https
   websecure:
     address: ":443"
-    http:
-      tls:
-        # Используем ТОЛЬКО пользовательские сертификаты
-        certificates:
-          - certFile: "/etc/traefik/ssl/gtm.baby-ssl-bundle/domain.cert.pem"
-            keyFile: "/etc/traefik/ssl/gtm.baby-ssl-bundle/private.key.pem"
 
 # Настройки провайдеров
 providers:
@@ -40,7 +34,11 @@ providers:
     directory: /etc/traefik/config
     watch: true
 
-# Убираем Let's Encrypt - используем только пользовательские сертификаты
+# Настройки TLS (правильная конфигурация для v2.10)
+tls:
+  certificates:
+    - certFile: "/etc/traefik/ssl/gtm.baby-ssl-bundle/domain.cert.pem"
+      keyFile: "/etc/traefik/ssl/gtm.baby-ssl-bundle/private.key.pem"
 
 # Настройки логирования
 log:
