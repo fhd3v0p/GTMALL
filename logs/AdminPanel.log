@@ -1,0 +1,34 @@
+
+> gtm-admin-panel@2.0.0 start:full
+> PORT=3001 ts-node src/index.full.ts
+
+[INFO] 🚀 GTM Admin Panel Full started on port 3001
+[INFO] 📊 Dashboard: http://localhost:3001/dashboard
+[INFO] 👥 Users: http://localhost:3001/users
+[INFO] 👨‍🎨 Masters: http://localhost:3001/masters
+[INFO] 📦 Products: http://localhost:3001/products
+[INFO] 📁 Files: http://localhost:3001/files
+[INFO] ⚙️ Settings: http://localhost:3001/settings
+[INFO] 🔍 Health check: http://localhost:3001/health
+[INFO] GET /health - ::ffff:127.0.0.1
+[INFO] GET / - ::ffff:127.0.0.1
+[INFO] GET / - ::ffff:127.0.0.1
+[INFO] GET /api/users - ::ffff:127.0.0.1
+[INFO] GET /api/masters - ::ffff:127.0.0.1
+[INFO] GET /flutter_service_worker.js - ::ffff:127.0.0.1
+[INFO] GET /api/products - ::ffff:127.0.0.1
+[INFO] GET /flutter_service_worker.js - ::ffff:127.0.0.1
+[INFO] GET /api/users - ::ffff:127.0.0.1
+[INFO] GET /api/masters - ::ffff:127.0.0.1
+[INFO] GET /api/products - ::ffff:127.0.0.1
+[INFO] GET /flutter_service_worker.js - ::ffff:127.0.0.1
+[INFO] GET /api/users - ::ffff:127.0.0.1
+[INFO] GET /api/masters - ::ffff:127.0.0.1
+[INFO] GET /api/products - ::ffff:127.0.0.1
+[INFO] GET /flutter_service_worker.js - ::ffff:127.0.0.1
+[INFO] GET /api/users - ::ffff:127.0.0.1
+[INFO] GET /api/masters - ::ffff:127.0.0.1
+[INFO] GET /api/products - ::ffff:127.0.0.1
+[INFO] GET /flutter_service_worker.js - ::ffff:127.0.0.1
+[INFO] Received SIGTERM, shutting down gracefully...
+[INFO] 🛑 Stopping GTM Admin Panel Full...

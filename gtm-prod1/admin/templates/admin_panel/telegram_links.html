@@ -1,0 +1,50 @@
+{% extends 'admin_panel/base.html' %}
+
+{% block title %}Telegram-ссылки - GTM Admin Panel{% endblock %}
+
+{% block content %}
+<h2>📱 Управление Telegram-ссылками</h2>
+
+<div id="telegram-links-container" class="loading">
+    <p>Загрузка Telegram-ссылок...</p>
+</div>
+
+<script>
+function loadTelegramLinks() {
+    fetch('/api/telegram-links/')
+        .then(response => response.json())
+        .then(data => {
+            if (data.success) {
+                displayTelegramLinks(data.data);
+            } else {
+                document.getElementById('telegram-links-container').innerHTML = 
+                    '<p class="status-offline">Ошибка загрузки Telegram-ссылок</p>';
+            }
+        })
+        .catch(error => {
+            console.error('Ошибка при загрузке Telegram-ссылок:', error);
+            document.getElementById('telegram-links-container').innerHTML = 
+                '<p class="status-offline">Ошибка загрузки Telegram-ссылок</p>';
+        });
+}
+
+function displayTelegramLinks(links) {
+    const container = document.getElementById('telegram-links-container');
+    container.innerHTML = '';
+    
+    links.forEach(link => {
+        const linkElement = document.createElement('div');
+        linkElement.className = 'telegram-link';
+        linkElement.innerHTML = `
+            <h3>@${link.name}</h3>
+            <p><strong>URL:</strong> <a href="${link.url}" target="_blank">${link.url}</a></p>
+            <p><strong>Описание:</strong> ${link.description}</p>
+            <p><strong>Статус:</strong> <span class="status-online">✅ Активна</span></p>
+        `;
+        container.appendChild(linkElement);
+    });
+}
+
+document.addEventListener('DOMContentLoaded', loadTelegramLinks);
+</script>
+{% endblock %} 

@@ -1,0 +1,38 @@
+🐍 Запуск GTM Backend (Local)
+🚀 Запуск Backend API на порту 5001...
+/Users/h0/flutter/GTMv05/backend_new/gtm_api_server_local.py:525: DeprecationWarning: 
+        on_event is deprecated, use lifespan event handlers instead.
+
+        Read more about it in the
+        [FastAPI docs for Lifespan Events](https://fastapi.tiangolo.com/advanced/events/).
+        
+  @app.on_event("startup")
+/Users/h0/flutter/GTMv05/backend_new/gtm_api_server_local.py:532: DeprecationWarning: 
+        on_event is deprecated, use lifespan event handlers instead.
+
+        Read more about it in the
+        [FastAPI docs for Lifespan Events](https://fastapi.tiangolo.com/advanced/events/).
+        
+  @app.on_event("shutdown")
+2025-08-04 23:36:46,557 - __main__ - INFO - 🔧 GTM API Server - Local Development Mode
+2025-08-04 23:36:46,558 - __main__ - INFO - ==================================================
+2025-08-04 23:36:46,558 - __main__ - INFO - 📊 Environment: Development
+2025-08-04 23:36:46,558 - __main__ - INFO - 🔗 Database: localhost:5432/gtm_db
+2025-08-04 23:36:46,558 - __main__ - INFO - 🔴 Redis: localhost:6379
+2025-08-04 23:36:46,558 - __main__ - INFO - 🌐 CORS Origins: http://localhost:3000, http://localhost:3001, http://localhost:8080, http://127.0.0.1:3000, http://127.0.0.1:3001, http://127.0.0.1:8080
+2025-08-04 23:36:46,558 - __main__ - INFO - ==================================================
+INFO:     Will watch for changes in these directories: ['/Users/h0/flutter/GTMv05/backend_new']
+INFO:     Uvicorn running on http://127.0.0.1:5001 (Press CTRL+C to quit)
+INFO:     Started reloader process [77113] using StatReload
+INFO:     Started server process [77117]
+INFO:     Waiting for application startup.
+2025-08-04 23:36:46,816 - gtm_api_server_local - INFO - 🚀 Starting GTM API Server (Local Development)
+2025-08-04 23:36:46,874 - gtm_api_server_local - INFO - ✅ Connected to PostgreSQL
+2025-08-04 23:36:46,882 - gtm_api_server_local - INFO - ✅ Database tables initialized
+2025-08-04 23:36:46,903 - gtm_api_server_local - INFO - ✅ Connected to Redis
+2025-08-04 23:36:46,903 - gtm_api_server_local - INFO - ✅ GTM API Server started successfully
+INFO:     Application startup complete.
+2025-08-04 23:36:47,237 - gtm_api_server_local - INFO - 📥 GET http://localhost:5001/health - 127.0.0.1
+2025-08-04 23:36:47,239 - gtm_api_server_local - INFO - 📤 GET /health - 200 (0.003s)
+INFO:     127.0.0.1:49859 - "GET /health HTTP/1.1" 200 OK
+./start_backend_local.sh: line 53: 77113 Killed: 9               python gtm_api_server_local.py

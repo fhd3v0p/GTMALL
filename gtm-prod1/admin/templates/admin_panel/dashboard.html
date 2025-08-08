@@ -1,0 +1,65 @@
+{% extends 'admin_panel/base.html' %}
+
+{% block title %}🎭 GTM Admin Panel - Dark Pink{% endblock %}
+
+{% block content %}
+<div class="grid">
+    <div class="status-card">
+        <h3>🎨 Управление артистами</h3>
+        <p>Добавляйте и редактируйте карточки артистов</p>
+        <a href="{% url 'artists' %}" class="btn">Перейти к артистам</a>
+    </div>
+
+    <div class="status-card">
+        <h3>🏙️ Управление городами</h3>
+        <p>Настройка городов и Telegram-ссылок</p>
+        <a href="{% url 'cities' %}" class="btn">Перейти к городам</a>
+    </div>
+
+    <div class="status-card">
+        <h3>🎁 Giveaway</h3>
+        <p>Управление розыгрышами и Telegram-папкой</p>
+        <a href="{% url 'giveaway' %}" class="btn">Перейти к Giveaway</a>
+    </div>
+
+    <div class="status-card">
+        <h3>📱 Telegram-ссылки</h3>
+        <p>Управление ссылками на Telegram-каналы</p>
+        <a href="{% url 'telegram_links' %}" class="btn">Перейти к ссылкам</a>
+    </div>
+
+    <div class="status-card">
+        <h3>📁 Файловый менеджер</h3>
+        <p>Управление файлами в MinIO</p>
+        <a href="{% url 'file_manager' %}" class="btn">Перейти к файлам</a>
+    </div>
+
+    <div class="status-card">
+        <h3>⚙️ Статус системы</h3>
+        <p>Мониторинг всех сервисов</p>
+        <a href="{% url 'system_status' %}" class="btn">Перейти к статусу</a>
+    </div>
+</div>
+
+<div class="status-card" style="margin-top: 30px;">
+    <h3>📊 Быстрый обзор</h3>
+    <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 20px; margin-top: 20px;">
+        <div>
+            <h4>🎨 Артисты</h4>
+            <p>Управление карточками артистов</p>
+        </div>
+        <div>
+            <h4>🏙️ Города</h4>
+            <p>Настройка городов и ссылок</p>
+        </div>
+        <div>
+            <h4>🎁 Giveaway</h4>
+            <p>Розыгрыши и Telegram-папка</p>
+        </div>
+        <div>
+            <h4>📱 Telegram</h4>
+            <p>Управление ссылками</p>
+        </div>
+    </div>
+</div>
+{% endblock %} 

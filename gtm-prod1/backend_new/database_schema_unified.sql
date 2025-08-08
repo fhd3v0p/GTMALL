@@ -1,0 +1,2 @@
+-- GTM Unified Database Schema
+-- Скопируйте сюда ваш database_schema_unified.sql

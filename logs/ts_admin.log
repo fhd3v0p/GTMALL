@@ -1,0 +1,37 @@
+
+> gtm-admin-panel@3.0.0 dev
+> ts-node src/index.ts
+
+[INFO] 2025-08-05T05:16:26.556Z - 🚀 GTM Admin Panel запущен на порту 3001 
+[INFO] 2025-08-05T05:16:26.558Z - 📊 Доступен по адресу: http://localhost:3001 
+[INFO] 2025-08-05T05:16:26.558Z - 🔧 API Base URL: http://localhost:3001/api 
+[INFO] 2025-08-05T05:16:26.558Z - 🌍 Environment: development 
+[INFO] 2025-08-05T05:16:26.558Z - ⏰ Started at: 2025-08-05T05:16:26.558Z 
+[INFO] 2025-08-05T05:16:26.558Z - 🔐 Security: development mode 
+[INFO] 2025-08-05T05:16:26.559Z - 💾 Database: localhost:5432/gtm_db 
+[INFO] 2025-08-05T05:16:26.559Z - 🔴 Redis: localhost:6379 
+[ERROR] 2025-08-05T05:16:26.582Z - Failed to initialize MinIO bucket AggregateError
+    at internalConnectMultiple (node:net:1116:18)
+    at afterConnectMultiple (node:net:1683:7) {
+  code: 'ECONNREFUSED',
+  [errors]: [
+    Error: connect ECONNREFUSED ::1:9000
+        at createConnectionError (node:net:1646:14)
+        at afterConnectMultiple (node:net:1676:16) {
+      errno: -61,
+      code: 'ECONNREFUSED',
+      syscall: 'connect',
+      address: '::1',
+      port: 9000
+    },
+    Error: connect ECONNREFUSED 127.0.0.1:9000
+        at createConnectionError (node:net:1646:14)
+        at afterConnectMultiple (node:net:1676:16) {
+      errno: -61,
+      code: 'ECONNREFUSED',
+      syscall: 'connect',
+      address: '127.0.0.1',
+      port: 9000
+    }
+  ]
+}

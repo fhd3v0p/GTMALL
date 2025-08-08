@@ -1,0 +1,1657 @@
+Watching for file changes with StatReloader
+[05/Aug/2025 05:02:17] "HEAD / HTTP/1.1" 200 0
+[05/Aug/2025 05:02:22] "GET /artists/ HTTP/1.1" 200 26551
+Not Found: /health
+[05/Aug/2025 05:02:23] "GET /health HTTP/1.1" 404 4031
+Not Found: /api/system-status/
+[05/Aug/2025 05:02:23] "GET /api/system-status/ HTTP/1.1" 404 4067
+[05/Aug/2025 05:02:25] "GET /cities/ HTTP/1.1" 200 18118
+[05/Aug/2025 05:02:27] "GET /giveaway/ HTTP/1.1" 200 15422
+/Users/h0/flutter/GTMv05/gtm_admin_panel/admin_panel/urls.py changed, reloading.
+Performing system checks...
+
+System check identified no issues (0 silenced).
+August 05, 2025 - 05:02:16
+Django version 5.2.4, using settings 'gtm_admin_panel.settings'
+Starting development server at http://127.0.0.1:3003/
+Quit the server with CONTROL-C.
+
+WARNING: This is a development server. Do not use it in a production setting. Use a production WSGI or ASGI server instead.
+For more information on production servers see: https://docs.djangoproject.com/en/5.2/howto/deployment/
+Watching for file changes with StatReloader
+Not Found: /api/users
+[05/Aug/2025 05:02:40] "GET /api/users HTTP/1.1" 404 4040
+Not Found: /api/artists
+Not Found: /api/products
+Not Found: /api/admin/analytics
+[05/Aug/2025 05:02:40] "GET /api/products HTTP/1.1" 404 4049
+[05/Aug/2025 05:02:40] "GET /api/artists HTTP/1.1" 404 4046
+[05/Aug/2025 05:02:40] "GET /api/admin/analytics HTTP/1.1" 404 4070
+Not Found: /health
+[05/Aug/2025 05:02:43] "GET /health HTTP/1.1" 404 4031
+/Users/h0/flutter/GTMv05/gtm_admin_panel/admin_panel/urls.py changed, reloading.
+Performing system checks...
+
+System check identified no issues (0 silenced).
+August 05, 2025 - 05:02:38
+Django version 5.2.4, using settings 'gtm_admin_panel.settings'
+Starting development server at http://127.0.0.1:3003/
+Quit the server with CONTROL-C.
+
+WARNING: This is a development server. Do not use it in a production setting. Use a production WSGI or ASGI server instead.
+For more information on production servers see: https://docs.djangoproject.com/en/5.2/howto/deployment/
+Watching for file changes with StatReloader
+Not Found: /health
+[05/Aug/2025 05:02:53] "GET /health HTTP/1.1" 404 4031
+Not Found: /api/system-status/
+[05/Aug/2025 05:02:53] "GET /api/system-status/ HTTP/1.1" 404 4067
+Not Found: /api/admin/analytics
+Not Found: /api/products
+Not Found: /api/artists
+[05/Aug/2025 05:03:10] "GET /api/artists HTTP/1.1" 404 4046
+[05/Aug/2025 05:03:10] "GET /api/products HTTP/1.1" 404 4049
+Not Found: /api/users
+[05/Aug/2025 05:03:10] "GET /api/admin/analytics HTTP/1.1" 404 4070
+[05/Aug/2025 05:03:10] "GET /api/users HTTP/1.1" 404 4040
+Not Found: /health
+[05/Aug/2025 05:03:13] "GET /health HTTP/1.1" 404 4031
+Not Found: /health
+[05/Aug/2025 05:03:23] "GET /health HTTP/1.1" 404 4031
+Not Found: /api/system-status/
+[05/Aug/2025 05:03:23] "GET /api/system-status/ HTTP/1.1" 404 4067
+Not Found: /api/users
+Not Found: /api/artists
+Not Found: /api/admin/analytics
+[05/Aug/2025 05:03:40] "GET /api/users HTTP/1.1" 404 4040
+Not Found: /api/products
+[05/Aug/2025 05:03:40] "GET /api/artists HTTP/1.1" 404 4046
+[05/Aug/2025 05:03:40] "GET /api/admin/analytics HTTP/1.1" 404 4070
+[05/Aug/2025 05:03:40] "GET /api/products HTTP/1.1" 404 4049
+Not Found: /health
+[05/Aug/2025 05:03:43] "GET /health HTTP/1.1" 404 4031
+Not Found: /health
+[05/Aug/2025 05:03:53] "GET /health HTTP/1.1" 404 4031
+Not Found: /api/system-status/
+[05/Aug/2025 05:03:53] "GET /api/system-status/ HTTP/1.1" 404 4067
+Not Found: /api/products
+Not Found: /api/artists
+Not Found: /api/users
+[05/Aug/2025 05:04:10] "GET /api/products HTTP/1.1" 404 4049
+Not Found: /api/admin/analytics
+[05/Aug/2025 05:04:10] "GET /api/users HTTP/1.1" 404 4040
+[05/Aug/2025 05:04:10] "GET /api/artists HTTP/1.1" 404 4046
+[05/Aug/2025 05:04:10] "GET /api/admin/analytics HTTP/1.1" 404 4070
+Not Found: /health
+[05/Aug/2025 05:04:13] "GET /health HTTP/1.1" 404 4031
+/Users/h0/flutter/GTMv05/gtm_admin_panel/admin_panel/urls.py changed, reloading.
+Performing system checks...
+
+System check identified no issues (0 silenced).
+August 05, 2025 - 05:02:45
+Django version 5.2.4, using settings 'gtm_admin_panel.settings'
+Starting development server at http://127.0.0.1:3003/
+Quit the server with CONTROL-C.
+
+WARNING: This is a development server. Do not use it in a production setting. Use a production WSGI or ASGI server instead.
+For more information on production servers see: https://docs.djangoproject.com/en/5.2/howto/deployment/
+Watching for file changes with StatReloader
+Exception in thread django-main-thread:
+Traceback (most recent call last):
+  File "/Users/h0/miniconda3/lib/python3.10/threading.py", line 1016, in _bootstrap_inner
+    self.run()
+  File "/Users/h0/miniconda3/lib/python3.10/threading.py", line 953, in run
+    self._target(*self._args, **self._kwargs)
+  File "/Users/h0/flutter/GTMv05/gtm_admin_panel/venv/lib/python3.10/site-packages/django/utils/autoreload.py", line 64, in wrapper
+    fn(*args, **kwargs)
+  File "/Users/h0/flutter/GTMv05/gtm_admin_panel/venv/lib/python3.10/site-packages/django/core/management/commands/runserver.py", line 134, in inner_run
+    self.check(**check_kwargs)
+  File "/Users/h0/flutter/GTMv05/gtm_admin_panel/venv/lib/python3.10/site-packages/django/core/management/base.py", line 492, in check
+    all_issues = checks.run_checks(
+  File "/Users/h0/flutter/GTMv05/gtm_admin_panel/venv/lib/python3.10/site-packages/django/core/checks/registry.py", line 89, in run_checks
+    new_errors = check(app_configs=app_configs, databases=databases)
+  File "/Users/h0/flutter/GTMv05/gtm_admin_panel/venv/lib/python3.10/site-packages/django/core/checks/urls.py", line 136, in check_custom_error_handlers
+    handler = resolver.resolve_error_handler(status_code)
+  File "/Users/h0/flutter/GTMv05/gtm_admin_panel/venv/lib/python3.10/site-packages/django/urls/resolvers.py", line 732, in resolve_error_handler
+    callback = getattr(self.urlconf_module, "handler%s" % view_type, None)
+  File "/Users/h0/flutter/GTMv05/gtm_admin_panel/venv/lib/python3.10/site-packages/django/utils/functional.py", line 47, in __get__
+    res = instance.__dict__[self.name] = self.func(instance)
+  File "/Users/h0/flutter/GTMv05/gtm_admin_panel/venv/lib/python3.10/site-packages/django/urls/resolvers.py", line 711, in urlconf_module
+    return import_module(self.urlconf_name)
+  File "/Users/h0/miniconda3/lib/python3.10/importlib/__init__.py", line 126, in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+  File "<frozen importlib._bootstrap>", line 1050, in _gcd_import
+  File "<frozen importlib._bootstrap>", line 1027, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 1006, in _find_and_load_unlocked
+  File "<frozen importlib._bootstrap>", line 688, in _load_unlocked
+  File "<frozen importlib._bootstrap_external>", line 883, in exec_module
+  File "<frozen importlib._bootstrap>", line 241, in _call_with_frames_removed
+  File "/Users/h0/flutter/GTMv05/gtm_admin_panel/gtm_admin_panel/urls.py", line 22, in <module>
+    path('', include('admin_panel.urls')),
+  File "/Users/h0/flutter/GTMv05/gtm_admin_panel/venv/lib/python3.10/site-packages/django/urls/conf.py", line 39, in include
+    urlconf_module = import_module(urlconf_module)
+  File "/Users/h0/miniconda3/lib/python3.10/importlib/__init__.py", line 126, in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+  File "<frozen importlib._bootstrap>", line 1050, in _gcd_import
+  File "<frozen importlib._bootstrap>", line 1027, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 1006, in _find_and_load_unlocked
+  File "<frozen importlib._bootstrap>", line 688, in _load_unlocked
+  File "<frozen importlib._bootstrap_external>", line 883, in exec_module
+  File "<frozen importlib._bootstrap>", line 241, in _call_with_frames_removed
+  File "/Users/h0/flutter/GTMv05/gtm_admin_panel/admin_panel/urls.py", line 19, in <module>
+    path('api/admin/analytics/', views.api_admin_analytics, name='api_admin_analytics'),
+AttributeError: module 'admin_panel.views' has no attribute 'api_admin_analytics'
+/Users/h0/flutter/GTMv05/gtm_admin_panel/admin_panel/models.py changed, reloading.
+Performing system checks...
+
+Watching for file changes with StatReloader
+Exception in thread django-main-thread:
+Traceback (most recent call last):
+  File "/Users/h0/miniconda3/lib/python3.10/threading.py", line 1016, in _bootstrap_inner
+    self.run()
+  File "/Users/h0/miniconda3/lib/python3.10/threading.py", line 953, in run
+    self._target(*self._args, **self._kwargs)
+  File "/Users/h0/flutter/GTMv05/gtm_admin_panel/venv/lib/python3.10/site-packages/django/utils/autoreload.py", line 64, in wrapper
+    fn(*args, **kwargs)
+  File "/Users/h0/flutter/GTMv05/gtm_admin_panel/venv/lib/python3.10/site-packages/django/core/management/commands/runserver.py", line 134, in inner_run
+    self.check(**check_kwargs)
+  File "/Users/h0/flutter/GTMv05/gtm_admin_panel/venv/lib/python3.10/site-packages/django/core/management/base.py", line 492, in check
+    all_issues = checks.run_checks(
+  File "/Users/h0/flutter/GTMv05/gtm_admin_panel/venv/lib/python3.10/site-packages/django/core/checks/registry.py", line 89, in run_checks
+    new_errors = check(app_configs=app_configs, databases=databases)
+  File "/Users/h0/flutter/GTMv05/gtm_admin_panel/venv/lib/python3.10/site-packages/django/core/checks/urls.py", line 136, in check_custom_error_handlers
+    handler = resolver.resolve_error_handler(status_code)
+  File "/Users/h0/flutter/GTMv05/gtm_admin_panel/venv/lib/python3.10/site-packages/django/urls/resolvers.py", line 732, in resolve_error_handler
+    callback = getattr(self.urlconf_module, "handler%s" % view_type, None)
+  File "/Users/h0/flutter/GTMv05/gtm_admin_panel/venv/lib/python3.10/site-packages/django/utils/functional.py", line 47, in __get__
+    res = instance.__dict__[self.name] = self.func(instance)
+  File "/Users/h0/flutter/GTMv05/gtm_admin_panel/venv/lib/python3.10/site-packages/django/urls/resolvers.py", line 711, in urlconf_module
+    return import_module(self.urlconf_name)
+  File "/Users/h0/miniconda3/lib/python3.10/importlib/__init__.py", line 126, in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+  File "<frozen importlib._bootstrap>", line 1050, in _gcd_import
+  File "<frozen importlib._bootstrap>", line 1027, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 1006, in _find_and_load_unlocked
+  File "<frozen importlib._bootstrap>", line 688, in _load_unlocked
+  File "<frozen importlib._bootstrap_external>", line 883, in exec_module
+  File "<frozen importlib._bootstrap>", line 241, in _call_with_frames_removed
+  File "/Users/h0/flutter/GTMv05/gtm_admin_panel/gtm_admin_panel/urls.py", line 22, in <module>
+    path('', include('admin_panel.urls')),
+  File "/Users/h0/flutter/GTMv05/gtm_admin_panel/venv/lib/python3.10/site-packages/django/urls/conf.py", line 39, in include
+    urlconf_module = import_module(urlconf_module)
+  File "/Users/h0/miniconda3/lib/python3.10/importlib/__init__.py", line 126, in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+  File "<frozen importlib._bootstrap>", line 1050, in _gcd_import
+  File "<frozen importlib._bootstrap>", line 1027, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 1006, in _find_and_load_unlocked
+  File "<frozen importlib._bootstrap>", line 688, in _load_unlocked
+  File "<frozen importlib._bootstrap_external>", line 883, in exec_module
+  File "<frozen importlib._bootstrap>", line 241, in _call_with_frames_removed
+  File "/Users/h0/flutter/GTMv05/gtm_admin_panel/admin_panel/urls.py", line 19, in <module>
+    path('api/admin/analytics/', views.api_admin_analytics, name='api_admin_analytics'),
+AttributeError: module 'admin_panel.views' has no attribute 'api_admin_analytics'
+/Users/h0/flutter/GTMv05/gtm_admin_panel/gtm_admin_panel/settings.py changed, reloading.
+Performing system checks...
+
+Watching for file changes with StatReloader
+Exception in thread django-main-thread:
+Traceback (most recent call last):
+  File "/Users/h0/flutter/GTMv05/gtm_admin_panel/venv/lib/python3.10/site-packages/django/db/backends/postgresql/base.py", line 25, in <module>
+    import psycopg as Database
+ModuleNotFoundError: No module named 'psycopg'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/Users/h0/flutter/GTMv05/gtm_admin_panel/venv/lib/python3.10/site-packages/django/db/backends/postgresql/base.py", line 27, in <module>
+    import psycopg2 as Database
+ModuleNotFoundError: No module named 'psycopg2'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/Users/h0/miniconda3/lib/python3.10/threading.py", line 1016, in _bootstrap_inner
+    self.run()
+  File "/Users/h0/miniconda3/lib/python3.10/threading.py", line 953, in run
+    self._target(*self._args, **self._kwargs)
+  File "/Users/h0/flutter/GTMv05/gtm_admin_panel/venv/lib/python3.10/site-packages/django/utils/autoreload.py", line 64, in wrapper
+    fn(*args, **kwargs)
+  File "/Users/h0/flutter/GTMv05/gtm_admin_panel/venv/lib/python3.10/site-packages/django/core/management/commands/runserver.py", line 124, in inner_run
+    autoreload.raise_last_exception()
+  File "/Users/h0/flutter/GTMv05/gtm_admin_panel/venv/lib/python3.10/site-packages/django/utils/autoreload.py", line 86, in raise_last_exception
+    raise _exception[1]
+  File "/Users/h0/flutter/GTMv05/gtm_admin_panel/venv/lib/python3.10/site-packages/django/core/management/__init__.py", line 394, in execute
+    autoreload.check_errors(django.setup)()
+  File "/Users/h0/flutter/GTMv05/gtm_admin_panel/venv/lib/python3.10/site-packages/django/utils/autoreload.py", line 64, in wrapper
+    fn(*args, **kwargs)
+  File "/Users/h0/flutter/GTMv05/gtm_admin_panel/venv/lib/python3.10/site-packages/django/__init__.py", line 24, in setup
+    apps.populate(settings.INSTALLED_APPS)
+  File "/Users/h0/flutter/GTMv05/gtm_admin_panel/venv/lib/python3.10/site-packages/django/apps/registry.py", line 116, in populate
+    app_config.import_models()
+  File "/Users/h0/flutter/GTMv05/gtm_admin_panel/venv/lib/python3.10/site-packages/django/apps/config.py", line 269, in import_models
+    self.models_module = import_module(models_module_name)
+  File "/Users/h0/miniconda3/lib/python3.10/importlib/__init__.py", line 126, in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+  File "<frozen importlib._bootstrap>", line 1050, in _gcd_import
+  File "<frozen importlib._bootstrap>", line 1027, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 1006, in _find_and_load_unlocked
+  File "<frozen importlib._bootstrap>", line 688, in _load_unlocked
+  File "<frozen importlib._bootstrap_external>", line 883, in exec_module
+  File "<frozen importlib._bootstrap>", line 241, in _call_with_frames_removed
+  File "/Users/h0/flutter/GTMv05/gtm_admin_panel/venv/lib/python3.10/site-packages/django/contrib/auth/models.py", line 5, in <module>
+    from django.contrib.auth.base_user import AbstractBaseUser, BaseUserManager
+  File "/Users/h0/flutter/GTMv05/gtm_admin_panel/venv/lib/python3.10/site-packages/django/contrib/auth/base_user.py", line 43, in <module>
+    class AbstractBaseUser(models.Model):
+  File "/Users/h0/flutter/GTMv05/gtm_admin_panel/venv/lib/python3.10/site-packages/django/db/models/base.py", line 145, in __new__
+    new_class.add_to_class("_meta", Options(meta, app_label))
+  File "/Users/h0/flutter/GTMv05/gtm_admin_panel/venv/lib/python3.10/site-packages/django/db/models/base.py", line 373, in add_to_class
+    value.contribute_to_class(cls, name)
+  File "/Users/h0/flutter/GTMv05/gtm_admin_panel/venv/lib/python3.10/site-packages/django/db/models/options.py", line 238, in contribute_to_class
+    self.db_table, connection.ops.max_name_length()
+  File "/Users/h0/flutter/GTMv05/gtm_admin_panel/venv/lib/python3.10/site-packages/django/utils/connection.py", line 15, in __getattr__
+    return getattr(self._connections[self._alias], item)
+  File "/Users/h0/flutter/GTMv05/gtm_admin_panel/venv/lib/python3.10/site-packages/django/utils/connection.py", line 62, in __getitem__
+    conn = self.create_connection(alias)
+  File "/Users/h0/flutter/GTMv05/gtm_admin_panel/venv/lib/python3.10/site-packages/django/db/utils.py", line 193, in create_connection
+    backend = load_backend(db["ENGINE"])
+  File "/Users/h0/flutter/GTMv05/gtm_admin_panel/venv/lib/python3.10/site-packages/django/db/utils.py", line 113, in load_backend
+    return import_module("%s.base" % backend_name)
+  File "/Users/h0/miniconda3/lib/python3.10/importlib/__init__.py", line 126, in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+  File "/Users/h0/flutter/GTMv05/gtm_admin_panel/venv/lib/python3.10/site-packages/django/db/backends/postgresql/base.py", line 29, in <module>
+    raise ImproperlyConfigured("Error loading psycopg2 or psycopg module")
+django.core.exceptions.ImproperlyConfigured: Error loading psycopg2 or psycopg module
+/Users/h0/flutter/GTMv05/gtm_admin_panel/gtm_admin_panel/settings.py changed, reloading.
+Watching for file changes with StatReloader
+Exception in thread django-main-thread:
+Traceback (most recent call last):
+  File "/Users/h0/flutter/GTMv05/gtm_admin_panel/venv/lib/python3.10/site-packages/django/db/backends/postgresql/base.py", line 25, in <module>
+    import psycopg as Database
+ModuleNotFoundError: No module named 'psycopg'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/Users/h0/flutter/GTMv05/gtm_admin_panel/venv/lib/python3.10/site-packages/django/db/backends/postgresql/base.py", line 27, in <module>
+    import psycopg2 as Database
+ModuleNotFoundError: No module named 'psycopg2'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/Users/h0/miniconda3/lib/python3.10/threading.py", line 1016, in _bootstrap_inner
+    self.run()
+  File "/Users/h0/miniconda3/lib/python3.10/threading.py", line 953, in run
+    self._target(*self._args, **self._kwargs)
+  File "/Users/h0/flutter/GTMv05/gtm_admin_panel/venv/lib/python3.10/site-packages/django/utils/autoreload.py", line 64, in wrapper
+    fn(*args, **kwargs)
+  File "/Users/h0/flutter/GTMv05/gtm_admin_panel/venv/lib/python3.10/site-packages/django/core/management/commands/runserver.py", line 124, in inner_run
+    autoreload.raise_last_exception()
+  File "/Users/h0/flutter/GTMv05/gtm_admin_panel/venv/lib/python3.10/site-packages/django/utils/autoreload.py", line 86, in raise_last_exception
+    raise _exception[1]
+  File "/Users/h0/flutter/GTMv05/gtm_admin_panel/venv/lib/python3.10/site-packages/django/core/management/__init__.py", line 394, in execute
+    autoreload.check_errors(django.setup)()
+  File "/Users/h0/flutter/GTMv05/gtm_admin_panel/venv/lib/python3.10/site-packages/django/utils/autoreload.py", line 64, in wrapper
+    fn(*args, **kwargs)
+  File "/Users/h0/flutter/GTMv05/gtm_admin_panel/venv/lib/python3.10/site-packages/django/__init__.py", line 24, in setup
+    apps.populate(settings.INSTALLED_APPS)
+  File "/Users/h0/flutter/GTMv05/gtm_admin_panel/venv/lib/python3.10/site-packages/django/apps/registry.py", line 116, in populate
+    app_config.import_models()
+  File "/Users/h0/flutter/GTMv05/gtm_admin_panel/venv/lib/python3.10/site-packages/django/apps/config.py", line 269, in import_models
+    self.models_module = import_module(models_module_name)
+  File "/Users/h0/miniconda3/lib/python3.10/importlib/__init__.py", line 126, in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+  File "<frozen importlib._bootstrap>", line 1050, in _gcd_import
+  File "<frozen importlib._bootstrap>", line 1027, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 1006, in _find_and_load_unlocked
+  File "<frozen importlib._bootstrap>", line 688, in _load_unlocked
+  File "<frozen importlib._bootstrap_external>", line 883, in exec_module
+  File "<frozen importlib._bootstrap>", line 241, in _call_with_frames_removed
+  File "/Users/h0/flutter/GTMv05/gtm_admin_panel/venv/lib/python3.10/site-packages/django/contrib/auth/models.py", line 5, in <module>
+    from django.contrib.auth.base_user import AbstractBaseUser, BaseUserManager
+  File "/Users/h0/flutter/GTMv05/gtm_admin_panel/venv/lib/python3.10/site-packages/django/contrib/auth/base_user.py", line 43, in <module>
+    class AbstractBaseUser(models.Model):
+  File "/Users/h0/flutter/GTMv05/gtm_admin_panel/venv/lib/python3.10/site-packages/django/db/models/base.py", line 145, in __new__
+    new_class.add_to_class("_meta", Options(meta, app_label))
+  File "/Users/h0/flutter/GTMv05/gtm_admin_panel/venv/lib/python3.10/site-packages/django/db/models/base.py", line 373, in add_to_class
+    value.contribute_to_class(cls, name)
+  File "/Users/h0/flutter/GTMv05/gtm_admin_panel/venv/lib/python3.10/site-packages/django/db/models/options.py", line 238, in contribute_to_class
+    self.db_table, connection.ops.max_name_length()
+  File "/Users/h0/flutter/GTMv05/gtm_admin_panel/venv/lib/python3.10/site-packages/django/utils/connection.py", line 15, in __getattr__
+    return getattr(self._connections[self._alias], item)
+  File "/Users/h0/flutter/GTMv05/gtm_admin_panel/venv/lib/python3.10/site-packages/django/utils/connection.py", line 62, in __getitem__
+    conn = self.create_connection(alias)
+  File "/Users/h0/flutter/GTMv05/gtm_admin_panel/venv/lib/python3.10/site-packages/django/db/utils.py", line 193, in create_connection
+    backend = load_backend(db["ENGINE"])
+  File "/Users/h0/flutter/GTMv05/gtm_admin_panel/venv/lib/python3.10/site-packages/django/db/utils.py", line 113, in load_backend
+    return import_module("%s.base" % backend_name)
+  File "/Users/h0/miniconda3/lib/python3.10/importlib/__init__.py", line 126, in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+  File "/Users/h0/flutter/GTMv05/gtm_admin_panel/venv/lib/python3.10/site-packages/django/db/backends/postgresql/base.py", line 29, in <module>
+    raise ImproperlyConfigured("Error loading psycopg2 or psycopg module")
+django.core.exceptions.ImproperlyConfigured: Error loading psycopg2 or psycopg module
+/Users/h0/flutter/GTMv05/gtm_admin_panel/gtm_admin_panel/settings.py changed, reloading.
+Watching for file changes with StatReloader
+Not Found: /health
+[05/Aug/2025 05:11:53] "GET /health HTTP/1.1" 404 6209
+[05/Aug/2025 05:12:10] "GET /api/users HTTP/1.1" 301 0
+[05/Aug/2025 05:12:10] "GET /api/artists HTTP/1.1" 301 0
+[05/Aug/2025 05:12:10] "GET /api/admin/analytics HTTP/1.1" 301 0
+[05/Aug/2025 05:12:10] "GET /api/products HTTP/1.1" 301 0
+[05/Aug/2025 05:12:10] "GET /api/users/ HTTP/1.1" 200 391
+Internal Server Error: /api/artists/
+Traceback (most recent call last):
+  File "/Users/h0/flutter/GTMv05/gtm_admin_panel/venv/lib/python3.10/site-packages/django/db/backends/utils.py", line 105, in _execute
+    return self.cursor.execute(sql, params)
+psycopg2.errors.UndefinedColumn: column artists.folder_name does not exist
+LINE 1: ...sts"."name", "artists"."bio", "artists"."avatar", "artists"....
+                                                             ^
+
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/Users/h0/flutter/GTMv05/gtm_admin_panel/venv/lib/python3.10/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+  File "/Users/h0/flutter/GTMv05/gtm_admin_panel/venv/lib/python3.10/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/Users/h0/flutter/GTMv05/gtm_admin_panel/venv/lib/python3.10/site-packages/django/views/decorators/csrf.py", line 65, in _view_wrapper
+    return view_func(request, *args, **kwargs)
+  File "/Users/h0/flutter/GTMv05/gtm_admin_panel/admin_panel/views.py", line 163, in api_artists
+    for artist in artists:
+  File "/Users/h0/flutter/GTMv05/gtm_admin_panel/venv/lib/python3.10/site-packages/django/db/models/query.py", line 384, in __iter__
+    self._fetch_all()
+  File "/Users/h0/flutter/GTMv05/gtm_admin_panel/venv/lib/python3.10/site-packages/django/db/models/query.py", line 1949, in _fetch_all
+    self._result_cache = list(self._iterable_class(self))
+  File "/Users/h0/flutter/GTMv05/gtm_admin_panel/venv/lib/python3.10/site-packages/django/db/models/query.py", line 91, in __iter__
+    results = compiler.execute_sql(
+  File "/Users/h0/flutter/GTMv05/gtm_admin_panel/venv/lib/python3.10/site-packages/django/db/models/sql/compiler.py", line 1623, in execute_sql
+    cursor.execute(sql, params)
+  File "/Users/h0/flutter/GTMv05/gtm_admin_panel/venv/lib/python3.10/site-packages/django/db/backends/utils.py", line 122, in execute
+    return super().execute(sql, params)
+  File "/Users/h0/flutter/GTMv05/gtm_admin_panel/venv/lib/python3.10/site-packages/django/db/backends/utils.py", line 79, in execute
+    return self._execute_with_wrappers(
+  File "/Users/h0/flutter/GTMv05/gtm_admin_panel/venv/lib/python3.10/site-packages/django/db/backends/utils.py", line 92, in _execute_with_wrappers
+    return executor(sql, params, many, context)
+  File "/Users/h0/flutter/GTMv05/gtm_admin_panel/venv/lib/python3.10/site-packages/django/db/backends/utils.py", line 100, in _execute
+    with self.db.wrap_database_errors:
+  File "/Users/h0/flutter/GTMv05/gtm_admin_panel/venv/lib/python3.10/site-packages/django/db/utils.py", line 91, in __exit__
+    raise dj_exc_value.with_traceback(traceback) from exc_value
+  File "/Users/h0/flutter/GTMv05/gtm_admin_panel/venv/lib/python3.10/site-packages/django/db/backends/utils.py", line 105, in _execute
+    return self.cursor.execute(sql, params)
+django.db.utils.ProgrammingError: column artists.folder_name does not exist
+LINE 1: ...sts"."name", "artists"."bio", "artists"."avatar", "artists"....
+                                                             ^
+
+[05/Aug/2025 05:12:10] "GET /api/artists/ HTTP/1.1" 500 122616
+Internal Server Error: /api/admin/analytics/
+Traceback (most recent call last):
+  File "/Users/h0/flutter/GTMv05/gtm_admin_panel/venv/lib/python3.10/site-packages/django/db/backends/utils.py", line 105, in _execute
+    return self.cursor.execute(sql, params)
+psycopg2.errors.UndefinedTable: relation "cities" does not exist
+LINE 1: SELECT COUNT(*) AS "__count" FROM "cities"
+                                          ^
+
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/Users/h0/flutter/GTMv05/gtm_admin_panel/venv/lib/python3.10/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+  File "/Users/h0/flutter/GTMv05/gtm_admin_panel/venv/lib/python3.10/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/Users/h0/flutter/GTMv05/gtm_admin_panel/venv/lib/python3.10/site-packages/django/views/decorators/csrf.py", line 65, in _view_wrapper
+    return view_func(request, *args, **kwargs)
+  File "/Users/h0/flutter/GTMv05/gtm_admin_panel/admin_panel/views.py", line 217, in api_admin_analytics
+    'total_cities': City.objects.count(),
+  File "/Users/h0/flutter/GTMv05/gtm_admin_panel/venv/lib/python3.10/site-packages/django/db/models/manager.py", line 87, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+  File "/Users/h0/flutter/GTMv05/gtm_admin_panel/venv/lib/python3.10/site-packages/django/db/models/query.py", line 604, in count
+    return self.query.get_count(using=self.db)
+  File "/Users/h0/flutter/GTMv05/gtm_admin_panel/venv/lib/python3.10/site-packages/django/db/models/sql/query.py", line 644, in get_count
+    return obj.get_aggregation(using, {"__count": Count("*")})["__count"]
+  File "/Users/h0/flutter/GTMv05/gtm_admin_panel/venv/lib/python3.10/site-packages/django/db/models/sql/query.py", line 626, in get_aggregation
+    result = compiler.execute_sql(SINGLE)
+  File "/Users/h0/flutter/GTMv05/gtm_admin_panel/venv/lib/python3.10/site-packages/django/db/models/sql/compiler.py", line 1623, in execute_sql
+    cursor.execute(sql, params)
+  File "/Users/h0/flutter/GTMv05/gtm_admin_panel/venv/lib/python3.10/site-packages/django/db/backends/utils.py", line 122, in execute
+    return super().execute(sql, params)
+  File "/Users/h0/flutter/GTMv05/gtm_admin_panel/venv/lib/python3.10/site-packages/django/db/backends/utils.py", line 79, in execute
+    return self._execute_with_wrappers(
+  File "/Users/h0/flutter/GTMv05/gtm_admin_panel/venv/lib/python3.10/site-packages/django/db/backends/utils.py", line 92, in _execute_with_wrappers
+    return executor(sql, params, many, context)
+  File "/Users/h0/flutter/GTMv05/gtm_admin_panel/venv/lib/python3.10/site-packages/django/db/backends/utils.py", line 100, in _execute
+    with self.db.wrap_database_errors:
+  File "/Users/h0/flutter/GTMv05/gtm_admin_panel/venv/lib/python3.10/site-packages/django/db/utils.py", line 91, in __exit__
+    raise dj_exc_value.with_traceback(traceback) from exc_value
+  File "/Users/h0/flutter/GTMv05/gtm_admin_panel/venv/lib/python3.10/site-packages/django/db/backends/utils.py", line 105, in _execute
+    return self.cursor.execute(sql, params)
+django.db.utils.ProgrammingError: relation "cities" does not exist
+LINE 1: SELECT COUNT(*) AS "__count" FROM "cities"
+                                          ^
+
+Internal Server Error: /api/products/
+Traceback (most recent call last):
+  File "/Users/h0/flutter/GTMv05/gtm_admin_panel/venv/lib/python3.10/site-packages/django/db/backends/utils.py", line 105, in _execute
+    return self.cursor.execute(sql, params)
+psycopg2.errors.UndefinedColumn: column products.image does not exist
+LINE 1: ...e", "products"."description", "products"."price", "products"...
+                                                             ^
+
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/Users/h0/flutter/GTMv05/gtm_admin_panel/venv/lib/python3.10/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+  File "/Users/h0/flutter/GTMv05/gtm_admin_panel/venv/lib/python3.10/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/Users/h0/flutter/GTMv05/gtm_admin_panel/venv/lib/python3.10/site-packages/django/views/decorators/csrf.py", line 65, in _view_wrapper
+    return view_func(request, *args, **kwargs)
+  File "/Users/h0/flutter/GTMv05/gtm_admin_panel/admin_panel/views.py", line 250, in api_products
+    for product in products:
+  File "/Users/h0/flutter/GTMv05/gtm_admin_panel/venv/lib/python3.10/site-packages/django/db/models/query.py", line 384, in __iter__
+    self._fetch_all()
+  File "/Users/h0/flutter/GTMv05/gtm_admin_panel/venv/lib/python3.10/site-packages/django/db/models/query.py", line 1949, in _fetch_all
+    self._result_cache = list(self._iterable_class(self))
+  File "/Users/h0/flutter/GTMv05/gtm_admin_panel/venv/lib/python3.10/site-packages/django/db/models/query.py", line 91, in __iter__
+    results = compiler.execute_sql(
+  File "/Users/h0/flutter/GTMv05/gtm_admin_panel/venv/lib/python3.10/site-packages/django/db/models/sql/compiler.py", line 1623, in execute_sql
+    cursor.execute(sql, params)
+  File "/Users/h0/flutter/GTMv05/gtm_admin_panel/venv/lib/python3.10/site-packages/django/db/backends/utils.py", line 122, in execute
+    return super().execute(sql, params)
+  File "/Users/h0/flutter/GTMv05/gtm_admin_panel/venv/lib/python3.10/site-packages/django/db/backends/utils.py", line 79, in execute
+    return self._execute_with_wrappers(
+  File "/Users/h0/flutter/GTMv05/gtm_admin_panel/venv/lib/python3.10/site-packages/django/db/backends/utils.py", line 92, in _execute_with_wrappers
+    return executor(sql, params, many, context)
+  File "/Users/h0/flutter/GTMv05/gtm_admin_panel/venv/lib/python3.10/site-packages/django/db/backends/utils.py", line 100, in _execute
+    with self.db.wrap_database_errors:
+  File "/Users/h0/flutter/GTMv05/gtm_admin_panel/venv/lib/python3.10/site-packages/django/db/utils.py", line 91, in __exit__
+    raise dj_exc_value.with_traceback(traceback) from exc_value
+  File "/Users/h0/flutter/GTMv05/gtm_admin_panel/venv/lib/python3.10/site-packages/django/db/backends/utils.py", line 105, in _execute
+    return self.cursor.execute(sql, params)
+django.db.utils.ProgrammingError: column products.image does not exist
+LINE 1: ...e", "products"."description", "products"."price", "products"...
+                                                             ^
+
+[05/Aug/2025 05:12:10] "GET /api/admin/analytics/ HTTP/1.1" 500 126707
+[05/Aug/2025 05:12:10] "GET /api/products/ HTTP/1.1" 500 122569
+Not Found: /health
+[05/Aug/2025 05:12:13] "GET /health HTTP/1.1" 404 6209
+Not Found: /health
+[05/Aug/2025 05:12:23] "GET /health HTTP/1.1" 404 6209
+[05/Aug/2025 05:12:40] "GET /api/admin/analytics HTTP/1.1" 301 0
+[05/Aug/2025 05:12:40] "GET /api/artists HTTP/1.1" 301 0
+[05/Aug/2025 05:12:40] "GET /api/users HTTP/1.1" 301 0
+[05/Aug/2025 05:12:40] "GET /api/products HTTP/1.1" 301 0
+[05/Aug/2025 05:12:40] "GET /api/users/ HTTP/1.1" 200 391
+Internal Server Error: /api/admin/analytics/
+Traceback (most recent call last):
+  File "/Users/h0/flutter/GTMv05/gtm_admin_panel/venv/lib/python3.10/site-packages/django/db/backends/utils.py", line 105, in _execute
+    return self.cursor.execute(sql, params)
+psycopg2.errors.UndefinedTable: relation "cities" does not exist
+LINE 1: SELECT COUNT(*) AS "__count" FROM "cities"
+                                          ^
+
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/Users/h0/flutter/GTMv05/gtm_admin_panel/venv/lib/python3.10/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+  File "/Users/h0/flutter/GTMv05/gtm_admin_panel/venv/lib/python3.10/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/Users/h0/flutter/GTMv05/gtm_admin_panel/venv/lib/python3.10/site-packages/django/views/decorators/csrf.py", line 65, in _view_wrapper
+    return view_func(request, *args, **kwargs)
+  File "/Users/h0/flutter/GTMv05/gtm_admin_panel/admin_panel/views.py", line 217, in api_admin_analytics
+    'total_cities': City.objects.count(),
+  File "/Users/h0/flutter/GTMv05/gtm_admin_panel/venv/lib/python3.10/site-packages/django/db/models/manager.py", line 87, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+  File "/Users/h0/flutter/GTMv05/gtm_admin_panel/venv/lib/python3.10/site-packages/django/db/models/query.py", line 604, in count
+    return self.query.get_count(using=self.db)
+  File "/Users/h0/flutter/GTMv05/gtm_admin_panel/venv/lib/python3.10/site-packages/django/db/models/sql/query.py", line 644, in get_count
+    return obj.get_aggregation(using, {"__count": Count("*")})["__count"]
+  File "/Users/h0/flutter/GTMv05/gtm_admin_panel/venv/lib/python3.10/site-packages/django/db/models/sql/query.py", line 626, in get_aggregation
+    result = compiler.execute_sql(SINGLE)
+  File "/Users/h0/flutter/GTMv05/gtm_admin_panel/venv/lib/python3.10/site-packages/django/db/models/sql/compiler.py", line 1623, in execute_sql
+    cursor.execute(sql, params)
+  File "/Users/h0/flutter/GTMv05/gtm_admin_panel/venv/lib/python3.10/site-packages/django/db/backends/utils.py", line 122, in execute
+    return super().execute(sql, params)
+  File "/Users/h0/flutter/GTMv05/gtm_admin_panel/venv/lib/python3.10/site-packages/django/db/backends/utils.py", line 79, in execute
+    return self._execute_with_wrappers(
+  File "/Users/h0/flutter/GTMv05/gtm_admin_panel/venv/lib/python3.10/site-packages/django/db/backends/utils.py", line 92, in _execute_with_wrappers
+    return executor(sql, params, many, context)
+  File "/Users/h0/flutter/GTMv05/gtm_admin_panel/venv/lib/python3.10/site-packages/django/db/backends/utils.py", line 100, in _execute
+    with self.db.wrap_database_errors:
+  File "/Users/h0/flutter/GTMv05/gtm_admin_panel/venv/lib/python3.10/site-packages/django/db/utils.py", line 91, in __exit__
+    raise dj_exc_value.with_traceback(traceback) from exc_value
+  File "/Users/h0/flutter/GTMv05/gtm_admin_panel/venv/lib/python3.10/site-packages/django/db/backends/utils.py", line 105, in _execute
+    return self.cursor.execute(sql, params)
+django.db.utils.ProgrammingError: relation "cities" does not exist
+LINE 1: SELECT COUNT(*) AS "__count" FROM "cities"
+                                          ^
+
+[05/Aug/2025 05:12:40] "GET /api/admin/analytics/ HTTP/1.1" 500 126707
+Internal Server Error: /api/artists/
+Traceback (most recent call last):
+  File "/Users/h0/flutter/GTMv05/gtm_admin_panel/venv/lib/python3.10/site-packages/django/db/backends/utils.py", line 105, in _execute
+    return self.cursor.execute(sql, params)
+psycopg2.errors.UndefinedColumn: column artists.folder_name does not exist
+LINE 1: ...sts"."name", "artists"."bio", "artists"."avatar", "artists"....
+                                                             ^
+
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/Users/h0/flutter/GTMv05/gtm_admin_panel/venv/lib/python3.10/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+  File "/Users/h0/flutter/GTMv05/gtm_admin_panel/venv/lib/python3.10/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/Users/h0/flutter/GTMv05/gtm_admin_panel/venv/lib/python3.10/site-packages/django/views/decorators/csrf.py", line 65, in _view_wrapper
+    return view_func(request, *args, **kwargs)
+  File "/Users/h0/flutter/GTMv05/gtm_admin_panel/admin_panel/views.py", line 163, in api_artists
+    for artist in artists:
+  File "/Users/h0/flutter/GTMv05/gtm_admin_panel/venv/lib/python3.10/site-packages/django/db/models/query.py", line 384, in __iter__
+    self._fetch_all()
+  File "/Users/h0/flutter/GTMv05/gtm_admin_panel/venv/lib/python3.10/site-packages/django/db/models/query.py", line 1949, in _fetch_all
+    self._result_cache = list(self._iterable_class(self))
+  File "/Users/h0/flutter/GTMv05/gtm_admin_panel/venv/lib/python3.10/site-packages/django/db/models/query.py", line 91, in __iter__
+    results = compiler.execute_sql(
+  File "/Users/h0/flutter/GTMv05/gtm_admin_panel/venv/lib/python3.10/site-packages/django/db/models/sql/compiler.py", line 1623, in execute_sql
+    cursor.execute(sql, params)
+  File "/Users/h0/flutter/GTMv05/gtm_admin_panel/venv/lib/python3.10/site-packages/django/db/backends/utils.py", line 122, in execute
+    return super().execute(sql, params)
+  File "/Users/h0/flutter/GTMv05/gtm_admin_panel/venv/lib/python3.10/site-packages/django/db/backends/utils.py", line 79, in execute
+    return self._execute_with_wrappers(
+  File "/Users/h0/flutter/GTMv05/gtm_admin_panel/venv/lib/python3.10/site-packages/django/db/backends/utils.py", line 92, in _execute_with_wrappers
+    return executor(sql, params, many, context)
+  File "/Users/h0/flutter/GTMv05/gtm_admin_panel/venv/lib/python3.10/site-packages/django/db/backends/utils.py", line 100, in _execute
+    with self.db.wrap_database_errors:
+  File "/Users/h0/flutter/GTMv05/gtm_admin_panel/venv/lib/python3.10/site-packages/django/db/utils.py", line 91, in __exit__
+    raise dj_exc_value.with_traceback(traceback) from exc_value
+  File "/Users/h0/flutter/GTMv05/gtm_admin_panel/venv/lib/python3.10/site-packages/django/db/backends/utils.py", line 105, in _execute
+    return self.cursor.execute(sql, params)
+django.db.utils.ProgrammingError: column artists.folder_name does not exist
+LINE 1: ...sts"."name", "artists"."bio", "artists"."avatar", "artists"....
+                                                             ^
+
+Internal Server Error: /api/products/
+Traceback (most recent call last):
+  File "/Users/h0/flutter/GTMv05/gtm_admin_panel/venv/lib/python3.10/site-packages/django/db/backends/utils.py", line 105, in _execute
+    return self.cursor.execute(sql, params)
+psycopg2.errors.UndefinedColumn: column products.image does not exist
+LINE 1: ...e", "products"."description", "products"."price", "products"...
+                                                             ^
+
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/Users/h0/flutter/GTMv05/gtm_admin_panel/venv/lib/python3.10/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+  File "/Users/h0/flutter/GTMv05/gtm_admin_panel/venv/lib/python3.10/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/Users/h0/flutter/GTMv05/gtm_admin_panel/venv/lib/python3.10/site-packages/django/views/decorators/csrf.py", line 65, in _view_wrapper
+    return view_func(request, *args, **kwargs)
+  File "/Users/h0/flutter/GTMv05/gtm_admin_panel/admin_panel/views.py", line 250, in api_products
+    for product in products:
+  File "/Users/h0/flutter/GTMv05/gtm_admin_panel/venv/lib/python3.10/site-packages/django/db/models/query.py", line 384, in __iter__
+    self._fetch_all()
+  File "/Users/h0/flutter/GTMv05/gtm_admin_panel/venv/lib/python3.10/site-packages/django/db/models/query.py", line 1949, in _fetch_all
+    self._result_cache = list(self._iterable_class(self))
+  File "/Users/h0/flutter/GTMv05/gtm_admin_panel/venv/lib/python3.10/site-packages/django/db/models/query.py", line 91, in __iter__
+    results = compiler.execute_sql(
+  File "/Users/h0/flutter/GTMv05/gtm_admin_panel/venv/lib/python3.10/site-packages/django/db/models/sql/compiler.py", line 1623, in execute_sql
+    cursor.execute(sql, params)
+  File "/Users/h0/flutter/GTMv05/gtm_admin_panel/venv/lib/python3.10/site-packages/django/db/backends/utils.py", line 122, in execute
+    return super().execute(sql, params)
+  File "/Users/h0/flutter/GTMv05/gtm_admin_panel/venv/lib/python3.10/site-packages/django/db/backends/utils.py", line 79, in execute
+    return self._execute_with_wrappers(
+  File "/Users/h0/flutter/GTMv05/gtm_admin_panel/venv/lib/python3.10/site-packages/django/db/backends/utils.py", line 92, in _execute_with_wrappers
+    return executor(sql, params, many, context)
+  File "/Users/h0/flutter/GTMv05/gtm_admin_panel/venv/lib/python3.10/site-packages/django/db/backends/utils.py", line 100, in _execute
+    with self.db.wrap_database_errors:
+  File "/Users/h0/flutter/GTMv05/gtm_admin_panel/venv/lib/python3.10/site-packages/django/db/utils.py", line 91, in __exit__
+    raise dj_exc_value.with_traceback(traceback) from exc_value
+  File "/Users/h0/flutter/GTMv05/gtm_admin_panel/venv/lib/python3.10/site-packages/django/db/backends/utils.py", line 105, in _execute
+    return self.cursor.execute(sql, params)
+django.db.utils.ProgrammingError: column products.image does not exist
+LINE 1: ...e", "products"."description", "products"."price", "products"...
+                                                             ^
+
+[05/Aug/2025 05:12:40] "GET /api/artists/ HTTP/1.1" 500 122616
+[05/Aug/2025 05:12:40] "GET /api/products/ HTTP/1.1" 500 122569
+Not Found: /health
+[05/Aug/2025 05:12:43] "GET /health HTTP/1.1" 404 6209
+Not Found: /health
+[05/Aug/2025 05:12:53] "GET /health HTTP/1.1" 404 6209
+[05/Aug/2025 05:13:10] "GET /api/products HTTP/1.1" 301 0
+[05/Aug/2025 05:13:10] "GET /api/users HTTP/1.1" 301 0
+[05/Aug/2025 05:13:10] "GET /api/admin/analytics HTTP/1.1" 301 0
+[05/Aug/2025 05:13:10] "GET /api/artists HTTP/1.1" 301 0
+[05/Aug/2025 05:13:10] "GET /api/users/ HTTP/1.1" 200 391
+Internal Server Error: /api/admin/analytics/
+Traceback (most recent call last):
+  File "/Users/h0/flutter/GTMv05/gtm_admin_panel/venv/lib/python3.10/site-packages/django/db/backends/utils.py", line 105, in _execute
+    return self.cursor.execute(sql, params)
+psycopg2.errors.UndefinedTable: relation "cities" does not exist
+LINE 1: SELECT COUNT(*) AS "__count" FROM "cities"
+                                          ^
+
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/Users/h0/flutter/GTMv05/gtm_admin_panel/venv/lib/python3.10/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+  File "/Users/h0/flutter/GTMv05/gtm_admin_panel/venv/lib/python3.10/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/Users/h0/flutter/GTMv05/gtm_admin_panel/venv/lib/python3.10/site-packages/django/views/decorators/csrf.py", line 65, in _view_wrapper
+    return view_func(request, *args, **kwargs)
+  File "/Users/h0/flutter/GTMv05/gtm_admin_panel/admin_panel/views.py", line 217, in api_admin_analytics
+    'total_cities': City.objects.count(),
+  File "/Users/h0/flutter/GTMv05/gtm_admin_panel/venv/lib/python3.10/site-packages/django/db/models/manager.py", line 87, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+  File "/Users/h0/flutter/GTMv05/gtm_admin_panel/venv/lib/python3.10/site-packages/django/db/models/query.py", line 604, in count
+    return self.query.get_count(using=self.db)
+  File "/Users/h0/flutter/GTMv05/gtm_admin_panel/venv/lib/python3.10/site-packages/django/db/models/sql/query.py", line 644, in get_count
+    return obj.get_aggregation(using, {"__count": Count("*")})["__count"]
+  File "/Users/h0/flutter/GTMv05/gtm_admin_panel/venv/lib/python3.10/site-packages/django/db/models/sql/query.py", line 626, in get_aggregation
+    result = compiler.execute_sql(SINGLE)
+  File "/Users/h0/flutter/GTMv05/gtm_admin_panel/venv/lib/python3.10/site-packages/django/db/models/sql/compiler.py", line 1623, in execute_sql
+    cursor.execute(sql, params)
+  File "/Users/h0/flutter/GTMv05/gtm_admin_panel/venv/lib/python3.10/site-packages/django/db/backends/utils.py", line 122, in execute
+    return super().execute(sql, params)
+  File "/Users/h0/flutter/GTMv05/gtm_admin_panel/venv/lib/python3.10/site-packages/django/db/backends/utils.py", line 79, in execute
+    return self._execute_with_wrappers(
+  File "/Users/h0/flutter/GTMv05/gtm_admin_panel/venv/lib/python3.10/site-packages/django/db/backends/utils.py", line 92, in _execute_with_wrappers
+    return executor(sql, params, many, context)
+  File "/Users/h0/flutter/GTMv05/gtm_admin_panel/venv/lib/python3.10/site-packages/django/db/backends/utils.py", line 100, in _execute
+    with self.db.wrap_database_errors:
+  File "/Users/h0/flutter/GTMv05/gtm_admin_panel/venv/lib/python3.10/site-packages/django/db/utils.py", line 91, in __exit__
+    raise dj_exc_value.with_traceback(traceback) from exc_value
+  File "/Users/h0/flutter/GTMv05/gtm_admin_panel/venv/lib/python3.10/site-packages/django/db/backends/utils.py", line 105, in _execute
+    return self.cursor.execute(sql, params)
+django.db.utils.ProgrammingError: relation "cities" does not exist
+LINE 1: SELECT COUNT(*) AS "__count" FROM "cities"
+                                          ^
+
+[05/Aug/2025 05:13:10] "GET /api/admin/analytics/ HTTP/1.1" 500 126707
+Internal Server Error: /api/products/
+Traceback (most recent call last):
+  File "/Users/h0/flutter/GTMv05/gtm_admin_panel/venv/lib/python3.10/site-packages/django/db/backends/utils.py", line 105, in _execute
+    return self.cursor.execute(sql, params)
+psycopg2.errors.UndefinedColumn: column products.image does not exist
+LINE 1: ...e", "products"."description", "products"."price", "products"...
+                                                             ^
+
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/Users/h0/flutter/GTMv05/gtm_admin_panel/venv/lib/python3.10/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+  File "/Users/h0/flutter/GTMv05/gtm_admin_panel/venv/lib/python3.10/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/Users/h0/flutter/GTMv05/gtm_admin_panel/venv/lib/python3.10/site-packages/django/views/decorators/csrf.py", line 65, in _view_wrapper
+    return view_func(request, *args, **kwargs)
+  File "/Users/h0/flutter/GTMv05/gtm_admin_panel/admin_panel/views.py", line 250, in api_products
+    for product in products:
+  File "/Users/h0/flutter/GTMv05/gtm_admin_panel/venv/lib/python3.10/site-packages/django/db/models/query.py", line 384, in __iter__
+    self._fetch_all()
+  File "/Users/h0/flutter/GTMv05/gtm_admin_panel/venv/lib/python3.10/site-packages/django/db/models/query.py", line 1949, in _fetch_all
+    self._result_cache = list(self._iterable_class(self))
+  File "/Users/h0/flutter/GTMv05/gtm_admin_panel/venv/lib/python3.10/site-packages/django/db/models/query.py", line 91, in __iter__
+    results = compiler.execute_sql(
+  File "/Users/h0/flutter/GTMv05/gtm_admin_panel/venv/lib/python3.10/site-packages/django/db/models/sql/compiler.py", line 1623, in execute_sql
+    cursor.execute(sql, params)
+  File "/Users/h0/flutter/GTMv05/gtm_admin_panel/venv/lib/python3.10/site-packages/django/db/backends/utils.py", line 122, in execute
+    return super().execute(sql, params)
+  File "/Users/h0/flutter/GTMv05/gtm_admin_panel/venv/lib/python3.10/site-packages/django/db/backends/utils.py", line 79, in execute
+    return self._execute_with_wrappers(
+  File "/Users/h0/flutter/GTMv05/gtm_admin_panel/venv/lib/python3.10/site-packages/django/db/backends/utils.py", line 92, in _execute_with_wrappers
+    return executor(sql, params, many, context)
+  File "/Users/h0/flutter/GTMv05/gtm_admin_panel/venv/lib/python3.10/site-packages/django/db/backends/utils.py", line 100, in _execute
+    with self.db.wrap_database_errors:
+  File "/Users/h0/flutter/GTMv05/gtm_admin_panel/venv/lib/python3.10/site-packages/django/db/utils.py", line 91, in __exit__
+    raise dj_exc_value.with_traceback(traceback) from exc_value
+  File "/Users/h0/flutter/GTMv05/gtm_admin_panel/venv/lib/python3.10/site-packages/django/db/backends/utils.py", line 105, in _execute
+    return self.cursor.execute(sql, params)
+django.db.utils.ProgrammingError: column products.image does not exist
+LINE 1: ...e", "products"."description", "products"."price", "products"...
+                                                             ^
+
+Internal Server Error: /api/artists/
+Traceback (most recent call last):
+  File "/Users/h0/flutter/GTMv05/gtm_admin_panel/venv/lib/python3.10/site-packages/django/db/backends/utils.py", line 105, in _execute
+    return self.cursor.execute(sql, params)
+psycopg2.errors.UndefinedColumn: column artists.folder_name does not exist
+LINE 1: ...sts"."name", "artists"."bio", "artists"."avatar", "artists"....
+                                                             ^
+
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/Users/h0/flutter/GTMv05/gtm_admin_panel/venv/lib/python3.10/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+  File "/Users/h0/flutter/GTMv05/gtm_admin_panel/venv/lib/python3.10/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/Users/h0/flutter/GTMv05/gtm_admin_panel/venv/lib/python3.10/site-packages/django/views/decorators/csrf.py", line 65, in _view_wrapper
+    return view_func(request, *args, **kwargs)
+  File "/Users/h0/flutter/GTMv05/gtm_admin_panel/admin_panel/views.py", line 163, in api_artists
+    for artist in artists:
+  File "/Users/h0/flutter/GTMv05/gtm_admin_panel/venv/lib/python3.10/site-packages/django/db/models/query.py", line 384, in __iter__
+    self._fetch_all()
+  File "/Users/h0/flutter/GTMv05/gtm_admin_panel/venv/lib/python3.10/site-packages/django/db/models/query.py", line 1949, in _fetch_all
+    self._result_cache = list(self._iterable_class(self))
+  File "/Users/h0/flutter/GTMv05/gtm_admin_panel/venv/lib/python3.10/site-packages/django/db/models/query.py", line 91, in __iter__
+    results = compiler.execute_sql(
+  File "/Users/h0/flutter/GTMv05/gtm_admin_panel/venv/lib/python3.10/site-packages/django/db/models/sql/compiler.py", line 1623, in execute_sql
+    cursor.execute(sql, params)
+  File "/Users/h0/flutter/GTMv05/gtm_admin_panel/venv/lib/python3.10/site-packages/django/db/backends/utils.py", line 122, in execute
+    return super().execute(sql, params)
+  File "/Users/h0/flutter/GTMv05/gtm_admin_panel/venv/lib/python3.10/site-packages/django/db/backends/utils.py", line 79, in execute
+    return self._execute_with_wrappers(
+  File "/Users/h0/flutter/GTMv05/gtm_admin_panel/venv/lib/python3.10/site-packages/django/db/backends/utils.py", line 92, in _execute_with_wrappers
+    return executor(sql, params, many, context)
+  File "/Users/h0/flutter/GTMv05/gtm_admin_panel/venv/lib/python3.10/site-packages/django/db/backends/utils.py", line 100, in _execute
+    with self.db.wrap_database_errors:
+  File "/Users/h0/flutter/GTMv05/gtm_admin_panel/venv/lib/python3.10/site-packages/django/db/utils.py", line 91, in __exit__
+    raise dj_exc_value.with_traceback(traceback) from exc_value
+  File "/Users/h0/flutter/GTMv05/gtm_admin_panel/venv/lib/python3.10/site-packages/django/db/backends/utils.py", line 105, in _execute
+    return self.cursor.execute(sql, params)
+django.db.utils.ProgrammingError: column artists.folder_name does not exist
+LINE 1: ...sts"."name", "artists"."bio", "artists"."avatar", "artists"....
+                                                             ^
+
+[05/Aug/2025 05:13:10] "GET /api/products/ HTTP/1.1" 500 122569
+[05/Aug/2025 05:13:10] "GET /api/artists/ HTTP/1.1" 500 122616
+Not Found: /health
+[05/Aug/2025 05:13:13] "GET /health HTTP/1.1" 404 6209
+Not Found: /health
+[05/Aug/2025 05:13:23] "GET /health HTTP/1.1" 404 6209
+[05/Aug/2025 05:13:40] "GET /api/artists HTTP/1.1" 301 0
+[05/Aug/2025 05:13:40] "GET /api/products HTTP/1.1" 301 0
+[05/Aug/2025 05:13:40] "GET /api/users HTTP/1.1" 301 0
+[05/Aug/2025 05:13:40] "GET /api/admin/analytics HTTP/1.1" 301 0
+[05/Aug/2025 05:13:40] "GET /api/users/ HTTP/1.1" 200 391
+Internal Server Error: /api/admin/analytics/
+Traceback (most recent call last):
+  File "/Users/h0/flutter/GTMv05/gtm_admin_panel/venv/lib/python3.10/site-packages/django/db/backends/utils.py", line 105, in _execute
+    return self.cursor.execute(sql, params)
+psycopg2.errors.UndefinedTable: relation "cities" does not exist
+LINE 1: SELECT COUNT(*) AS "__count" FROM "cities"
+                                          ^
+
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/Users/h0/flutter/GTMv05/gtm_admin_panel/venv/lib/python3.10/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+  File "/Users/h0/flutter/GTMv05/gtm_admin_panel/venv/lib/python3.10/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/Users/h0/flutter/GTMv05/gtm_admin_panel/venv/lib/python3.10/site-packages/django/views/decorators/csrf.py", line 65, in _view_wrapper
+    return view_func(request, *args, **kwargs)
+  File "/Users/h0/flutter/GTMv05/gtm_admin_panel/admin_panel/views.py", line 217, in api_admin_analytics
+    'total_cities': City.objects.count(),
+  File "/Users/h0/flutter/GTMv05/gtm_admin_panel/venv/lib/python3.10/site-packages/django/db/models/manager.py", line 87, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+  File "/Users/h0/flutter/GTMv05/gtm_admin_panel/venv/lib/python3.10/site-packages/django/db/models/query.py", line 604, in count
+    return self.query.get_count(using=self.db)
+  File "/Users/h0/flutter/GTMv05/gtm_admin_panel/venv/lib/python3.10/site-packages/django/db/models/sql/query.py", line 644, in get_count
+    return obj.get_aggregation(using, {"__count": Count("*")})["__count"]
+  File "/Users/h0/flutter/GTMv05/gtm_admin_panel/venv/lib/python3.10/site-packages/django/db/models/sql/query.py", line 626, in get_aggregation
+    result = compiler.execute_sql(SINGLE)
+  File "/Users/h0/flutter/GTMv05/gtm_admin_panel/venv/lib/python3.10/site-packages/django/db/models/sql/compiler.py", line 1623, in execute_sql
+    cursor.execute(sql, params)
+  File "/Users/h0/flutter/GTMv05/gtm_admin_panel/venv/lib/python3.10/site-packages/django/db/backends/utils.py", line 122, in execute
+    return super().execute(sql, params)
+  File "/Users/h0/flutter/GTMv05/gtm_admin_panel/venv/lib/python3.10/site-packages/django/db/backends/utils.py", line 79, in execute
+    return self._execute_with_wrappers(
+  File "/Users/h0/flutter/GTMv05/gtm_admin_panel/venv/lib/python3.10/site-packages/django/db/backends/utils.py", line 92, in _execute_with_wrappers
+    return executor(sql, params, many, context)
+  File "/Users/h0/flutter/GTMv05/gtm_admin_panel/venv/lib/python3.10/site-packages/django/db/backends/utils.py", line 100, in _execute
+    with self.db.wrap_database_errors:
+  File "/Users/h0/flutter/GTMv05/gtm_admin_panel/venv/lib/python3.10/site-packages/django/db/utils.py", line 91, in __exit__
+    raise dj_exc_value.with_traceback(traceback) from exc_value
+  File "/Users/h0/flutter/GTMv05/gtm_admin_panel/venv/lib/python3.10/site-packages/django/db/backends/utils.py", line 105, in _execute
+    return self.cursor.execute(sql, params)
+django.db.utils.ProgrammingError: relation "cities" does not exist
+LINE 1: SELECT COUNT(*) AS "__count" FROM "cities"
+                                          ^
+
+Internal Server Error: /api/products/
+Traceback (most recent call last):
+  File "/Users/h0/flutter/GTMv05/gtm_admin_panel/venv/lib/python3.10/site-packages/django/db/backends/utils.py", line 105, in _execute
+    return self.cursor.execute(sql, params)
+psycopg2.errors.UndefinedColumn: column products.image does not exist
+LINE 1: ...e", "products"."description", "products"."price", "products"...
+                                                             ^
+
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/Users/h0/flutter/GTMv05/gtm_admin_panel/venv/lib/python3.10/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+  File "/Users/h0/flutter/GTMv05/gtm_admin_panel/venv/lib/python3.10/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/Users/h0/flutter/GTMv05/gtm_admin_panel/venv/lib/python3.10/site-packages/django/views/decorators/csrf.py", line 65, in _view_wrapper
+    return view_func(request, *args, **kwargs)
+  File "/Users/h0/flutter/GTMv05/gtm_admin_panel/admin_panel/views.py", line 250, in api_products
+    for product in products:
+  File "/Users/h0/flutter/GTMv05/gtm_admin_panel/venv/lib/python3.10/site-packages/django/db/models/query.py", line 384, in __iter__
+    self._fetch_all()
+  File "/Users/h0/flutter/GTMv05/gtm_admin_panel/venv/lib/python3.10/site-packages/django/db/models/query.py", line 1949, in _fetch_all
+    self._result_cache = list(self._iterable_class(self))
+  File "/Users/h0/flutter/GTMv05/gtm_admin_panel/venv/lib/python3.10/site-packages/django/db/models/query.py", line 91, in __iter__
+    results = compiler.execute_sql(
+  File "/Users/h0/flutter/GTMv05/gtm_admin_panel/venv/lib/python3.10/site-packages/django/db/models/sql/compiler.py", line 1623, in execute_sql
+    cursor.execute(sql, params)
+  File "/Users/h0/flutter/GTMv05/gtm_admin_panel/venv/lib/python3.10/site-packages/django/db/backends/utils.py", line 122, in execute
+    return super().execute(sql, params)
+  File "/Users/h0/flutter/GTMv05/gtm_admin_panel/venv/lib/python3.10/site-packages/django/db/backends/utils.py", line 79, in execute
+    return self._execute_with_wrappers(
+  File "/Users/h0/flutter/GTMv05/gtm_admin_panel/venv/lib/python3.10/site-packages/django/db/backends/utils.py", line 92, in _execute_with_wrappers
+    return executor(sql, params, many, context)
+  File "/Users/h0/flutter/GTMv05/gtm_admin_panel/venv/lib/python3.10/site-packages/django/db/backends/utils.py", line 100, in _execute
+    with self.db.wrap_database_errors:
+  File "/Users/h0/flutter/GTMv05/gtm_admin_panel/venv/lib/python3.10/site-packages/django/db/utils.py", line 91, in __exit__
+    raise dj_exc_value.with_traceback(traceback) from exc_value
+  File "/Users/h0/flutter/GTMv05/gtm_admin_panel/venv/lib/python3.10/site-packages/django/db/backends/utils.py", line 105, in _execute
+    return self.cursor.execute(sql, params)
+django.db.utils.ProgrammingError: column products.image does not exist
+LINE 1: ...e", "products"."description", "products"."price", "products"...
+                                                             ^
+
+[05/Aug/2025 05:13:40] "GET /api/admin/analytics/ HTTP/1.1" 500 126707
+[05/Aug/2025 05:13:40] "GET /api/products/ HTTP/1.1" 500 122569
+Internal Server Error: /api/artists/
+Traceback (most recent call last):
+  File "/Users/h0/flutter/GTMv05/gtm_admin_panel/venv/lib/python3.10/site-packages/django/db/backends/utils.py", line 105, in _execute
+    return self.cursor.execute(sql, params)
+psycopg2.errors.UndefinedColumn: column artists.folder_name does not exist
+LINE 1: ...sts"."name", "artists"."bio", "artists"."avatar", "artists"....
+                                                             ^
+
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/Users/h0/flutter/GTMv05/gtm_admin_panel/venv/lib/python3.10/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+  File "/Users/h0/flutter/GTMv05/gtm_admin_panel/venv/lib/python3.10/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/Users/h0/flutter/GTMv05/gtm_admin_panel/venv/lib/python3.10/site-packages/django/views/decorators/csrf.py", line 65, in _view_wrapper
+    return view_func(request, *args, **kwargs)
+  File "/Users/h0/flutter/GTMv05/gtm_admin_panel/admin_panel/views.py", line 163, in api_artists
+    for artist in artists:
+  File "/Users/h0/flutter/GTMv05/gtm_admin_panel/venv/lib/python3.10/site-packages/django/db/models/query.py", line 384, in __iter__
+    self._fetch_all()
+  File "/Users/h0/flutter/GTMv05/gtm_admin_panel/venv/lib/python3.10/site-packages/django/db/models/query.py", line 1949, in _fetch_all
+    self._result_cache = list(self._iterable_class(self))
+  File "/Users/h0/flutter/GTMv05/gtm_admin_panel/venv/lib/python3.10/site-packages/django/db/models/query.py", line 91, in __iter__
+    results = compiler.execute_sql(
+  File "/Users/h0/flutter/GTMv05/gtm_admin_panel/venv/lib/python3.10/site-packages/django/db/models/sql/compiler.py", line 1623, in execute_sql
+    cursor.execute(sql, params)
+  File "/Users/h0/flutter/GTMv05/gtm_admin_panel/venv/lib/python3.10/site-packages/django/db/backends/utils.py", line 122, in execute
+    return super().execute(sql, params)
+  File "/Users/h0/flutter/GTMv05/gtm_admin_panel/venv/lib/python3.10/site-packages/django/db/backends/utils.py", line 79, in execute
+    return self._execute_with_wrappers(
+  File "/Users/h0/flutter/GTMv05/gtm_admin_panel/venv/lib/python3.10/site-packages/django/db/backends/utils.py", line 92, in _execute_with_wrappers
+    return executor(sql, params, many, context)
+  File "/Users/h0/flutter/GTMv05/gtm_admin_panel/venv/lib/python3.10/site-packages/django/db/backends/utils.py", line 100, in _execute
+    with self.db.wrap_database_errors:
+  File "/Users/h0/flutter/GTMv05/gtm_admin_panel/venv/lib/python3.10/site-packages/django/db/utils.py", line 91, in __exit__
+    raise dj_exc_value.with_traceback(traceback) from exc_value
+  File "/Users/h0/flutter/GTMv05/gtm_admin_panel/venv/lib/python3.10/site-packages/django/db/backends/utils.py", line 105, in _execute
+    return self.cursor.execute(sql, params)
+django.db.utils.ProgrammingError: column artists.folder_name does not exist
+LINE 1: ...sts"."name", "artists"."bio", "artists"."avatar", "artists"....
+                                                             ^
+
+[05/Aug/2025 05:13:40] "GET /api/artists/ HTTP/1.1" 500 122616
+Not Found: /health
+[05/Aug/2025 05:13:43] "GET /health HTTP/1.1" 404 6209
+Not Found: /health
+[05/Aug/2025 05:13:53] "GET /health HTTP/1.1" 404 6209
+[05/Aug/2025 05:14:10] "GET /api/products HTTP/1.1" 301 0
+[05/Aug/2025 05:14:10] "GET /api/admin/analytics HTTP/1.1" 301 0
+[05/Aug/2025 05:14:10] "GET /api/artists HTTP/1.1" 301 0
+[05/Aug/2025 05:14:10] "GET /api/users HTTP/1.1" 301 0
+[05/Aug/2025 05:14:10] "GET /api/users/ HTTP/1.1" 200 391
+Internal Server Error: /api/admin/analytics/
+Traceback (most recent call last):
+  File "/Users/h0/flutter/GTMv05/gtm_admin_panel/venv/lib/python3.10/site-packages/django/db/backends/utils.py", line 105, in _execute
+    return self.cursor.execute(sql, params)
+psycopg2.errors.UndefinedTable: relation "cities" does not exist
+LINE 1: SELECT COUNT(*) AS "__count" FROM "cities"
+                                          ^
+
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/Users/h0/flutter/GTMv05/gtm_admin_panel/venv/lib/python3.10/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+  File "/Users/h0/flutter/GTMv05/gtm_admin_panel/venv/lib/python3.10/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/Users/h0/flutter/GTMv05/gtm_admin_panel/venv/lib/python3.10/site-packages/django/views/decorators/csrf.py", line 65, in _view_wrapper
+    return view_func(request, *args, **kwargs)
+  File "/Users/h0/flutter/GTMv05/gtm_admin_panel/admin_panel/views.py", line 217, in api_admin_analytics
+    'total_cities': City.objects.count(),
+  File "/Users/h0/flutter/GTMv05/gtm_admin_panel/venv/lib/python3.10/site-packages/django/db/models/manager.py", line 87, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+  File "/Users/h0/flutter/GTMv05/gtm_admin_panel/venv/lib/python3.10/site-packages/django/db/models/query.py", line 604, in count
+    return self.query.get_count(using=self.db)
+  File "/Users/h0/flutter/GTMv05/gtm_admin_panel/venv/lib/python3.10/site-packages/django/db/models/sql/query.py", line 644, in get_count
+    return obj.get_aggregation(using, {"__count": Count("*")})["__count"]
+  File "/Users/h0/flutter/GTMv05/gtm_admin_panel/venv/lib/python3.10/site-packages/django/db/models/sql/query.py", line 626, in get_aggregation
+    result = compiler.execute_sql(SINGLE)
+  File "/Users/h0/flutter/GTMv05/gtm_admin_panel/venv/lib/python3.10/site-packages/django/db/models/sql/compiler.py", line 1623, in execute_sql
+    cursor.execute(sql, params)
+  File "/Users/h0/flutter/GTMv05/gtm_admin_panel/venv/lib/python3.10/site-packages/django/db/backends/utils.py", line 122, in execute
+    return super().execute(sql, params)
+  File "/Users/h0/flutter/GTMv05/gtm_admin_panel/venv/lib/python3.10/site-packages/django/db/backends/utils.py", line 79, in execute
+    return self._execute_with_wrappers(
+  File "/Users/h0/flutter/GTMv05/gtm_admin_panel/venv/lib/python3.10/site-packages/django/db/backends/utils.py", line 92, in _execute_with_wrappers
+    return executor(sql, params, many, context)
+  File "/Users/h0/flutter/GTMv05/gtm_admin_panel/venv/lib/python3.10/site-packages/django/db/backends/utils.py", line 100, in _execute
+    with self.db.wrap_database_errors:
+  File "/Users/h0/flutter/GTMv05/gtm_admin_panel/venv/lib/python3.10/site-packages/django/db/utils.py", line 91, in __exit__
+    raise dj_exc_value.with_traceback(traceback) from exc_value
+  File "/Users/h0/flutter/GTMv05/gtm_admin_panel/venv/lib/python3.10/site-packages/django/db/backends/utils.py", line 105, in _execute
+    return self.cursor.execute(sql, params)
+django.db.utils.ProgrammingError: relation "cities" does not exist
+LINE 1: SELECT COUNT(*) AS "__count" FROM "cities"
+                                          ^
+
+Internal Server Error: /api/artists/
+Traceback (most recent call last):
+  File "/Users/h0/flutter/GTMv05/gtm_admin_panel/venv/lib/python3.10/site-packages/django/db/backends/utils.py", line 105, in _execute
+    return self.cursor.execute(sql, params)
+psycopg2.errors.UndefinedColumn: column artists.folder_name does not exist
+LINE 1: ...sts"."name", "artists"."bio", "artists"."avatar", "artists"....
+                                                             ^
+
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/Users/h0/flutter/GTMv05/gtm_admin_panel/venv/lib/python3.10/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+  File "/Users/h0/flutter/GTMv05/gtm_admin_panel/venv/lib/python3.10/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/Users/h0/flutter/GTMv05/gtm_admin_panel/venv/lib/python3.10/site-packages/django/views/decorators/csrf.py", line 65, in _view_wrapper
+    return view_func(request, *args, **kwargs)
+  File "/Users/h0/flutter/GTMv05/gtm_admin_panel/admin_panel/views.py", line 163, in api_artists
+    for artist in artists:
+  File "/Users/h0/flutter/GTMv05/gtm_admin_panel/venv/lib/python3.10/site-packages/django/db/models/query.py", line 384, in __iter__
+    self._fetch_all()
+  File "/Users/h0/flutter/GTMv05/gtm_admin_panel/venv/lib/python3.10/site-packages/django/db/models/query.py", line 1949, in _fetch_all
+    self._result_cache = list(self._iterable_class(self))
+  File "/Users/h0/flutter/GTMv05/gtm_admin_panel/venv/lib/python3.10/site-packages/django/db/models/query.py", line 91, in __iter__
+    results = compiler.execute_sql(
+  File "/Users/h0/flutter/GTMv05/gtm_admin_panel/venv/lib/python3.10/site-packages/django/db/models/sql/compiler.py", line 1623, in execute_sql
+    cursor.execute(sql, params)
+  File "/Users/h0/flutter/GTMv05/gtm_admin_panel/venv/lib/python3.10/site-packages/django/db/backends/utils.py", line 122, in execute
+    return super().execute(sql, params)
+  File "/Users/h0/flutter/GTMv05/gtm_admin_panel/venv/lib/python3.10/site-packages/django/db/backends/utils.py", line 79, in execute
+    return self._execute_with_wrappers(
+  File "/Users/h0/flutter/GTMv05/gtm_admin_panel/venv/lib/python3.10/site-packages/django/db/backends/utils.py", line 92, in _execute_with_wrappers
+    return executor(sql, params, many, context)
+  File "/Users/h0/flutter/GTMv05/gtm_admin_panel/venv/lib/python3.10/site-packages/django/db/backends/utils.py", line 100, in _execute
+    with self.db.wrap_database_errors:
+  File "/Users/h0/flutter/GTMv05/gtm_admin_panel/venv/lib/python3.10/site-packages/django/db/utils.py", line 91, in __exit__
+    raise dj_exc_value.with_traceback(traceback) from exc_value
+  File "/Users/h0/flutter/GTMv05/gtm_admin_panel/venv/lib/python3.10/site-packages/django/db/backends/utils.py", line 105, in _execute
+    return self.cursor.execute(sql, params)
+django.db.utils.ProgrammingError: column artists.folder_name does not exist
+LINE 1: ...sts"."name", "artists"."bio", "artists"."avatar", "artists"....
+                                                             ^
+
+[05/Aug/2025 05:14:10] "GET /api/admin/analytics/ HTTP/1.1" 500 126707
+[05/Aug/2025 05:14:10] "GET /api/artists/ HTTP/1.1" 500 122616
+Internal Server Error: /api/products/
+Traceback (most recent call last):
+  File "/Users/h0/flutter/GTMv05/gtm_admin_panel/venv/lib/python3.10/site-packages/django/db/backends/utils.py", line 105, in _execute
+    return self.cursor.execute(sql, params)
+psycopg2.errors.UndefinedColumn: column products.image does not exist
+LINE 1: ...e", "products"."description", "products"."price", "products"...
+                                                             ^
+
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/Users/h0/flutter/GTMv05/gtm_admin_panel/venv/lib/python3.10/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+  File "/Users/h0/flutter/GTMv05/gtm_admin_panel/venv/lib/python3.10/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/Users/h0/flutter/GTMv05/gtm_admin_panel/venv/lib/python3.10/site-packages/django/views/decorators/csrf.py", line 65, in _view_wrapper
+    return view_func(request, *args, **kwargs)
+  File "/Users/h0/flutter/GTMv05/gtm_admin_panel/admin_panel/views.py", line 250, in api_products
+    for product in products:
+  File "/Users/h0/flutter/GTMv05/gtm_admin_panel/venv/lib/python3.10/site-packages/django/db/models/query.py", line 384, in __iter__
+    self._fetch_all()
+  File "/Users/h0/flutter/GTMv05/gtm_admin_panel/venv/lib/python3.10/site-packages/django/db/models/query.py", line 1949, in _fetch_all
+    self._result_cache = list(self._iterable_class(self))
+  File "/Users/h0/flutter/GTMv05/gtm_admin_panel/venv/lib/python3.10/site-packages/django/db/models/query.py", line 91, in __iter__
+    results = compiler.execute_sql(
+  File "/Users/h0/flutter/GTMv05/gtm_admin_panel/venv/lib/python3.10/site-packages/django/db/models/sql/compiler.py", line 1623, in execute_sql
+    cursor.execute(sql, params)
+  File "/Users/h0/flutter/GTMv05/gtm_admin_panel/venv/lib/python3.10/site-packages/django/db/backends/utils.py", line 122, in execute
+    return super().execute(sql, params)
+  File "/Users/h0/flutter/GTMv05/gtm_admin_panel/venv/lib/python3.10/site-packages/django/db/backends/utils.py", line 79, in execute
+    return self._execute_with_wrappers(
+  File "/Users/h0/flutter/GTMv05/gtm_admin_panel/venv/lib/python3.10/site-packages/django/db/backends/utils.py", line 92, in _execute_with_wrappers
+    return executor(sql, params, many, context)
+  File "/Users/h0/flutter/GTMv05/gtm_admin_panel/venv/lib/python3.10/site-packages/django/db/backends/utils.py", line 100, in _execute
+    with self.db.wrap_database_errors:
+  File "/Users/h0/flutter/GTMv05/gtm_admin_panel/venv/lib/python3.10/site-packages/django/db/utils.py", line 91, in __exit__
+    raise dj_exc_value.with_traceback(traceback) from exc_value
+  File "/Users/h0/flutter/GTMv05/gtm_admin_panel/venv/lib/python3.10/site-packages/django/db/backends/utils.py", line 105, in _execute
+    return self.cursor.execute(sql, params)
+django.db.utils.ProgrammingError: column products.image does not exist
+LINE 1: ...e", "products"."description", "products"."price", "products"...
+                                                             ^
+
+[05/Aug/2025 05:14:10] "GET /api/products/ HTTP/1.1" 500 122569
+Not Found: /health
+[05/Aug/2025 05:14:13] "GET /health HTTP/1.1" 404 6209
+Not Found: /health
+[05/Aug/2025 05:14:23] "GET /health HTTP/1.1" 404 6209
+[05/Aug/2025 05:14:40] "GET /api/admin/analytics HTTP/1.1" 301 0
+[05/Aug/2025 05:14:40] "GET /api/products HTTP/1.1" 301 0
+[05/Aug/2025 05:14:40] "GET /api/users HTTP/1.1" 301 0
+[05/Aug/2025 05:14:40] "GET /api/artists HTTP/1.1" 301 0
+[05/Aug/2025 05:14:40] "GET /api/users/ HTTP/1.1" 200 391
+Internal Server Error: /api/admin/analytics/
+Traceback (most recent call last):
+  File "/Users/h0/flutter/GTMv05/gtm_admin_panel/venv/lib/python3.10/site-packages/django/db/backends/utils.py", line 105, in _execute
+    return self.cursor.execute(sql, params)
+psycopg2.errors.UndefinedTable: relation "cities" does not exist
+LINE 1: SELECT COUNT(*) AS "__count" FROM "cities"
+                                          ^
+
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/Users/h0/flutter/GTMv05/gtm_admin_panel/venv/lib/python3.10/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+  File "/Users/h0/flutter/GTMv05/gtm_admin_panel/venv/lib/python3.10/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/Users/h0/flutter/GTMv05/gtm_admin_panel/venv/lib/python3.10/site-packages/django/views/decorators/csrf.py", line 65, in _view_wrapper
+    return view_func(request, *args, **kwargs)
+  File "/Users/h0/flutter/GTMv05/gtm_admin_panel/admin_panel/views.py", line 217, in api_admin_analytics
+    'total_cities': City.objects.count(),
+  File "/Users/h0/flutter/GTMv05/gtm_admin_panel/venv/lib/python3.10/site-packages/django/db/models/manager.py", line 87, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+  File "/Users/h0/flutter/GTMv05/gtm_admin_panel/venv/lib/python3.10/site-packages/django/db/models/query.py", line 604, in count
+    return self.query.get_count(using=self.db)
+  File "/Users/h0/flutter/GTMv05/gtm_admin_panel/venv/lib/python3.10/site-packages/django/db/models/sql/query.py", line 644, in get_count
+    return obj.get_aggregation(using, {"__count": Count("*")})["__count"]
+  File "/Users/h0/flutter/GTMv05/gtm_admin_panel/venv/lib/python3.10/site-packages/django/db/models/sql/query.py", line 626, in get_aggregation
+    result = compiler.execute_sql(SINGLE)
+  File "/Users/h0/flutter/GTMv05/gtm_admin_panel/venv/lib/python3.10/site-packages/django/db/models/sql/compiler.py", line 1623, in execute_sql
+    cursor.execute(sql, params)
+  File "/Users/h0/flutter/GTMv05/gtm_admin_panel/venv/lib/python3.10/site-packages/django/db/backends/utils.py", line 122, in execute
+    return super().execute(sql, params)
+  File "/Users/h0/flutter/GTMv05/gtm_admin_panel/venv/lib/python3.10/site-packages/django/db/backends/utils.py", line 79, in execute
+    return self._execute_with_wrappers(
+  File "/Users/h0/flutter/GTMv05/gtm_admin_panel/venv/lib/python3.10/site-packages/django/db/backends/utils.py", line 92, in _execute_with_wrappers
+    return executor(sql, params, many, context)
+  File "/Users/h0/flutter/GTMv05/gtm_admin_panel/venv/lib/python3.10/site-packages/django/db/backends/utils.py", line 100, in _execute
+    with self.db.wrap_database_errors:
+  File "/Users/h0/flutter/GTMv05/gtm_admin_panel/venv/lib/python3.10/site-packages/django/db/utils.py", line 91, in __exit__
+    raise dj_exc_value.with_traceback(traceback) from exc_value
+  File "/Users/h0/flutter/GTMv05/gtm_admin_panel/venv/lib/python3.10/site-packages/django/db/backends/utils.py", line 105, in _execute
+    return self.cursor.execute(sql, params)
+django.db.utils.ProgrammingError: relation "cities" does not exist
+LINE 1: SELECT COUNT(*) AS "__count" FROM "cities"
+                                          ^
+
+Internal Server Error: /api/artists/
+Traceback (most recent call last):
+  File "/Users/h0/flutter/GTMv05/gtm_admin_panel/venv/lib/python3.10/site-packages/django/db/backends/utils.py", line 105, in _execute
+    return self.cursor.execute(sql, params)
+psycopg2.errors.UndefinedColumn: column artists.folder_name does not exist
+LINE 1: ...sts"."name", "artists"."bio", "artists"."avatar", "artists"....
+                                                             ^
+
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/Users/h0/flutter/GTMv05/gtm_admin_panel/venv/lib/python3.10/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+  File "/Users/h0/flutter/GTMv05/gtm_admin_panel/venv/lib/python3.10/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/Users/h0/flutter/GTMv05/gtm_admin_panel/venv/lib/python3.10/site-packages/django/views/decorators/csrf.py", line 65, in _view_wrapper
+    return view_func(request, *args, **kwargs)
+  File "/Users/h0/flutter/GTMv05/gtm_admin_panel/admin_panel/views.py", line 163, in api_artists
+    for artist in artists:
+  File "/Users/h0/flutter/GTMv05/gtm_admin_panel/venv/lib/python3.10/site-packages/django/db/models/query.py", line 384, in __iter__
+    self._fetch_all()
+  File "/Users/h0/flutter/GTMv05/gtm_admin_panel/venv/lib/python3.10/site-packages/django/db/models/query.py", line 1949, in _fetch_all
+    self._result_cache = list(self._iterable_class(self))
+  File "/Users/h0/flutter/GTMv05/gtm_admin_panel/venv/lib/python3.10/site-packages/django/db/models/query.py", line 91, in __iter__
+    results = compiler.execute_sql(
+  File "/Users/h0/flutter/GTMv05/gtm_admin_panel/venv/lib/python3.10/site-packages/django/db/models/sql/compiler.py", line 1623, in execute_sql
+    cursor.execute(sql, params)
+  File "/Users/h0/flutter/GTMv05/gtm_admin_panel/venv/lib/python3.10/site-packages/django/db/backends/utils.py", line 122, in execute
+    return super().execute(sql, params)
+  File "/Users/h0/flutter/GTMv05/gtm_admin_panel/venv/lib/python3.10/site-packages/django/db/backends/utils.py", line 79, in execute
+    return self._execute_with_wrappers(
+  File "/Users/h0/flutter/GTMv05/gtm_admin_panel/venv/lib/python3.10/site-packages/django/db/backends/utils.py", line 92, in _execute_with_wrappers
+    return executor(sql, params, many, context)
+  File "/Users/h0/flutter/GTMv05/gtm_admin_panel/venv/lib/python3.10/site-packages/django/db/backends/utils.py", line 100, in _execute
+    with self.db.wrap_database_errors:
+  File "/Users/h0/flutter/GTMv05/gtm_admin_panel/venv/lib/python3.10/site-packages/django/db/utils.py", line 91, in __exit__
+    raise dj_exc_value.with_traceback(traceback) from exc_value
+  File "/Users/h0/flutter/GTMv05/gtm_admin_panel/venv/lib/python3.10/site-packages/django/db/backends/utils.py", line 105, in _execute
+    return self.cursor.execute(sql, params)
+django.db.utils.ProgrammingError: column artists.folder_name does not exist
+LINE 1: ...sts"."name", "artists"."bio", "artists"."avatar", "artists"....
+                                                             ^
+
+[05/Aug/2025 05:14:40] "GET /api/admin/analytics/ HTTP/1.1" 500 126707
+Internal Server Error: /api/products/
+Traceback (most recent call last):
+  File "/Users/h0/flutter/GTMv05/gtm_admin_panel/venv/lib/python3.10/site-packages/django/db/backends/utils.py", line 105, in _execute
+    return self.cursor.execute(sql, params)
+psycopg2.errors.UndefinedColumn: column products.image does not exist
+LINE 1: ...e", "products"."description", "products"."price", "products"...
+                                                             ^
+
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/Users/h0/flutter/GTMv05/gtm_admin_panel/venv/lib/python3.10/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+  File "/Users/h0/flutter/GTMv05/gtm_admin_panel/venv/lib/python3.10/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/Users/h0/flutter/GTMv05/gtm_admin_panel/venv/lib/python3.10/site-packages/django/views/decorators/csrf.py", line 65, in _view_wrapper
+    return view_func(request, *args, **kwargs)
+  File "/Users/h0/flutter/GTMv05/gtm_admin_panel/admin_panel/views.py", line 250, in api_products
+    for product in products:
+  File "/Users/h0/flutter/GTMv05/gtm_admin_panel/venv/lib/python3.10/site-packages/django/db/models/query.py", line 384, in __iter__
+    self._fetch_all()
+  File "/Users/h0/flutter/GTMv05/gtm_admin_panel/venv/lib/python3.10/site-packages/django/db/models/query.py", line 1949, in _fetch_all
+    self._result_cache = list(self._iterable_class(self))
+  File "/Users/h0/flutter/GTMv05/gtm_admin_panel/venv/lib/python3.10/site-packages/django/db/models/query.py", line 91, in __iter__
+    results = compiler.execute_sql(
+  File "/Users/h0/flutter/GTMv05/gtm_admin_panel/venv/lib/python3.10/site-packages/django/db/models/sql/compiler.py", line 1623, in execute_sql
+    cursor.execute(sql, params)
+  File "/Users/h0/flutter/GTMv05/gtm_admin_panel/venv/lib/python3.10/site-packages/django/db/backends/utils.py", line 122, in execute
+    return super().execute(sql, params)
+  File "/Users/h0/flutter/GTMv05/gtm_admin_panel/venv/lib/python3.10/site-packages/django/db/backends/utils.py", line 79, in execute
+    return self._execute_with_wrappers(
+  File "/Users/h0/flutter/GTMv05/gtm_admin_panel/venv/lib/python3.10/site-packages/django/db/backends/utils.py", line 92, in _execute_with_wrappers
+    return executor(sql, params, many, context)
+  File "/Users/h0/flutter/GTMv05/gtm_admin_panel/venv/lib/python3.10/site-packages/django/db/backends/utils.py", line 100, in _execute
+    with self.db.wrap_database_errors:
+  File "/Users/h0/flutter/GTMv05/gtm_admin_panel/venv/lib/python3.10/site-packages/django/db/utils.py", line 91, in __exit__
+    raise dj_exc_value.with_traceback(traceback) from exc_value
+  File "/Users/h0/flutter/GTMv05/gtm_admin_panel/venv/lib/python3.10/site-packages/django/db/backends/utils.py", line 105, in _execute
+    return self.cursor.execute(sql, params)
+django.db.utils.ProgrammingError: column products.image does not exist
+LINE 1: ...e", "products"."description", "products"."price", "products"...
+                                                             ^
+
+[05/Aug/2025 05:14:40] "GET /api/artists/ HTTP/1.1" 500 122616
+[05/Aug/2025 05:14:40] "GET /api/products/ HTTP/1.1" 500 122569
+Not Found: /health
+[05/Aug/2025 05:14:43] "GET /health HTTP/1.1" 404 6209
+Not Found: /health
+[05/Aug/2025 05:14:53] "GET /health HTTP/1.1" 404 6209
+[05/Aug/2025 05:15:10] "GET /api/products HTTP/1.1" 301 0
+[05/Aug/2025 05:15:10] "GET /api/admin/analytics HTTP/1.1" 301 0
+[05/Aug/2025 05:15:10] "GET /api/users HTTP/1.1" 301 0
+[05/Aug/2025 05:15:10] "GET /api/artists HTTP/1.1" 301 0
+[05/Aug/2025 05:15:10] "GET /api/users/ HTTP/1.1" 200 391
+Internal Server Error: /api/admin/analytics/
+Traceback (most recent call last):
+  File "/Users/h0/flutter/GTMv05/gtm_admin_panel/venv/lib/python3.10/site-packages/django/db/backends/utils.py", line 105, in _execute
+    return self.cursor.execute(sql, params)
+psycopg2.errors.UndefinedTable: relation "cities" does not exist
+LINE 1: SELECT COUNT(*) AS "__count" FROM "cities"
+                                          ^
+
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/Users/h0/flutter/GTMv05/gtm_admin_panel/venv/lib/python3.10/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+  File "/Users/h0/flutter/GTMv05/gtm_admin_panel/venv/lib/python3.10/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/Users/h0/flutter/GTMv05/gtm_admin_panel/venv/lib/python3.10/site-packages/django/views/decorators/csrf.py", line 65, in _view_wrapper
+    return view_func(request, *args, **kwargs)
+  File "/Users/h0/flutter/GTMv05/gtm_admin_panel/admin_panel/views.py", line 217, in api_admin_analytics
+    'total_cities': City.objects.count(),
+  File "/Users/h0/flutter/GTMv05/gtm_admin_panel/venv/lib/python3.10/site-packages/django/db/models/manager.py", line 87, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+  File "/Users/h0/flutter/GTMv05/gtm_admin_panel/venv/lib/python3.10/site-packages/django/db/models/query.py", line 604, in count
+    return self.query.get_count(using=self.db)
+  File "/Users/h0/flutter/GTMv05/gtm_admin_panel/venv/lib/python3.10/site-packages/django/db/models/sql/query.py", line 644, in get_count
+    return obj.get_aggregation(using, {"__count": Count("*")})["__count"]
+  File "/Users/h0/flutter/GTMv05/gtm_admin_panel/venv/lib/python3.10/site-packages/django/db/models/sql/query.py", line 626, in get_aggregation
+    result = compiler.execute_sql(SINGLE)
+  File "/Users/h0/flutter/GTMv05/gtm_admin_panel/venv/lib/python3.10/site-packages/django/db/models/sql/compiler.py", line 1623, in execute_sql
+    cursor.execute(sql, params)
+  File "/Users/h0/flutter/GTMv05/gtm_admin_panel/venv/lib/python3.10/site-packages/django/db/backends/utils.py", line 122, in execute
+    return super().execute(sql, params)
+  File "/Users/h0/flutter/GTMv05/gtm_admin_panel/venv/lib/python3.10/site-packages/django/db/backends/utils.py", line 79, in execute
+    return self._execute_with_wrappers(
+  File "/Users/h0/flutter/GTMv05/gtm_admin_panel/venv/lib/python3.10/site-packages/django/db/backends/utils.py", line 92, in _execute_with_wrappers
+    return executor(sql, params, many, context)
+  File "/Users/h0/flutter/GTMv05/gtm_admin_panel/venv/lib/python3.10/site-packages/django/db/backends/utils.py", line 100, in _execute
+    with self.db.wrap_database_errors:
+  File "/Users/h0/flutter/GTMv05/gtm_admin_panel/venv/lib/python3.10/site-packages/django/db/utils.py", line 91, in __exit__
+    raise dj_exc_value.with_traceback(traceback) from exc_value
+  File "/Users/h0/flutter/GTMv05/gtm_admin_panel/venv/lib/python3.10/site-packages/django/db/backends/utils.py", line 105, in _execute
+    return self.cursor.execute(sql, params)
+django.db.utils.ProgrammingError: relation "cities" does not exist
+LINE 1: SELECT COUNT(*) AS "__count" FROM "cities"
+                                          ^
+
+[05/Aug/2025 05:15:10] "GET /api/admin/analytics/ HTTP/1.1" 500 126707
+Internal Server Error: /api/artists/
+Traceback (most recent call last):
+  File "/Users/h0/flutter/GTMv05/gtm_admin_panel/venv/lib/python3.10/site-packages/django/db/backends/utils.py", line 105, in _execute
+    return self.cursor.execute(sql, params)
+psycopg2.errors.UndefinedColumn: column artists.folder_name does not exist
+LINE 1: ...sts"."name", "artists"."bio", "artists"."avatar", "artists"....
+                                                             ^
+
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/Users/h0/flutter/GTMv05/gtm_admin_panel/venv/lib/python3.10/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+  File "/Users/h0/flutter/GTMv05/gtm_admin_panel/venv/lib/python3.10/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/Users/h0/flutter/GTMv05/gtm_admin_panel/venv/lib/python3.10/site-packages/django/views/decorators/csrf.py", line 65, in _view_wrapper
+    return view_func(request, *args, **kwargs)
+  File "/Users/h0/flutter/GTMv05/gtm_admin_panel/admin_panel/views.py", line 163, in api_artists
+    for artist in artists:
+  File "/Users/h0/flutter/GTMv05/gtm_admin_panel/venv/lib/python3.10/site-packages/django/db/models/query.py", line 384, in __iter__
+    self._fetch_all()
+  File "/Users/h0/flutter/GTMv05/gtm_admin_panel/venv/lib/python3.10/site-packages/django/db/models/query.py", line 1949, in _fetch_all
+    self._result_cache = list(self._iterable_class(self))
+  File "/Users/h0/flutter/GTMv05/gtm_admin_panel/venv/lib/python3.10/site-packages/django/db/models/query.py", line 91, in __iter__
+    results = compiler.execute_sql(
+  File "/Users/h0/flutter/GTMv05/gtm_admin_panel/venv/lib/python3.10/site-packages/django/db/models/sql/compiler.py", line 1623, in execute_sql
+    cursor.execute(sql, params)
+  File "/Users/h0/flutter/GTMv05/gtm_admin_panel/venv/lib/python3.10/site-packages/django/db/backends/utils.py", line 122, in execute
+    return super().execute(sql, params)
+  File "/Users/h0/flutter/GTMv05/gtm_admin_panel/venv/lib/python3.10/site-packages/django/db/backends/utils.py", line 79, in execute
+    return self._execute_with_wrappers(
+  File "/Users/h0/flutter/GTMv05/gtm_admin_panel/venv/lib/python3.10/site-packages/django/db/backends/utils.py", line 92, in _execute_with_wrappers
+    return executor(sql, params, many, context)
+  File "/Users/h0/flutter/GTMv05/gtm_admin_panel/venv/lib/python3.10/site-packages/django/db/backends/utils.py", line 100, in _execute
+    with self.db.wrap_database_errors:
+  File "/Users/h0/flutter/GTMv05/gtm_admin_panel/venv/lib/python3.10/site-packages/django/db/utils.py", line 91, in __exit__
+    raise dj_exc_value.with_traceback(traceback) from exc_value
+  File "/Users/h0/flutter/GTMv05/gtm_admin_panel/venv/lib/python3.10/site-packages/django/db/backends/utils.py", line 105, in _execute
+    return self.cursor.execute(sql, params)
+django.db.utils.ProgrammingError: column artists.folder_name does not exist
+LINE 1: ...sts"."name", "artists"."bio", "artists"."avatar", "artists"....
+                                                             ^
+
+[05/Aug/2025 05:15:10] "GET /api/artists/ HTTP/1.1" 500 122616
+Internal Server Error: /api/products/
+Traceback (most recent call last):
+  File "/Users/h0/flutter/GTMv05/gtm_admin_panel/venv/lib/python3.10/site-packages/django/db/backends/utils.py", line 105, in _execute
+    return self.cursor.execute(sql, params)
+psycopg2.errors.UndefinedColumn: column products.image does not exist
+LINE 1: ...e", "products"."description", "products"."price", "products"...
+                                                             ^
+
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/Users/h0/flutter/GTMv05/gtm_admin_panel/venv/lib/python3.10/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+  File "/Users/h0/flutter/GTMv05/gtm_admin_panel/venv/lib/python3.10/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/Users/h0/flutter/GTMv05/gtm_admin_panel/venv/lib/python3.10/site-packages/django/views/decorators/csrf.py", line 65, in _view_wrapper
+    return view_func(request, *args, **kwargs)
+  File "/Users/h0/flutter/GTMv05/gtm_admin_panel/admin_panel/views.py", line 250, in api_products
+    for product in products:
+  File "/Users/h0/flutter/GTMv05/gtm_admin_panel/venv/lib/python3.10/site-packages/django/db/models/query.py", line 384, in __iter__
+    self._fetch_all()
+  File "/Users/h0/flutter/GTMv05/gtm_admin_panel/venv/lib/python3.10/site-packages/django/db/models/query.py", line 1949, in _fetch_all
+    self._result_cache = list(self._iterable_class(self))
+  File "/Users/h0/flutter/GTMv05/gtm_admin_panel/venv/lib/python3.10/site-packages/django/db/models/query.py", line 91, in __iter__
+    results = compiler.execute_sql(
+  File "/Users/h0/flutter/GTMv05/gtm_admin_panel/venv/lib/python3.10/site-packages/django/db/models/sql/compiler.py", line 1623, in execute_sql
+    cursor.execute(sql, params)
+  File "/Users/h0/flutter/GTMv05/gtm_admin_panel/venv/lib/python3.10/site-packages/django/db/backends/utils.py", line 122, in execute
+    return super().execute(sql, params)
+  File "/Users/h0/flutter/GTMv05/gtm_admin_panel/venv/lib/python3.10/site-packages/django/db/backends/utils.py", line 79, in execute
+    return self._execute_with_wrappers(
+  File "/Users/h0/flutter/GTMv05/gtm_admin_panel/venv/lib/python3.10/site-packages/django/db/backends/utils.py", line 92, in _execute_with_wrappers
+    return executor(sql, params, many, context)
+  File "/Users/h0/flutter/GTMv05/gtm_admin_panel/venv/lib/python3.10/site-packages/django/db/backends/utils.py", line 100, in _execute
+    with self.db.wrap_database_errors:
+  File "/Users/h0/flutter/GTMv05/gtm_admin_panel/venv/lib/python3.10/site-packages/django/db/utils.py", line 91, in __exit__
+    raise dj_exc_value.with_traceback(traceback) from exc_value
+  File "/Users/h0/flutter/GTMv05/gtm_admin_panel/venv/lib/python3.10/site-packages/django/db/backends/utils.py", line 105, in _execute
+    return self.cursor.execute(sql, params)
+django.db.utils.ProgrammingError: column products.image does not exist
+LINE 1: ...e", "products"."description", "products"."price", "products"...
+                                                             ^
+
+[05/Aug/2025 05:15:10] "GET /api/products/ HTTP/1.1" 500 122569
+Not Found: /health
+[05/Aug/2025 05:15:13] "GET /health HTTP/1.1" 404 6209
+Not Found: /health
+[05/Aug/2025 05:15:24] "GET /health HTTP/1.1" 404 6209
+[05/Aug/2025 05:15:40] "GET /api/artists HTTP/1.1" 301 0
+[05/Aug/2025 05:15:40] "GET /api/products HTTP/1.1" 301 0
+[05/Aug/2025 05:15:40] "GET /api/users HTTP/1.1" 301 0
+[05/Aug/2025 05:15:40] "GET /api/admin/analytics HTTP/1.1" 301 0
+[05/Aug/2025 05:15:40] "GET /api/users/ HTTP/1.1" 200 391
+Internal Server Error: /api/admin/analytics/
+Traceback (most recent call last):
+  File "/Users/h0/flutter/GTMv05/gtm_admin_panel/venv/lib/python3.10/site-packages/django/db/backends/utils.py", line 105, in _execute
+    return self.cursor.execute(sql, params)
+psycopg2.errors.UndefinedTable: relation "cities" does not exist
+LINE 1: SELECT COUNT(*) AS "__count" FROM "cities"
+                                          ^
+
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/Users/h0/flutter/GTMv05/gtm_admin_panel/venv/lib/python3.10/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+  File "/Users/h0/flutter/GTMv05/gtm_admin_panel/venv/lib/python3.10/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/Users/h0/flutter/GTMv05/gtm_admin_panel/venv/lib/python3.10/site-packages/django/views/decorators/csrf.py", line 65, in _view_wrapper
+    return view_func(request, *args, **kwargs)
+  File "/Users/h0/flutter/GTMv05/gtm_admin_panel/admin_panel/views.py", line 217, in api_admin_analytics
+    'total_cities': City.objects.count(),
+  File "/Users/h0/flutter/GTMv05/gtm_admin_panel/venv/lib/python3.10/site-packages/django/db/models/manager.py", line 87, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+  File "/Users/h0/flutter/GTMv05/gtm_admin_panel/venv/lib/python3.10/site-packages/django/db/models/query.py", line 604, in count
+    return self.query.get_count(using=self.db)
+  File "/Users/h0/flutter/GTMv05/gtm_admin_panel/venv/lib/python3.10/site-packages/django/db/models/sql/query.py", line 644, in get_count
+    return obj.get_aggregation(using, {"__count": Count("*")})["__count"]
+  File "/Users/h0/flutter/GTMv05/gtm_admin_panel/venv/lib/python3.10/site-packages/django/db/models/sql/query.py", line 626, in get_aggregation
+    result = compiler.execute_sql(SINGLE)
+  File "/Users/h0/flutter/GTMv05/gtm_admin_panel/venv/lib/python3.10/site-packages/django/db/models/sql/compiler.py", line 1623, in execute_sql
+    cursor.execute(sql, params)
+  File "/Users/h0/flutter/GTMv05/gtm_admin_panel/venv/lib/python3.10/site-packages/django/db/backends/utils.py", line 122, in execute
+    return super().execute(sql, params)
+  File "/Users/h0/flutter/GTMv05/gtm_admin_panel/venv/lib/python3.10/site-packages/django/db/backends/utils.py", line 79, in execute
+    return self._execute_with_wrappers(
+  File "/Users/h0/flutter/GTMv05/gtm_admin_panel/venv/lib/python3.10/site-packages/django/db/backends/utils.py", line 92, in _execute_with_wrappers
+    return executor(sql, params, many, context)
+  File "/Users/h0/flutter/GTMv05/gtm_admin_panel/venv/lib/python3.10/site-packages/django/db/backends/utils.py", line 100, in _execute
+    with self.db.wrap_database_errors:
+  File "/Users/h0/flutter/GTMv05/gtm_admin_panel/venv/lib/python3.10/site-packages/django/db/utils.py", line 91, in __exit__
+    raise dj_exc_value.with_traceback(traceback) from exc_value
+  File "/Users/h0/flutter/GTMv05/gtm_admin_panel/venv/lib/python3.10/site-packages/django/db/backends/utils.py", line 105, in _execute
+    return self.cursor.execute(sql, params)
+django.db.utils.ProgrammingError: relation "cities" does not exist
+LINE 1: SELECT COUNT(*) AS "__count" FROM "cities"
+                                          ^
+
+Internal Server Error: /api/artists/
+Traceback (most recent call last):
+  File "/Users/h0/flutter/GTMv05/gtm_admin_panel/venv/lib/python3.10/site-packages/django/db/backends/utils.py", line 105, in _execute
+    return self.cursor.execute(sql, params)
+psycopg2.errors.UndefinedColumn: column artists.folder_name does not exist
+LINE 1: ...sts"."name", "artists"."bio", "artists"."avatar", "artists"....
+                                                             ^
+
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/Users/h0/flutter/GTMv05/gtm_admin_panel/venv/lib/python3.10/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+  File "/Users/h0/flutter/GTMv05/gtm_admin_panel/venv/lib/python3.10/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/Users/h0/flutter/GTMv05/gtm_admin_panel/venv/lib/python3.10/site-packages/django/views/decorators/csrf.py", line 65, in _view_wrapper
+    return view_func(request, *args, **kwargs)
+  File "/Users/h0/flutter/GTMv05/gtm_admin_panel/admin_panel/views.py", line 163, in api_artists
+    for artist in artists:
+  File "/Users/h0/flutter/GTMv05/gtm_admin_panel/venv/lib/python3.10/site-packages/django/db/models/query.py", line 384, in __iter__
+    self._fetch_all()
+  File "/Users/h0/flutter/GTMv05/gtm_admin_panel/venv/lib/python3.10/site-packages/django/db/models/query.py", line 1949, in _fetch_all
+    self._result_cache = list(self._iterable_class(self))
+  File "/Users/h0/flutter/GTMv05/gtm_admin_panel/venv/lib/python3.10/site-packages/django/db/models/query.py", line 91, in __iter__
+    results = compiler.execute_sql(
+  File "/Users/h0/flutter/GTMv05/gtm_admin_panel/venv/lib/python3.10/site-packages/django/db/models/sql/compiler.py", line 1623, in execute_sql
+    cursor.execute(sql, params)
+  File "/Users/h0/flutter/GTMv05/gtm_admin_panel/venv/lib/python3.10/site-packages/django/db/backends/utils.py", line 122, in execute
+    return super().execute(sql, params)
+  File "/Users/h0/flutter/GTMv05/gtm_admin_panel/venv/lib/python3.10/site-packages/django/db/backends/utils.py", line 79, in execute
+    return self._execute_with_wrappers(
+  File "/Users/h0/flutter/GTMv05/gtm_admin_panel/venv/lib/python3.10/site-packages/django/db/backends/utils.py", line 92, in _execute_with_wrappers
+    return executor(sql, params, many, context)
+  File "/Users/h0/flutter/GTMv05/gtm_admin_panel/venv/lib/python3.10/site-packages/django/db/backends/utils.py", line 100, in _execute
+    with self.db.wrap_database_errors:
+  File "/Users/h0/flutter/GTMv05/gtm_admin_panel/venv/lib/python3.10/site-packages/django/db/utils.py", line 91, in __exit__
+    raise dj_exc_value.with_traceback(traceback) from exc_value
+  File "/Users/h0/flutter/GTMv05/gtm_admin_panel/venv/lib/python3.10/site-packages/django/db/backends/utils.py", line 105, in _execute
+    return self.cursor.execute(sql, params)
+django.db.utils.ProgrammingError: column artists.folder_name does not exist
+LINE 1: ...sts"."name", "artists"."bio", "artists"."avatar", "artists"....
+                                                             ^
+
+[05/Aug/2025 05:15:40] "GET /api/admin/analytics/ HTTP/1.1" 500 126707
+[05/Aug/2025 05:15:40] "GET /api/artists/ HTTP/1.1" 500 122616
+Internal Server Error: /api/products/
+Traceback (most recent call last):
+  File "/Users/h0/flutter/GTMv05/gtm_admin_panel/venv/lib/python3.10/site-packages/django/db/backends/utils.py", line 105, in _execute
+    return self.cursor.execute(sql, params)
+psycopg2.errors.UndefinedColumn: column products.image does not exist
+LINE 1: ...e", "products"."description", "products"."price", "products"...
+                                                             ^
+
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/Users/h0/flutter/GTMv05/gtm_admin_panel/venv/lib/python3.10/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+  File "/Users/h0/flutter/GTMv05/gtm_admin_panel/venv/lib/python3.10/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/Users/h0/flutter/GTMv05/gtm_admin_panel/venv/lib/python3.10/site-packages/django/views/decorators/csrf.py", line 65, in _view_wrapper
+    return view_func(request, *args, **kwargs)
+  File "/Users/h0/flutter/GTMv05/gtm_admin_panel/admin_panel/views.py", line 250, in api_products
+    for product in products:
+  File "/Users/h0/flutter/GTMv05/gtm_admin_panel/venv/lib/python3.10/site-packages/django/db/models/query.py", line 384, in __iter__
+    self._fetch_all()
+  File "/Users/h0/flutter/GTMv05/gtm_admin_panel/venv/lib/python3.10/site-packages/django/db/models/query.py", line 1949, in _fetch_all
+    self._result_cache = list(self._iterable_class(self))
+  File "/Users/h0/flutter/GTMv05/gtm_admin_panel/venv/lib/python3.10/site-packages/django/db/models/query.py", line 91, in __iter__
+    results = compiler.execute_sql(
+  File "/Users/h0/flutter/GTMv05/gtm_admin_panel/venv/lib/python3.10/site-packages/django/db/models/sql/compiler.py", line 1623, in execute_sql
+    cursor.execute(sql, params)
+  File "/Users/h0/flutter/GTMv05/gtm_admin_panel/venv/lib/python3.10/site-packages/django/db/backends/utils.py", line 122, in execute
+    return super().execute(sql, params)
+  File "/Users/h0/flutter/GTMv05/gtm_admin_panel/venv/lib/python3.10/site-packages/django/db/backends/utils.py", line 79, in execute
+    return self._execute_with_wrappers(
+  File "/Users/h0/flutter/GTMv05/gtm_admin_panel/venv/lib/python3.10/site-packages/django/db/backends/utils.py", line 92, in _execute_with_wrappers
+    return executor(sql, params, many, context)
+  File "/Users/h0/flutter/GTMv05/gtm_admin_panel/venv/lib/python3.10/site-packages/django/db/backends/utils.py", line 100, in _execute
+    with self.db.wrap_database_errors:
+  File "/Users/h0/flutter/GTMv05/gtm_admin_panel/venv/lib/python3.10/site-packages/django/db/utils.py", line 91, in __exit__
+    raise dj_exc_value.with_traceback(traceback) from exc_value
+  File "/Users/h0/flutter/GTMv05/gtm_admin_panel/venv/lib/python3.10/site-packages/django/db/backends/utils.py", line 105, in _execute
+    return self.cursor.execute(sql, params)
+django.db.utils.ProgrammingError: column products.image does not exist
+LINE 1: ...e", "products"."description", "products"."price", "products"...
+                                                             ^
+
+[05/Aug/2025 05:15:40] "GET /api/products/ HTTP/1.1" 500 122569
+Not Found: /health
+[05/Aug/2025 05:15:43] "GET /health HTTP/1.1" 404 6209
+[05/Aug/2025 05:15:47] "GET / HTTP/1.1" 200 9134
+[05/Aug/2025 05:15:48] "GET / HTTP/1.1" 200 9134
+[05/Aug/2025 05:15:48] "GET /api/system-status/ HTTP/1.1" 200 259
+[05/Aug/2025 05:15:51] "GET / HTTP/1.1" 200 9134
+[05/Aug/2025 05:15:51] "GET /system-status/ HTTP/1.1" 200 8243
+[05/Aug/2025 05:15:51] "GET / HTTP/1.1" 200 9134
+[05/Aug/2025 05:15:51] "GET /api/system-status/ HTTP/1.1" 200 259
+Not Found: /health
+[05/Aug/2025 05:15:54] "GET /health HTTP/1.1" 404 6209
+[05/Aug/2025 05:16:10] "GET /api/users HTTP/1.1" 301 0
+[05/Aug/2025 05:16:10] "GET /api/products HTTP/1.1" 301 0
+[05/Aug/2025 05:16:10] "GET /api/artists HTTP/1.1" 301 0
+[05/Aug/2025 05:16:10] "GET /file-manager/ HTTP/1.1" 200 7513
+[05/Aug/2025 05:16:10] "GET /api/admin/analytics HTTP/1.1" 301 0
+[05/Aug/2025 05:16:11] "GET /api/users/ HTTP/1.1" 200 391
+Internal Server Error: /api/admin/analytics/
+Traceback (most recent call last):
+  File "/Users/h0/flutter/GTMv05/gtm_admin_panel/venv/lib/python3.10/site-packages/django/db/backends/utils.py", line 105, in _execute
+    return self.cursor.execute(sql, params)
+psycopg2.errors.UndefinedTable: relation "cities" does not exist
+LINE 1: SELECT COUNT(*) AS "__count" FROM "cities"
+                                          ^
+
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/Users/h0/flutter/GTMv05/gtm_admin_panel/venv/lib/python3.10/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+  File "/Users/h0/flutter/GTMv05/gtm_admin_panel/venv/lib/python3.10/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/Users/h0/flutter/GTMv05/gtm_admin_panel/venv/lib/python3.10/site-packages/django/views/decorators/csrf.py", line 65, in _view_wrapper
+    return view_func(request, *args, **kwargs)
+  File "/Users/h0/flutter/GTMv05/gtm_admin_panel/admin_panel/views.py", line 217, in api_admin_analytics
+    'total_cities': City.objects.count(),
+  File "/Users/h0/flutter/GTMv05/gtm_admin_panel/venv/lib/python3.10/site-packages/django/db/models/manager.py", line 87, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+  File "/Users/h0/flutter/GTMv05/gtm_admin_panel/venv/lib/python3.10/site-packages/django/db/models/query.py", line 604, in count
+    return self.query.get_count(using=self.db)
+  File "/Users/h0/flutter/GTMv05/gtm_admin_panel/venv/lib/python3.10/site-packages/django/db/models/sql/query.py", line 644, in get_count
+    return obj.get_aggregation(using, {"__count": Count("*")})["__count"]
+  File "/Users/h0/flutter/GTMv05/gtm_admin_panel/venv/lib/python3.10/site-packages/django/db/models/sql/query.py", line 626, in get_aggregation
+    result = compiler.execute_sql(SINGLE)
+  File "/Users/h0/flutter/GTMv05/gtm_admin_panel/venv/lib/python3.10/site-packages/django/db/models/sql/compiler.py", line 1623, in execute_sql
+    cursor.execute(sql, params)
+  File "/Users/h0/flutter/GTMv05/gtm_admin_panel/venv/lib/python3.10/site-packages/django/db/backends/utils.py", line 122, in execute
+    return super().execute(sql, params)
+  File "/Users/h0/flutter/GTMv05/gtm_admin_panel/venv/lib/python3.10/site-packages/django/db/backends/utils.py", line 79, in execute
+    return self._execute_with_wrappers(
+  File "/Users/h0/flutter/GTMv05/gtm_admin_panel/venv/lib/python3.10/site-packages/django/db/backends/utils.py", line 92, in _execute_with_wrappers
+    return executor(sql, params, many, context)
+  File "/Users/h0/flutter/GTMv05/gtm_admin_panel/venv/lib/python3.10/site-packages/django/db/backends/utils.py", line 100, in _execute
+    with self.db.wrap_database_errors:
+  File "/Users/h0/flutter/GTMv05/gtm_admin_panel/venv/lib/python3.10/site-packages/django/db/utils.py", line 91, in __exit__
+    raise dj_exc_value.with_traceback(traceback) from exc_value
+  File "/Users/h0/flutter/GTMv05/gtm_admin_panel/venv/lib/python3.10/site-packages/django/db/backends/utils.py", line 105, in _execute
+    return self.cursor.execute(sql, params)
+django.db.utils.ProgrammingError: relation "cities" does not exist
+LINE 1: SELECT COUNT(*) AS "__count" FROM "cities"
+                                          ^
+
+Internal Server Error: /api/artists/
+Traceback (most recent call last):
+  File "/Users/h0/flutter/GTMv05/gtm_admin_panel/venv/lib/python3.10/site-packages/django/db/backends/utils.py", line 105, in _execute
+    return self.cursor.execute(sql, params)
+psycopg2.errors.UndefinedColumn: column artists.folder_name does not exist
+LINE 1: ...sts"."name", "artists"."bio", "artists"."avatar", "artists"....
+                                                             ^
+
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/Users/h0/flutter/GTMv05/gtm_admin_panel/venv/lib/python3.10/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+  File "/Users/h0/flutter/GTMv05/gtm_admin_panel/venv/lib/python3.10/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/Users/h0/flutter/GTMv05/gtm_admin_panel/venv/lib/python3.10/site-packages/django/views/decorators/csrf.py", line 65, in _view_wrapper
+    return view_func(request, *args, **kwargs)
+  File "/Users/h0/flutter/GTMv05/gtm_admin_panel/admin_panel/views.py", line 163, in api_artists
+    for artist in artists:
+  File "/Users/h0/flutter/GTMv05/gtm_admin_panel/venv/lib/python3.10/site-packages/django/db/models/query.py", line 384, in __iter__
+    self._fetch_all()
+  File "/Users/h0/flutter/GTMv05/gtm_admin_panel/venv/lib/python3.10/site-packages/django/db/models/query.py", line 1949, in _fetch_all
+    self._result_cache = list(self._iterable_class(self))
+  File "/Users/h0/flutter/GTMv05/gtm_admin_panel/venv/lib/python3.10/site-packages/django/db/models/query.py", line 91, in __iter__
+    results = compiler.execute_sql(
+  File "/Users/h0/flutter/GTMv05/gtm_admin_panel/venv/lib/python3.10/site-packages/django/db/models/sql/compiler.py", line 1623, in execute_sql
+    cursor.execute(sql, params)
+  File "/Users/h0/flutter/GTMv05/gtm_admin_panel/venv/lib/python3.10/site-packages/django/db/backends/utils.py", line 122, in execute
+    return super().execute(sql, params)
+  File "/Users/h0/flutter/GTMv05/gtm_admin_panel/venv/lib/python3.10/site-packages/django/db/backends/utils.py", line 79, in execute
+    return self._execute_with_wrappers(
+  File "/Users/h0/flutter/GTMv05/gtm_admin_panel/venv/lib/python3.10/site-packages/django/db/backends/utils.py", line 92, in _execute_with_wrappers
+    return executor(sql, params, many, context)
+  File "/Users/h0/flutter/GTMv05/gtm_admin_panel/venv/lib/python3.10/site-packages/django/db/backends/utils.py", line 100, in _execute
+    with self.db.wrap_database_errors:
+  File "/Users/h0/flutter/GTMv05/gtm_admin_panel/venv/lib/python3.10/site-packages/django/db/utils.py", line 91, in __exit__
+    raise dj_exc_value.with_traceback(traceback) from exc_value
+  File "/Users/h0/flutter/GTMv05/gtm_admin_panel/venv/lib/python3.10/site-packages/django/db/backends/utils.py", line 105, in _execute
+    return self.cursor.execute(sql, params)
+django.db.utils.ProgrammingError: column artists.folder_name does not exist
+LINE 1: ...sts"."name", "artists"."bio", "artists"."avatar", "artists"....
+                                                             ^
+
+[05/Aug/2025 05:16:11] "GET /api/admin/analytics/ HTTP/1.1" 500 126707
+[05/Aug/2025 05:16:11] "GET /api/artists/ HTTP/1.1" 500 122616
+Internal Server Error: /api/products/
+Traceback (most recent call last):
+  File "/Users/h0/flutter/GTMv05/gtm_admin_panel/venv/lib/python3.10/site-packages/django/db/backends/utils.py", line 105, in _execute
+    return self.cursor.execute(sql, params)
+psycopg2.errors.UndefinedColumn: column products.image does not exist
+LINE 1: ...e", "products"."description", "products"."price", "products"...
+                                                             ^
+
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/Users/h0/flutter/GTMv05/gtm_admin_panel/venv/lib/python3.10/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+  File "/Users/h0/flutter/GTMv05/gtm_admin_panel/venv/lib/python3.10/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/Users/h0/flutter/GTMv05/gtm_admin_panel/venv/lib/python3.10/site-packages/django/views/decorators/csrf.py", line 65, in _view_wrapper
+    return view_func(request, *args, **kwargs)
+  File "/Users/h0/flutter/GTMv05/gtm_admin_panel/admin_panel/views.py", line 250, in api_products
+    for product in products:
+  File "/Users/h0/flutter/GTMv05/gtm_admin_panel/venv/lib/python3.10/site-packages/django/db/models/query.py", line 384, in __iter__
+    self._fetch_all()
+  File "/Users/h0/flutter/GTMv05/gtm_admin_panel/venv/lib/python3.10/site-packages/django/db/models/query.py", line 1949, in _fetch_all
+    self._result_cache = list(self._iterable_class(self))
+  File "/Users/h0/flutter/GTMv05/gtm_admin_panel/venv/lib/python3.10/site-packages/django/db/models/query.py", line 91, in __iter__
+    results = compiler.execute_sql(
+  File "/Users/h0/flutter/GTMv05/gtm_admin_panel/venv/lib/python3.10/site-packages/django/db/models/sql/compiler.py", line 1623, in execute_sql
+    cursor.execute(sql, params)
+  File "/Users/h0/flutter/GTMv05/gtm_admin_panel/venv/lib/python3.10/site-packages/django/db/backends/utils.py", line 122, in execute
+    return super().execute(sql, params)
+  File "/Users/h0/flutter/GTMv05/gtm_admin_panel/venv/lib/python3.10/site-packages/django/db/backends/utils.py", line 79, in execute
+    return self._execute_with_wrappers(
+  File "/Users/h0/flutter/GTMv05/gtm_admin_panel/venv/lib/python3.10/site-packages/django/db/backends/utils.py", line 92, in _execute_with_wrappers
+    return executor(sql, params, many, context)
+  File "/Users/h0/flutter/GTMv05/gtm_admin_panel/venv/lib/python3.10/site-packages/django/db/backends/utils.py", line 100, in _execute
+    with self.db.wrap_database_errors:
+  File "/Users/h0/flutter/GTMv05/gtm_admin_panel/venv/lib/python3.10/site-packages/django/db/utils.py", line 91, in __exit__
+    raise dj_exc_value.with_traceback(traceback) from exc_value
+  File "/Users/h0/flutter/GTMv05/gtm_admin_panel/venv/lib/python3.10/site-packages/django/db/backends/utils.py", line 105, in _execute
+    return self.cursor.execute(sql, params)
+django.db.utils.ProgrammingError: column products.image does not exist
+LINE 1: ...e", "products"."description", "products"."price", "products"...
+                                                             ^
+
+[05/Aug/2025 05:16:11] "GET /api/products/ HTTP/1.1" 500 122569
+[05/Aug/2025 05:16:11] "GET / HTTP/1.1" 200 9134
+[05/Aug/2025 05:16:11] "GET /api/system-status/ HTTP/1.1" 200 259
+Not Found: /health
+[05/Aug/2025 05:16:14] "GET /health HTTP/1.1" 404 6209

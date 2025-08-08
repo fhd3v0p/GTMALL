@@ -1,0 +1,19 @@
+# GTM Bot Supabase Configuration
+# Конфигурация для проекта rxmtovqxjsvogyywyrha
+# Скопируйте этот файл в .env
+
+# Telegram Bot Configuration
+TELEGRAM_BOT_TOKEN=7533650686:AAEU4_nJZHGfzOv9XL4m_fDVt0q3dMDPQX8
+TELEGRAM_FOLDER_LINK=https://t.me/addlist/qRX5VmLZF7E3M2U9
+WEBAPP_URL=https://gtm.baby
+
+# Supabase Configuration
+SUPABASE_URL=https://rxmtovqxjsvogyywyrha.supabase.co
+SUPABASE_ANON_KEY=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6InJ4bXRvdnF4anN2b2d5eXd5cmhhIiwicm9sZSI6ImFub24iLCJpYXQiOjE3NTQ1Mjg1NTAsImV4cCI6MjA3MDEwNDU1MH0.gDkJybktFoi486hbIVwppDfmVQlAR0fM4o4Sl1-AxhE
+SUPABASE_SERVICE_ROLE_KEY=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6InJ4bXRvdnF4anN2b2d5eXd5cmhhIiwicm9sZSI6InNlcnZpY2Vfcm9sZSIsImlhdCI6MTc1NDUyODU1MCwiZXhwIjoyMDcwMTA0NTUwfQ.BshdguBUaGJhB-LGpKmGAHEfmFTHw-iC6PYDmagJiR4
+
+# Supabase Storage Configuration
+SUPABASE_STORAGE_BUCKET=gtm-assets
+
+# Logging Configuration
+LOG_LEVEL=INFO 

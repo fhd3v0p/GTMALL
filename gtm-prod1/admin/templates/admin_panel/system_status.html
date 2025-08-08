@@ -1,0 +1,148 @@
+{% extends 'admin_panel/base.html' %}
+
+{% block title %}Статус системы - GTM Admin Panel{% endblock %}
+
+{% block content %}
+<h2>📊 Статус системы</h2>
+
+<div class="grid">
+    <div class="status-card">
+        <h3>MinIO Admin</h3>
+        <p id="minio-admin-status" class="{% if system_status.minio_admin %}status-online{% else %}status-offline{% endif %}">
+            {% if system_status.minio_admin %}✅ Онлайн{% else %}❌ Офлайн{% endif %}
+        </p>
+    </div>
+
+    <div class="status-card">
+        <h3>MinIO API</h3>
+        <p id="minio-api-status" class="{% if system_status.minio_api %}status-online{% else %}status-offline{% endif %}">
+            {% if system_status.minio_api %}✅ Онлайн{% else %}❌ Офлайн{% endif %}
+        </p>
+    </div>
+
+    <div class="status-card">
+        <h3>GTM API</h3>
+        <p id="gtm-api-status" class="{% if system_status.gtm_api %}status-online{% else %}status-offline{% endif %}">
+            {% if system_status.gtm_api %}✅ Онлайн{% else %}❌ Офлайн{% endif %}
+        </p>
+    </div>
+
+    <div class="status-card">
+        <h3>PostgreSQL</h3>
+        <p id="postgresql-status" class="{% if system_status.postgresql %}status-online{% else %}status-offline{% endif %}">
+            {% if system_status.postgresql %}✅ Онлайн{% else %}❌ Офлайн{% endif %}
+        </p>
+    </div>
+
+    <div class="status-card">
+        <h3>Redis</h3>
+        <p id="redis-status" class="{% if system_status.redis %}status-online{% else %}status-offline{% endif %}">
+            {% if system_status.redis %}✅ Онлайн{% else %}❌ Офлайн{% endif %}
+        </p>
+    </div>
+
+    <div class="status-card">
+        <h3>Web Server</h3>
+        <p id="web-server-status" class="{% if system_status.web_server %}status-online{% else %}status-offline{% endif %}">
+            {% if system_status.web_server %}✅ Онлайн{% else %}❌ Офлайн{% endif %}
+        </p>
+    </div>
+</div>
+
+<div class="status-card">
+    <h3>🔄 Автообновление</h3>
+    <p>Статус системы обновляется автоматически каждые 30 секунд</p>
+    <p>Последнее обновление: <span id="last-update">Сейчас</span></p>
+</div>
+
+<script>
+function updateLastUpdate() {
+    const now = new Date();
+    document.getElementById('last-update').textContent = now.toLocaleTimeString('ru-RU');
+}
+
+async function refreshSystemStatus() {
+    try {
+        const response = await fetch('/api/system-status/');
+        const data = await response.json();
+        
+        if (data.success) {
+            const services = data.data;
+            
+            // Обновляем статус MinIO Admin
+            const minioAdminStatus = document.getElementById('minio-admin-status');
+            if (services.minio_admin) {
+                minioAdminStatus.textContent = '✅ Онлайн';
+                minioAdminStatus.className = 'status-online';
+            } else {
+                minioAdminStatus.textContent = '❌ Офлайн';
+                minioAdminStatus.className = 'status-offline';
+            }
+            
+            // Обновляем статус MinIO API
+            const minioApiStatus = document.getElementById('minio-api-status');
+            if (services.minio_api) {
+                minioApiStatus.textContent = '✅ Онлайн';
+                minioApiStatus.className = 'status-online';
+            } else {
+                minioApiStatus.textContent = '❌ Офлайн';
+                minioApiStatus.className = 'status-offline';
+            }
+            
+            // Обновляем статус GTM API
+            const gtmApiStatus = document.getElementById('gtm-api-status');
+            if (services.gtm_api) {
+                gtmApiStatus.textContent = '✅ Онлайн';
+                gtmApiStatus.className = 'status-online';
+            } else {
+                gtmApiStatus.textContent = '❌ Офлайн';
+                gtmApiStatus.className = 'status-offline';
+            }
+            
+            // Обновляем статус PostgreSQL
+            const postgresqlStatus = document.getElementById('postgresql-status');
+            if (services.postgresql) {
+                postgresqlStatus.textContent = '✅ Онлайн';
+                postgresqlStatus.className = 'status-online';
+            } else {
+                postgresqlStatus.textContent = '❌ Офлайн';
+                postgresqlStatus.className = 'status-offline';
+            }
+            
+            // Обновляем статус Redis
+            const redisStatus = document.getElementById('redis-status');
+            if (services.redis) {
+                redisStatus.textContent = '✅ Онлайн';
+                redisStatus.className = 'status-online';
+            } else {
+                redisStatus.textContent = '❌ Офлайн';
+                redisStatus.className = 'status-offline';
+            }
+            
+            // Обновляем статус Web Server
+            const webServerStatus = document.getElementById('web-server-status');
+            if (services.web_server) {
+                webServerStatus.textContent = '✅ Онлайн';
+                webServerStatus.className = 'status-online';
+            } else {
+                webServerStatus.textContent = '❌ Офлайн';
+                webServerStatus.className = 'status-offline';
+            }
+        }
+    } catch (error) {
+        console.error('Ошибка при обновлении статуса:', error);
+    }
+}
+
+// Обновляем статус каждые 30 секунд
+setInterval(refreshSystemStatus, 30000);
+
+// Обновляем время последнего обновления
+setInterval(updateLastUpdate, 30000);
+
+document.addEventListener('DOMContentLoaded', function() {
+    updateLastUpdate();
+    refreshSystemStatus();
+});
+</script>
+{% endblock %} 

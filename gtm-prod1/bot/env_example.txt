@@ -1,0 +1,18 @@
+# GTM Bot Supabase Configuration
+# Скопируйте этот файл в .env и заполните своими данными
+
+# Telegram Bot Configuration
+TELEGRAM_BOT_TOKEN=7533650686:AAEU4_nJZHGfzOv9XL4m_fDVt0q3dMDPQX8
+TELEGRAM_FOLDER_LINK=https://t.me/addlist/qRX5VmLZF7E3M2U9
+WEBAPP_URL=https://gtm.baby
+
+# Supabase Configuration
+SUPABASE_URL=https://your-project.supabase.co
+SUPABASE_ANON_KEY=your-anon-key-here
+SUPABASE_SERVICE_ROLE_KEY=your-service-role-key-here
+
+# Supabase Storage Configuration
+SUPABASE_STORAGE_BUCKET=gtm-assets
+
+# Logging Configuration
+LOG_LEVEL=INFO 

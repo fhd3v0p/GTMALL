@@ -1,0 +1,507 @@
+{% extends 'admin_panel/base.html' %}
+
+{% block title %}🎨 Управление артистами{% endblock %}
+
+{% block content %}
+<div class="container-fluid">
+    <div class="row">
+        <div class="col-12">
+            <div class="card">
+                <div class="card-header">
+                    <h3 class="card-title">🎨 Управление артистами</h3>
+                    <div class="card-tools">
+                        <button type="button" class="btn btn-primary" onclick="openAddArtistModal()">
+                            <i class="fas fa-plus"></i> Добавить артиста
+                        </button>
+                    </div>
+                </div>
+                <div class="card-body">
+                    <div class="row" id="artists-container">
+                        {% for artist in artists %}
+                        <div class="col-md-4 col-lg-3 mb-4" id="artist-card-{{ artist.id }}">
+                            <div class="card artist-card">
+                                <div class="card-body text-center">
+                                    {% if artist.avatar_url %}
+                                    <img src="{{ artist.avatar_url }}" 
+                                         class="rounded-circle mb-3" 
+                                         style="width: 80px; height: 80px; object-fit: cover;">
+                                    {% else %}
+                                    <div class="rounded-circle bg-secondary d-inline-flex align-items-center justify-content-center mb-3" 
+                                         style="width: 80px; height: 80px;">
+                                        <i class="fas fa-user text-white" style="font-size: 2rem;"></i>
+                                    </div>
+                                    {% endif %}
+                                    <h5 class="card-title">{{ artist.name }}</h5>
+                                    <p class="card-text text-muted">{{ artist.bio|truncatechars:100 }}</p>
+                                    
+                                    <!-- Категории -->
+                                    {% if artist.categories %}
+                                    <div class="mb-2">
+                                        <small class="text-muted">
+                                            Категории: {{ artist.categories|join:", " }}
+                                        </small>
+                                    </div>
+                                    {% endif %}
+                                    
+                                    <!-- Города -->
+                                    {% if artist.cities %}
+                                    <div class="mb-2">
+                                        <small class="text-muted">
+                                            Города: {{ artist.cities|join:", " }}
+                                        </small>
+                                    </div>
+                                    {% endif %}
+                                    
+                                    <div class="btn-group">
+                                        <button class="btn btn-sm btn-outline-primary" onclick="editArtist({{ artist.id }})">
+                                            <i class="fas fa-edit"></i> Редактировать
+                                        </button>
+                                        <button class="btn btn-sm btn-outline-danger" onclick="deleteArtist({{ artist.id }})">
+                                            <i class="fas fa-trash"></i> Удалить
+                                        </button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        {% empty %}
+                        <div class="col-12">
+                            <div class="text-center py-5">
+                                <i class="fas fa-users fa-3x text-muted mb-3"></i>
+                                <h4 class="text-muted">Артисты не найдены</h4>
+                                <p class="text-muted">Добавьте первого артиста для начала работы</p>
+                            </div>
+                        </div>
+                        {% endfor %}
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Modal для добавления артиста -->
+<div class="modal fade" id="addArtistModal" tabindex="-1">
+    <div class="modal-dialog modal-lg">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title">🎨 Добавить нового артиста</h5>
+                <button type="button" class="close" data-dismiss="modal">
+                    <span>&times;</span>
+                </button>
+            </div>
+            <div class="modal-body">
+                <form id="addArtistForm">
+                    <div class="row">
+                        <div class="col-md-6">
+                            <div class="form-group">
+                                <label>Имя артиста *</label>
+                                <input type="text" class="form-control" name="name" required>
+                            </div>
+                            <div class="form-group">
+                                <label>Биография</label>
+                                <textarea class="form-control" name="bio" rows="4" placeholder="EMILY - CEO и идейный вдохновитель сервиса GOTAM'S TOP MODEL..."></textarea>
+                            </div>
+                            <div class="form-group">
+                                <label>Категории</label>
+                                <div id="categories-container">
+                                    <!-- Категории будут загружены через JavaScript -->
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label>Города</label>
+                                <div id="cities-container">
+                                    <!-- Города будут загружены через JavaScript -->
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <div class="form-group">
+                                <label>Telegram</label>
+                                <input type="text" class="form-control" name="telegram" placeholder="@username">
+                            </div>
+                            <div class="form-group">
+                                <label>Telegram URL</label>
+                                <input type="url" class="form-control" name="telegram_url" placeholder="https://t.me/username">
+                            </div>
+                            <div class="form-group">
+                                <label>Instagram (Мета запрещена в РФ)</label>
+                                <input type="text" class="form-control" name="instagram" placeholder="@username">
+                            </div>
+                            <div class="form-group">
+                                <label>TikTok</label>
+                                <input type="text" class="form-control" name="tiktok" placeholder="@username">
+                            </div>
+                            <div class="form-group">
+                                <label>TikTok URL</label>
+                                <input type="url" class="form-control" name="tiktok_url" placeholder="https://tiktok.com/@username">
+                            </div>
+                            <div class="form-group">
+                                <label>Pinterest</label>
+                                <input type="text" class="form-control" name="pinterest" placeholder="username">
+                            </div>
+                            <div class="form-group">
+                                <label>Pinterest URL</label>
+                                <input type="url" class="form-control" name="pinterest_url" placeholder="https://pinterest.com/username">
+                            </div>
+                            <div class="form-group">
+                                <label>Booking URL</label>
+                                <input type="url" class="form-control" name="booking_url" placeholder="https://t.me/username">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-12">
+                            <div class="form-group">
+                                <label>Аватар</label>
+                                <input type="file" class="form-control-file" name="avatar" accept="image/*">
+                            </div>
+                            <div class="form-group">
+                                <label>Галерея работ (до 10 фото)</label>
+                                <input type="file" class="form-control-file" name="gallery" accept="image/*" multiple>
+                            </div>
+                        </div>
+                    </div>
+                </form>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-dismiss="modal">Отмена</button>
+                <button type="button" class="btn btn-primary" onclick="saveArtist()">Сохранить</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Modal для редактирования артиста -->
+<div class="modal fade" id="editArtistModal" tabindex="-1">
+    <div class="modal-dialog modal-lg">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title">✏️ Редактировать артиста</h5>
+                <button type="button" class="close" data-dismiss="modal">
+                    <span>&times;</span>
+                </button>
+            </div>
+            <div class="modal-body">
+                <form id="editArtistForm">
+                    <input type="hidden" name="artist_id" id="edit_artist_id">
+                    <div class="row">
+                        <div class="col-md-6">
+                            <div class="form-group">
+                                <label>Имя артиста *</label>
+                                <input type="text" class="form-control" name="name" id="edit_name" required>
+                            </div>
+                            <div class="form-group">
+                                <label>Биография</label>
+                                <textarea class="form-control" name="bio" id="edit_bio" rows="4"></textarea>
+                            </div>
+                            <div class="form-group">
+                                <label>Категории</label>
+                                <div id="edit_categories_container">
+                                    <!-- Категории будут загружены через JavaScript -->
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label>Города</label>
+                                <div id="edit_cities_container">
+                                    <!-- Города будут загружены через JavaScript -->
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <div class="form-group">
+                                <label>Telegram</label>
+                                <input type="text" class="form-control" name="telegram" id="edit_telegram">
+                            </div>
+                            <div class="form-group">
+                                <label>Telegram URL</label>
+                                <input type="url" class="form-control" name="telegram_url" id="edit_telegram_url">
+                            </div>
+                            <div class="form-group">
+                                <label>Instagram (Мета запрещена в РФ)</label>
+                                <input type="text" class="form-control" name="instagram" id="edit_instagram">
+                            </div>
+                            <div class="form-group">
+                                <label>TikTok</label>
+                                <input type="text" class="form-control" name="tiktok" id="edit_tiktok">
+                            </div>
+                            <div class="form-group">
+                                <label>TikTok URL</label>
+                                <input type="url" class="form-control" name="tiktok_url" id="edit_tiktok_url">
+                            </div>
+                            <div class="form-group">
+                                <label>Pinterest</label>
+                                <input type="text" class="form-control" name="pinterest" id="edit_pinterest">
+                            </div>
+                            <div class="form-group">
+                                <label>Pinterest URL</label>
+                                <input type="url" class="form-control" name="pinterest_url" id="edit_pinterest_url">
+                            </div>
+                            <div class="form-group">
+                                <label>Booking URL</label>
+                                <input type="url" class="form-control" name="booking_url" id="edit_booking_url">
+                            </div>
+                        </div>
+                    </div>
+                </form>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-dismiss="modal">Отмена</button>
+                <button type="button" class="btn btn-primary" onclick="updateArtist()">Обновить</button>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}
+
+{% block scripts %}
+<script>
+let categories = [];
+let cities = [];
+
+// Загружаем категории и города при загрузке страницы
+document.addEventListener('DOMContentLoaded', function() {
+    loadCategories();
+    loadCities();
+});
+
+function loadCategories() {
+    fetch('/api/categories/')
+        .then(response => response.json())
+        .then(data => {
+            if (data.success) {
+                categories = data.data;
+                updateCategoriesContainers();
+            }
+        })
+        .catch(error => console.error('Ошибка загрузки категорий:', error));
+}
+
+function loadCities() {
+    fetch('/api/cities/')
+        .then(response => response.json())
+        .then(data => {
+            if (data.success) {
+                cities = data.data;
+                updateCitiesContainers();
+            }
+        })
+        .catch(error => console.error('Ошибка загрузки городов:', error));
+}
+
+function updateCategoriesContainers() {
+    const containers = ['categories-container', 'edit_categories_container'];
+    containers.forEach(containerId => {
+        const container = document.getElementById(containerId);
+        if (container) {
+            container.innerHTML = categories.map(cat => `
+                <div class="form-check">
+                    <input class="form-check-input" type="checkbox" name="categories" value="${cat.id}" id="cat_${cat.id}_${containerId}">
+                    <label class="form-check-label" for="cat_${cat.id}_${containerId}">
+                        ${cat.name} (${cat.type_display})
+                    </label>
+                </div>
+            `).join('');
+        }
+    });
+}
+
+function updateCitiesContainers() {
+    const containers = ['cities-container', 'edit_cities_container'];
+    containers.forEach(containerId => {
+        const container = document.getElementById(containerId);
+        if (container) {
+            container.innerHTML = cities.map(city => `
+                <div class="form-check">
+                    <input class="form-check-input" type="checkbox" name="cities" value="${city.id}" id="city_${city.id}_${containerId}">
+                    <label class="form-check-label" for="city_${city.id}_${containerId}">
+                        ${city.name}
+                    </label>
+                </div>
+            `).join('');
+        }
+    });
+}
+
+function openAddArtistModal() {
+    $('#addArtistModal').modal('show');
+}
+
+function saveArtist() {
+    const form = document.getElementById('addArtistForm');
+    const formData = new FormData(form);
+    
+    // Собираем данные формы
+    const data = {
+        name: formData.get('name'),
+        bio: formData.get('bio'),
+        categories: Array.from(form.querySelectorAll('input[name="categories"]:checked')).map(cb => parseInt(cb.value)),
+        cities: Array.from(form.querySelectorAll('input[name="cities"]:checked')).map(cb => parseInt(cb.value)),
+        telegram: formData.get('telegram'),
+        telegram_url: formData.get('telegram_url'),
+        instagram: formData.get('instagram'),
+        tiktok: formData.get('tiktok'),
+        tiktok_url: formData.get('tiktok_url'),
+        pinterest: formData.get('pinterest'),
+        pinterest_url: formData.get('pinterest_url'),
+        booking_url: formData.get('booking_url')
+    };
+    
+    fetch('/api/artists/create/', {
+        method: 'POST',
+        headers: {
+            'Content-Type': 'application/json',
+            'X-CSRFToken': getCookie('csrftoken')
+        },
+        body: JSON.stringify(data)
+    })
+    .then(response => response.json())
+    .then(data => {
+        if (data.success) {
+            alert('Артист успешно создан!');
+            $('#addArtistModal').modal('hide');
+            location.reload(); // Перезагружаем страницу для отображения нового артиста
+        } else {
+            alert('Ошибка создания артиста: ' + data.error);
+        }
+    })
+    .catch(error => {
+        console.error('Ошибка:', error);
+        alert('Ошибка создания артиста');
+    });
+}
+
+function editArtist(artistId) {
+    // Загружаем данные артиста
+    fetch(`/api/artists/`)
+        .then(response => response.json())
+        .then(data => {
+            if (data.success) {
+                const artist = data.data.find(a => a.id === artistId);
+                if (artist) {
+                    // Заполняем форму редактирования
+                    document.getElementById('edit_artist_id').value = artist.id;
+                    document.getElementById('edit_name').value = artist.name;
+                    document.getElementById('edit_bio').value = artist.bio || '';
+                    document.getElementById('edit_telegram').value = artist.telegram || '';
+                    document.getElementById('edit_telegram_url').value = artist.telegram_url || '';
+                    document.getElementById('edit_instagram').value = artist.instagram || '';
+                    document.getElementById('edit_tiktok').value = artist.tiktok || '';
+                    document.getElementById('edit_tiktok_url').value = artist.tiktok_url || '';
+                    document.getElementById('edit_pinterest').value = artist.pinterest || '';
+                    document.getElementById('edit_pinterest_url').value = artist.pinterest_url || '';
+                    document.getElementById('edit_booking_url').value = artist.booking_url || '';
+                    
+                    // Отмечаем категории и города
+                    setTimeout(() => {
+                        // Категории
+                        artist.categories.forEach(catName => {
+                            const category = categories.find(c => c.name === catName);
+                            if (category) {
+                                const checkbox = document.getElementById(`cat_${category.id}_edit_categories_container`);
+                                if (checkbox) checkbox.checked = true;
+                            }
+                        });
+                        
+                        // Города
+                        artist.cities.forEach(cityName => {
+                            const city = cities.find(c => c.name === cityName);
+                            if (city) {
+                                const checkbox = document.getElementById(`city_${city.id}_edit_cities_container`);
+                                if (checkbox) checkbox.checked = true;
+                            }
+                        });
+                    }, 100);
+                    
+                    $('#editArtistModal').modal('show');
+                }
+            }
+        })
+        .catch(error => {
+            console.error('Ошибка загрузки данных артиста:', error);
+            alert('Ошибка загрузки данных артиста');
+        });
+}
+
+function updateArtist() {
+    const form = document.getElementById('editArtistForm');
+    const artistId = document.getElementById('edit_artist_id').value;
+    
+    const data = {
+        name: document.getElementById('edit_name').value,
+        bio: document.getElementById('edit_bio').value,
+        categories: Array.from(form.querySelectorAll('input[name="categories"]:checked')).map(cb => parseInt(cb.value)),
+        cities: Array.from(form.querySelectorAll('input[name="cities"]:checked')).map(cb => parseInt(cb.value)),
+        telegram: document.getElementById('edit_telegram').value,
+        telegram_url: document.getElementById('edit_telegram_url').value,
+        instagram: document.getElementById('edit_instagram').value,
+        tiktok: document.getElementById('edit_tiktok').value,
+        tiktok_url: document.getElementById('edit_tiktok_url').value,
+        pinterest: document.getElementById('edit_pinterest').value,
+        pinterest_url: document.getElementById('edit_pinterest_url').value,
+        booking_url: document.getElementById('edit_booking_url').value
+    };
+    
+    fetch(`/api/artists/${artistId}/update/`, {
+        method: 'PUT',
+        headers: {
+            'Content-Type': 'application/json',
+            'X-CSRFToken': getCookie('csrftoken')
+        },
+        body: JSON.stringify(data)
+    })
+    .then(response => response.json())
+    .then(data => {
+        if (data.success) {
+            alert('Артист успешно обновлен!');
+            $('#editArtistModal').modal('hide');
+            location.reload();
+        } else {
+            alert('Ошибка обновления артиста: ' + data.error);
+        }
+    })
+    .catch(error => {
+        console.error('Ошибка:', error);
+        alert('Ошибка обновления артиста');
+    });
+}
+
+function deleteArtist(artistId) {
+    if (confirm('Вы уверены, что хотите удалить этого артиста?')) {
+        fetch(`/api/artists/${artistId}/delete/`, {
+            method: 'DELETE',
+            headers: {
+                'X-CSRFToken': getCookie('csrftoken')
+            }
+        })
+        .then(response => response.json())
+        .then(data => {
+            if (data.success) {
+                alert('Артист успешно удален!');
+                document.getElementById(`artist-card-${artistId}`).remove();
+            } else {
+                alert('Ошибка удаления артиста: ' + data.error);
+            }
+        })
+        .catch(error => {
+            console.error('Ошибка:', error);
+            alert('Ошибка удаления артиста');
+        });
+    }
+}
+
+function getCookie(name) {
+    let cookieValue = null;
+    if (document.cookie && document.cookie !== '') {
+        const cookies = document.cookie.split(';');
+        for (let i = 0; i < cookies.length; i++) {
+            const cookie = cookies[i].trim();
+            if (cookie.substring(0, name.length + 1) === (name + '=')) {
+                cookieValue = decodeURIComponent(cookie.substring(name.length + 1));
+                break;
+            }
+        }
+    }
+    return cookieValue;
+}
+</script>
+{% endblock %} 

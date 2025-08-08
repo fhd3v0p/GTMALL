@@ -1,0 +1,136 @@
+version: '3.8'
+
+services:
+  # PostgreSQL Database
+  postgres:
+    image: postgres:15-alpine
+    container_name: gtm_postgres
+    environment:
+      POSTGRES_DB: gtm_db
+      POSTGRES_USER: gtm_user
+      POSTGRES_PASSWORD: gtm_secure_password_2024
+    volumes:
+      - postgres_data:/var/lib/postgresql/data
+      - ./backend_new/database_schema_unified.sql:/docker-entrypoint-initdb.d/init.sql
+    ports:
+      - "127.0.0.1:5432:5432"
+    networks:
+      - gtm_network
+    restart: unless-stopped
+
+  # Redis Cache
+  redis:
+    image: redis:7-alpine
+    container_name: gtm_redis
+    command: redis-server --appendonly yes --requirepass gtm_redis_password
+    volumes:
+      - redis_data:/data
+    ports:
+      - "127.0.0.1:6379:6379"
+    networks:
+      - gtm_network
+    restart: unless-stopped
+
+  # API Server
+  api:
+    build:
+      context: ./api
+      dockerfile: Dockerfile
+    container_name: gtm_api
+    environment:
+      - DATABASE_URL=postgresql://gtm_user:gtm_secure_password_2024@postgres:5432/gtm_db
+      - REDIS_URL=redis://:gtm_redis_password@redis:6379/0
+      - DB_HOST=postgres
+      - REDIS_HOST=redis
+      - API_HOST=0.0.0.0
+      - API_PORT=3001
+      - DEBUG=False
+      - ENVIRONMENT=production
+      - TELEGRAM_BOT_TOKEN=7533650686:AAEU4_nJZHGfzOv9XL4m_fDVt0q3dMDPQX8
+    ports:
+      - "3001:3001"
+    volumes:
+      - ./api/uploads:/app/uploads
+      - ./logs:/app/logs
+    depends_on:
+      - postgres
+      - redis
+    networks:
+      - gtm_network
+    restart: unless-stopped
+
+  # Bot Service
+  bot:
+    build:
+      context: ./bot
+      dockerfile: Dockerfile
+    container_name: gtm_bot
+    environment:
+      - DATABASE_URL=postgresql://gtm_user:gtm_secure_password_2024@postgres:5432/gtm_db
+      - REDIS_URL=redis://:gtm_redis_password@redis:6379/0
+      - DB_HOST=postgres
+      - REDIS_HOST=redis
+      - TELEGRAM_BOT_TOKEN=7533650686:AAEU4_nJZHGfzOv9XL4m_fDVt0q3dMDPQX8
+      - WEBAPP_URL=https://gtm-prod.com
+    depends_on:
+      - postgres
+      - redis
+      - api
+    networks:
+      - gtm_network
+    restart: unless-stopped
+
+  # Admin Panel (Django)
+  admin:
+    build:
+      context: ./admin
+      dockerfile: Dockerfile
+    container_name: gtm_admin
+    environment:
+      - DATABASE_URL=postgresql://gtm_user:gtm_secure_password_2024@postgres:5432/gtm_db
+      - DB_HOST=postgres
+      - REDIS_HOST=redis
+      - DEBUG=False
+      - DJANGO_SECRET_KEY=your-secret-key-here-change-in-production
+      - ALLOWED_HOSTS=gtm-prod.com,31.56.39.165,localhost
+    ports:
+      - "8000:8000"
+    volumes:
+      - ./admin/static:/app/static
+      - ./admin/media:/app/media
+      - ./logs:/app/logs
+    depends_on:
+      - postgres
+      - redis
+    networks:
+      - gtm_network
+    restart: unless-stopped
+
+  # Nginx Reverse Proxy
+  nginx:
+    image: nginx:alpine
+    container_name: gtm_nginx
+    ports:
+      - "80:80"
+      - "443:443"
+    volumes:
+      - ./nginx.conf:/etc/nginx/nginx.conf:ro
+      - ./web:/usr/share/nginx/html:ro
+      - ./ssl_certs:/etc/nginx/ssl:ro
+      - ./logs/nginx:/var/log/nginx
+    depends_on:
+      - api
+      - admin
+    networks:
+      - gtm_network
+    restart: unless-stopped
+
+volumes:
+  postgres_data:
+    driver: local
+  redis_data:
+    driver: local
+
+networks:
+  gtm_network:
+    driver: bridge 

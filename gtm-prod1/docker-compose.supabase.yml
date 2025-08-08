@@ -1,0 +1,73 @@
+version: '3.8'
+
+services:
+  # Telegram Bot с Supabase
+  bot:
+    build:
+      context: ./bot
+      dockerfile: Dockerfile.supabase
+    container_name: gtm_bot_supabase
+    environment:
+      - TELEGRAM_BOT_TOKEN=${TELEGRAM_BOT_TOKEN}
+      - TELEGRAM_FOLDER_LINK=${TELEGRAM_FOLDER_LINK}
+      - WEBAPP_URL=${WEBAPP_URL}
+      - SUPABASE_URL=${SUPABASE_URL}
+      - SUPABASE_ANON_KEY=${SUPABASE_ANON_KEY}
+      - SUPABASE_SERVICE_ROLE_KEY=${SUPABASE_SERVICE_ROLE_KEY}
+      - SUPABASE_STORAGE_BUCKET=${SUPABASE_STORAGE_BUCKET}
+      - LOG_LEVEL=${LOG_LEVEL:-INFO}
+    volumes:
+      - ./bot:/app
+      - ./logs:/app/logs
+    networks:
+      - gtm_network
+    restart: unless-stopped
+    healthcheck:
+      test: ["CMD", "python", "-c", "import requests; requests.get('https://api.telegram.org/bot${TELEGRAM_BOT_TOKEN}/getMe')"]
+      interval: 30s
+      timeout: 10s
+      retries: 3
+
+  # Nginx для Flutter Web App
+  nginx:
+    image: nginx:alpine
+    container_name: gtm_nginx_supabase
+    ports:
+      - "80:80"
+      - "443:443"
+    volumes:
+      - ./nginx.supabase.conf:/etc/nginx/nginx.conf:ro
+      - ./web:/usr/share/nginx/html:ro
+      - ./ssl_certs:/etc/nginx/ssl:ro
+      - ./logs/nginx:/var/log/nginx
+    networks:
+      - gtm_network
+    restart: unless-stopped
+    depends_on:
+      - bot
+
+  # Redis для кэширования (опционально)
+  redis:
+    image: redis:7-alpine
+    container_name: gtm_redis_supabase
+    command: redis-server --appendonly yes --requirepass ${REDIS_PASSWORD:-gtm_redis_password}
+    volumes:
+      - redis_data:/data
+    ports:
+      - "127.0.0.1:6379:6379"
+    networks:
+      - gtm_network
+    restart: unless-stopped
+    healthcheck:
+      test: ["CMD", "redis-cli", "ping"]
+      interval: 30s
+      timeout: 10s
+      retries: 3
+
+volumes:
+  redis_data:
+    driver: local
+
+networks:
+  gtm_network:
+    driver: bridge 

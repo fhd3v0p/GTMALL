@@ -1,0 +1,110 @@
+2025-08-05 10:59:32,997 - __main__ - INFO - Redis connected successfully
+ * Tip: There are .env files present. Install python-dotenv to use them.
+ * Serving Flask app 'api_server_unified'
+ * Debug mode: on
+2025-08-05 10:59:33,033 - werkzeug - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:3001
+ * Running on http://192.168.10.12:3001
+2025-08-05 10:59:33,033 - werkzeug - INFO - [33mPress CTRL+C to quit[0m
+2025-08-05 10:59:33,034 - werkzeug - INFO -  * Restarting with stat
+2025-08-05 10:59:33,207 - __main__ - INFO - Redis connected successfully
+ * Tip: There are .env files present. Install python-dotenv to use them.
+2025-08-05 10:59:33,221 - werkzeug - WARNING -  * Debugger is active!
+2025-08-05 10:59:33,224 - werkzeug - INFO -  * Debugger PIN: 623-286-926
+2025-08-05 10:59:43,514 - werkzeug - INFO - 127.0.0.1 - - [05/Aug/2025 10:59:43] "GET /health HTTP/1.1" 200 -
+2025-08-05 10:59:54,944 - werkzeug - INFO - 127.0.0.1 - - [05/Aug/2025 10:59:54] "GET /health HTTP/1.1" 200 -
+2025-08-05 10:59:58,120 - werkzeug - INFO - 127.0.0.1 - - [05/Aug/2025 10:59:58] "GET /health HTTP/1.1" 200 -
+2025-08-05 10:59:58,314 - werkzeug - INFO - 127.0.0.1 - - [05/Aug/2025 10:59:58] "GET /health HTTP/1.1" 200 -
+2025-08-05 10:59:58,328 - werkzeug - INFO - 127.0.0.1 - - [05/Aug/2025 10:59:58] "GET /health HTTP/1.1" 200 -
+2025-08-05 11:00:28,431 - werkzeug - INFO - 127.0.0.1 - - [05/Aug/2025 11:00:28] "GET /health HTTP/1.1" 200 -
+2025-08-05 11:00:28,431 - werkzeug - INFO - 127.0.0.1 - - [05/Aug/2025 11:00:28] "GET /health HTTP/1.1" 200 -
+2025-08-05 11:00:58,465 - werkzeug - INFO - 127.0.0.1 - - [05/Aug/2025 11:00:58] "GET /health HTTP/1.1" 200 -
+2025-08-05 11:00:58,490 - werkzeug - INFO - 127.0.0.1 - - [05/Aug/2025 11:00:58] "GET /health HTTP/1.1" 200 -
+2025-08-05 11:01:28,492 - werkzeug - INFO - 127.0.0.1 - - [05/Aug/2025 11:01:28] "GET /health HTTP/1.1" 200 -
+2025-08-05 11:01:28,492 - werkzeug - INFO - 127.0.0.1 - - [05/Aug/2025 11:01:28] "GET /health HTTP/1.1" 200 -
+2025-08-05 11:01:58,455 - werkzeug - INFO - 127.0.0.1 - - [05/Aug/2025 11:01:58] "GET /health HTTP/1.1" 200 -
+2025-08-05 11:01:58,455 - werkzeug - INFO - 127.0.0.1 - - [05/Aug/2025 11:01:58] "GET /health HTTP/1.1" 200 -
+2025-08-05 11:02:28,444 - werkzeug - INFO - 127.0.0.1 - - [05/Aug/2025 11:02:28] "GET /health HTTP/1.1" 200 -
+2025-08-05 11:02:28,459 - werkzeug - INFO - 127.0.0.1 - - [05/Aug/2025 11:02:28] "GET /health HTTP/1.1" 200 -
+2025-08-05 11:02:58,974 - werkzeug - INFO - 127.0.0.1 - - [05/Aug/2025 11:02:58] "GET /health HTTP/1.1" 200 -
+2025-08-05 11:03:01,579 - werkzeug - INFO - 127.0.0.1 - - [05/Aug/2025 11:03:01] "GET /health HTTP/1.1" 200 -
+2025-08-05 11:03:14,121 - werkzeug - INFO - 127.0.0.1 - - [05/Aug/2025 11:03:14] "[33mGET /api/giveaway/status?user_id=123456789 HTTP/1.1[0m" 404 -
+2025-08-05 11:03:14,122 - werkzeug - INFO - 127.0.0.1 - - [05/Aug/2025 11:03:14] "[33mOPTIONS /api/app-settings HTTP/1.1[0m" 404 -
+2025-08-05 11:03:14,123 - werkzeug - INFO - 127.0.0.1 - - [05/Aug/2025 11:03:14] "[33mOPTIONS /api/app-settings HTTP/1.1[0m" 404 -
+2025-08-05 11:03:14,123 - werkzeug - INFO - 127.0.0.1 - - [05/Aug/2025 11:03:14] "[33mGET /api/user/123456789/tickets HTTP/1.1[0m" 404 -
+2025-08-05 11:03:14,166 - werkzeug - INFO - 127.0.0.1 - - [05/Aug/2025 11:03:14] "[33mGET /api/tickets/total HTTP/1.1[0m" 404 -
+2025-08-05 11:03:28,468 - werkzeug - INFO - 127.0.0.1 - - [05/Aug/2025 11:03:28] "GET /health HTTP/1.1" 200 -
+2025-08-05 11:03:31,557 - werkzeug - INFO - 127.0.0.1 - - [05/Aug/2025 11:03:31] "GET /health HTTP/1.1" 200 -
+2025-08-05 11:03:58,531 - werkzeug - INFO - 127.0.0.1 - - [05/Aug/2025 11:03:58] "GET /health HTTP/1.1" 200 -
+2025-08-05 11:04:02,286 - werkzeug - INFO - 127.0.0.1 - - [05/Aug/2025 11:04:02] "GET /health HTTP/1.1" 200 -
+2025-08-05 11:04:28,522 - werkzeug - INFO - 127.0.0.1 - - [05/Aug/2025 11:04:28] "GET /health HTTP/1.1" 200 -
+2025-08-05 11:04:32,280 - werkzeug - INFO - 127.0.0.1 - - [05/Aug/2025 11:04:32] "GET /health HTTP/1.1" 200 -
+2025-08-05 11:04:58,502 - werkzeug - INFO - 127.0.0.1 - - [05/Aug/2025 11:04:58] "GET /health HTTP/1.1" 200 -
+2025-08-05 11:05:02,706 - werkzeug - INFO - 127.0.0.1 - - [05/Aug/2025 11:05:02] "GET /health HTTP/1.1" 200 -
+2025-08-05 11:05:28,536 - werkzeug - INFO - 127.0.0.1 - - [05/Aug/2025 11:05:28] "GET /health HTTP/1.1" 200 -
+2025-08-05 11:05:32,732 - werkzeug - INFO - 127.0.0.1 - - [05/Aug/2025 11:05:32] "GET /health HTTP/1.1" 200 -
+2025-08-05 11:05:58,561 - werkzeug - INFO - 127.0.0.1 - - [05/Aug/2025 11:05:58] "GET /health HTTP/1.1" 200 -
+2025-08-05 11:06:03,268 - werkzeug - INFO - 127.0.0.1 - - [05/Aug/2025 11:06:03] "GET /health HTTP/1.1" 200 -
+2025-08-05 11:06:28,506 - werkzeug - INFO - 127.0.0.1 - - [05/Aug/2025 11:06:28] "GET /health HTTP/1.1" 200 -
+2025-08-05 11:06:31,893 - werkzeug - INFO - 127.0.0.1 - - [05/Aug/2025 11:06:31] "[33mGET /api/giveaway/status?user_id=123456789 HTTP/1.1[0m" 404 -
+2025-08-05 11:06:31,893 - werkzeug - INFO - 127.0.0.1 - - [05/Aug/2025 11:06:31] "[33mOPTIONS /api/app-settings HTTP/1.1[0m" 404 -
+2025-08-05 11:06:31,894 - werkzeug - INFO - 127.0.0.1 - - [05/Aug/2025 11:06:31] "[33mOPTIONS /api/app-settings HTTP/1.1[0m" 404 -
+2025-08-05 11:06:31,894 - werkzeug - INFO - 127.0.0.1 - - [05/Aug/2025 11:06:31] "[33mGET /api/user/123456789/tickets HTTP/1.1[0m" 404 -
+2025-08-05 11:06:31,935 - werkzeug - INFO - 127.0.0.1 - - [05/Aug/2025 11:06:31] "[33mGET /api/tickets/total HTTP/1.1[0m" 404 -
+2025-08-05 11:06:33,257 - werkzeug - INFO - 127.0.0.1 - - [05/Aug/2025 11:06:33] "GET /health HTTP/1.1" 200 -
+2025-08-05 11:06:34,994 - werkzeug - INFO - 127.0.0.1 - - [05/Aug/2025 11:06:34] "[33mOPTIONS /api/log-task-completion HTTP/1.1[0m" 404 -
+2025-08-05 11:06:35,032 - werkzeug - INFO - 127.0.0.1 - - [05/Aug/2025 11:06:35] "[33mGET /api/giveaway/status?user_id=123456789 HTTP/1.1[0m" 404 -
+2025-08-05 11:06:35,889 - werkzeug - INFO - 127.0.0.1 - - [05/Aug/2025 11:06:35] "[33mOPTIONS /api/log-task-completion HTTP/1.1[0m" 404 -
+2025-08-05 11:06:35,911 - werkzeug - INFO - 127.0.0.1 - - [05/Aug/2025 11:06:35] "[33mGET /api/giveaway/status?user_id=123456789 HTTP/1.1[0m" 404 -
+2025-08-05 11:06:36,670 - werkzeug - INFO - 127.0.0.1 - - [05/Aug/2025 11:06:36] "[33mOPTIONS /api/log-task-completion HTTP/1.1[0m" 404 -
+2025-08-05 11:06:36,687 - werkzeug - INFO - 127.0.0.1 - - [05/Aug/2025 11:06:36] "[33mGET /api/giveaway/status?user_id=123456789 HTTP/1.1[0m" 404 -
+2025-08-05 11:06:49,717 - werkzeug - INFO -  * Detected change in '/Users/h0/flutter/GTMv05/backend_new/api_server_unified.py', reloading
+2025-08-05 11:06:49,839 - werkzeug - INFO -  * Restarting with stat
+2025-08-05 11:06:50,363 - __main__ - INFO - Redis connected successfully
+ * Tip: There are .env files present. Install python-dotenv to use them.
+2025-08-05 11:06:50,397 - werkzeug - WARNING -  * Debugger is active!
+2025-08-05 11:06:50,408 - werkzeug - INFO -  * Debugger PIN: 623-286-926
+2025-08-05 11:06:58,490 - werkzeug - INFO - 127.0.0.1 - - [05/Aug/2025 11:06:58] "GET /health HTTP/1.1" 200 -
+2025-08-05 11:07:03,828 - werkzeug - INFO - 127.0.0.1 - - [05/Aug/2025 11:07:03] "GET /health HTTP/1.1" 200 -
+2025-08-05 11:07:28,498 - werkzeug - INFO - 127.0.0.1 - - [05/Aug/2025 11:07:28] "GET /health HTTP/1.1" 200 -
+2025-08-05 11:07:33,870 - werkzeug - INFO - 127.0.0.1 - - [05/Aug/2025 11:07:33] "GET /health HTTP/1.1" 200 -
+2025-08-05 11:07:58,571 - werkzeug - INFO - 127.0.0.1 - - [05/Aug/2025 11:07:58] "GET /health HTTP/1.1" 200 -
+2025-08-05 11:08:04,264 - werkzeug - INFO - 127.0.0.1 - - [05/Aug/2025 11:08:04] "GET /health HTTP/1.1" 200 -
+2025-08-05 11:08:28,511 - werkzeug - INFO - 127.0.0.1 - - [05/Aug/2025 11:08:28] "GET /health HTTP/1.1" 200 -
+2025-08-05 11:08:34,266 - werkzeug - INFO - 127.0.0.1 - - [05/Aug/2025 11:08:34] "GET /health HTTP/1.1" 200 -
+2025-08-05 11:08:58,664 - werkzeug - INFO - 127.0.0.1 - - [05/Aug/2025 11:08:58] "GET /health HTTP/1.1" 200 -
+2025-08-05 11:09:04,265 - werkzeug - INFO - 127.0.0.1 - - [05/Aug/2025 11:09:04] "GET /health HTTP/1.1" 200 -
+2025-08-05 11:09:28,634 - werkzeug - INFO - 127.0.0.1 - - [05/Aug/2025 11:09:28] "GET /health HTTP/1.1" 200 -
+2025-08-05 11:09:34,294 - werkzeug - INFO - 127.0.0.1 - - [05/Aug/2025 11:09:34] "GET /health HTTP/1.1" 200 -
+2025-08-05 11:09:58,668 - werkzeug - INFO - 127.0.0.1 - - [05/Aug/2025 11:09:58] "GET /health HTTP/1.1" 200 -
+2025-08-05 11:10:04,315 - werkzeug - INFO - 127.0.0.1 - - [05/Aug/2025 11:10:04] "GET /health HTTP/1.1" 200 -
+2025-08-05 11:10:28,603 - werkzeug - INFO - 127.0.0.1 - - [05/Aug/2025 11:10:28] "GET /health HTTP/1.1" 200 -
+2025-08-05 11:10:34,303 - werkzeug - INFO - 127.0.0.1 - - [05/Aug/2025 11:10:34] "GET /health HTTP/1.1" 200 -
+2025-08-05 11:10:58,646 - werkzeug - INFO - 127.0.0.1 - - [05/Aug/2025 11:10:58] "GET /health HTTP/1.1" 200 -
+2025-08-05 11:11:04,327 - werkzeug - INFO - 127.0.0.1 - - [05/Aug/2025 11:11:04] "GET /health HTTP/1.1" 200 -
+2025-08-05 11:11:28,643 - werkzeug - INFO - 127.0.0.1 - - [05/Aug/2025 11:11:28] "GET /health HTTP/1.1" 200 -
+2025-08-05 11:11:34,298 - werkzeug - INFO - 127.0.0.1 - - [05/Aug/2025 11:11:34] "GET /health HTTP/1.1" 200 -
+2025-08-05 11:11:58,649 - werkzeug - INFO - 127.0.0.1 - - [05/Aug/2025 11:11:58] "GET /health HTTP/1.1" 200 -
+2025-08-05 11:12:04,326 - werkzeug - INFO - 127.0.0.1 - - [05/Aug/2025 11:12:04] "GET /health HTTP/1.1" 200 -
+2025-08-05 11:12:28,635 - werkzeug - INFO - 127.0.0.1 - - [05/Aug/2025 11:12:28] "GET /health HTTP/1.1" 200 -
+2025-08-05 11:12:34,321 - werkzeug - INFO - 127.0.0.1 - - [05/Aug/2025 11:12:34] "GET /health HTTP/1.1" 200 -
+2025-08-05 11:12:58,657 - werkzeug - INFO - 127.0.0.1 - - [05/Aug/2025 11:12:58] "GET /health HTTP/1.1" 200 -
+2025-08-05 11:13:04,313 - werkzeug - INFO - 127.0.0.1 - - [05/Aug/2025 11:13:04] "GET /health HTTP/1.1" 200 -
+2025-08-05 11:13:28,664 - werkzeug - INFO - 127.0.0.1 - - [05/Aug/2025 11:13:28] "GET /health HTTP/1.1" 200 -
+2025-08-05 11:13:34,324 - werkzeug - INFO - 127.0.0.1 - - [05/Aug/2025 11:13:34] "GET /health HTTP/1.1" 200 -
+2025-08-05 11:13:58,732 - werkzeug - INFO - 127.0.0.1 - - [05/Aug/2025 11:13:58] "GET /health HTTP/1.1" 200 -
+2025-08-05 11:14:04,309 - werkzeug - INFO - 127.0.0.1 - - [05/Aug/2025 11:14:04] "GET /health HTTP/1.1" 200 -
+2025-08-05 11:14:28,647 - werkzeug - INFO - 127.0.0.1 - - [05/Aug/2025 11:14:28] "GET /health HTTP/1.1" 200 -
+2025-08-05 11:14:34,323 - werkzeug - INFO - 127.0.0.1 - - [05/Aug/2025 11:14:34] "GET /health HTTP/1.1" 200 -
+2025-08-05 11:14:58,692 - werkzeug - INFO - 127.0.0.1 - - [05/Aug/2025 11:14:58] "GET /health HTTP/1.1" 200 -
+2025-08-05 11:15:04,324 - werkzeug - INFO - 127.0.0.1 - - [05/Aug/2025 11:15:04] "GET /health HTTP/1.1" 200 -
+2025-08-05 11:15:28,676 - werkzeug - INFO - 127.0.0.1 - - [05/Aug/2025 11:15:28] "GET /health HTTP/1.1" 200 -
+2025-08-05 11:15:34,354 - werkzeug - INFO - 127.0.0.1 - - [05/Aug/2025 11:15:34] "GET /health HTTP/1.1" 200 -
+2025-08-05 11:15:58,687 - werkzeug - INFO - 127.0.0.1 - - [05/Aug/2025 11:15:58] "GET /health HTTP/1.1" 200 -
+2025-08-05 11:16:04,369 - werkzeug - INFO - 127.0.0.1 - - [05/Aug/2025 11:16:04] "GET /health HTTP/1.1" 200 -
+2025-08-05 11:16:59,729 - werkzeug - INFO - 127.0.0.1 - - [05/Aug/2025 11:16:59] "GET /health HTTP/1.1" 200 -
+2025-08-05 11:17:13,083 - werkzeug - INFO - 127.0.0.1 - - [05/Aug/2025 11:17:13] "GET /health HTTP/1.1" 200 -
+2025-08-05 11:17:23,661 - werkzeug - INFO - 127.0.0.1 - - [05/Aug/2025 11:17:23] "GET /health HTTP/1.1" 200 -
+2025-08-05 11:17:43,099 - werkzeug - INFO - 127.0.0.1 - - [05/Aug/2025 11:17:43] "GET /health HTTP/1.1" 200 -
+2025-08-05 11:17:53,669 - werkzeug - INFO - 127.0.0.1 - - [05/Aug/2025 11:17:53] "GET /health HTTP/1.1" 200 -

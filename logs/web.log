@@ -1,0 +1,93 @@
+127.0.0.1 - - [05/Aug/2025 10:59:43] "GET / HTTP/1.1" 200 -
+127.0.0.1 - - [05/Aug/2025 10:59:54] "GET / HTTP/1.1" 200 -
+127.0.0.1 - - [05/Aug/2025 10:59:58] "GET / HTTP/1.1" 200 -
+127.0.0.1 - - [05/Aug/2025 10:59:58] "GET / HTTP/1.1" 200 -
+127.0.0.1 - - [05/Aug/2025 10:59:58] "GET / HTTP/1.1" 200 -
+127.0.0.1 - - [05/Aug/2025 11:00:07] "GET / HTTP/1.1" 304 -
+127.0.0.1 - - [05/Aug/2025 11:00:07] code 404, message File not found
+127.0.0.1 - - [05/Aug/2025 11:00:07] "GET /flutter_bootstrap.js HTTP/1.1" 404 -
+127.0.0.1 - - [05/Aug/2025 11:00:07] code 404, message File not found
+127.0.0.1 - - [05/Aug/2025 11:00:07] "GET /flutter_bootstrap.js HTTP/1.1" 404 -
+127.0.0.1 - - [05/Aug/2025 11:00:07] "GET /favicon.png HTTP/1.1" 200 -
+----------------------------------------
+Exception occurred during processing of request from ('127.0.0.1', 62017)
+Traceback (most recent call last):
+  File "/Users/h0/miniconda3/lib/python3.10/socketserver.py", line 316, in _handle_request_noblock
+    self.process_request(request, client_address)
+  File "/Users/h0/miniconda3/lib/python3.10/socketserver.py", line 347, in process_request
+    self.finish_request(request, client_address)
+  File "/Users/h0/miniconda3/lib/python3.10/socketserver.py", line 360, in finish_request
+    self.RequestHandlerClass(request, client_address, self)
+  File "/Users/h0/miniconda3/lib/python3.10/http/server.py", line 668, in __init__
+    super().__init__(*args, **kwargs)
+  File "/Users/h0/miniconda3/lib/python3.10/socketserver.py", line 747, in __init__
+    self.handle()
+  File "/Users/h0/miniconda3/lib/python3.10/http/server.py", line 433, in handle
+    self.handle_one_request()
+  File "/Users/h0/miniconda3/lib/python3.10/http/server.py", line 421, in handle_one_request
+    method()
+  File "/Users/h0/miniconda3/lib/python3.10/http/server.py", line 675, in do_GET
+    self.copyfile(f, self.wfile)
+  File "/Users/h0/miniconda3/lib/python3.10/http/server.py", line 875, in copyfile
+    shutil.copyfileobj(source, outputfile)
+  File "/Users/h0/miniconda3/lib/python3.10/shutil.py", line 198, in copyfileobj
+    fdst_write(buf)
+  File "/Users/h0/miniconda3/lib/python3.10/socketserver.py", line 826, in write
+    self._sock.sendall(b)
+BrokenPipeError: [Errno 32] Broken pipe
+----------------------------------------
+127.0.0.1 - - [05/Aug/2025 11:00:07] "GET /icons/Icon-192.png HTTP/1.1" 200 -
+----------------------------------------
+Exception occurred during processing of request from ('127.0.0.1', 62018)
+Traceback (most recent call last):
+  File "/Users/h0/miniconda3/lib/python3.10/socketserver.py", line 316, in _handle_request_noblock
+    self.process_request(request, client_address)
+  File "/Users/h0/miniconda3/lib/python3.10/socketserver.py", line 347, in process_request
+    self.finish_request(request, client_address)
+  File "/Users/h0/miniconda3/lib/python3.10/socketserver.py", line 360, in finish_request
+    self.RequestHandlerClass(request, client_address, self)
+  File "/Users/h0/miniconda3/lib/python3.10/http/server.py", line 668, in __init__
+    super().__init__(*args, **kwargs)
+  File "/Users/h0/miniconda3/lib/python3.10/socketserver.py", line 747, in __init__
+    self.handle()
+  File "/Users/h0/miniconda3/lib/python3.10/http/server.py", line 433, in handle
+    self.handle_one_request()
+  File "/Users/h0/miniconda3/lib/python3.10/http/server.py", line 421, in handle_one_request
+    method()
+  File "/Users/h0/miniconda3/lib/python3.10/http/server.py", line 675, in do_GET
+    self.copyfile(f, self.wfile)
+  File "/Users/h0/miniconda3/lib/python3.10/http/server.py", line 875, in copyfile
+    shutil.copyfileobj(source, outputfile)
+  File "/Users/h0/miniconda3/lib/python3.10/shutil.py", line 198, in copyfileobj
+    fdst_write(buf)
+  File "/Users/h0/miniconda3/lib/python3.10/socketserver.py", line 826, in write
+    self._sock.sendall(b)
+BrokenPipeError: [Errno 32] Broken pipe
+----------------------------------------
+127.0.0.1 - - [05/Aug/2025 11:00:11] "GET / HTTP/1.1" 304 -
+127.0.0.1 - - [05/Aug/2025 11:00:11] code 404, message File not found
+127.0.0.1 - - [05/Aug/2025 11:00:11] "GET /flutter_bootstrap.js HTTP/1.1" 404 -
+127.0.0.1 - - [05/Aug/2025 11:00:28] "GET / HTTP/1.1" 200 -
+127.0.0.1 - - [05/Aug/2025 11:00:28] "GET / HTTP/1.1" 200 -
+127.0.0.1 - - [05/Aug/2025 11:00:58] "GET / HTTP/1.1" 200 -
+127.0.0.1 - - [05/Aug/2025 11:00:58] "GET / HTTP/1.1" 200 -
+127.0.0.1 - - [05/Aug/2025 11:01:28] "GET / HTTP/1.1" 200 -
+127.0.0.1 - - [05/Aug/2025 11:01:28] "GET / HTTP/1.1" 200 -
+127.0.0.1 - - [05/Aug/2025 11:01:58] "GET / HTTP/1.1" 200 -
+127.0.0.1 - - [05/Aug/2025 11:01:58] "GET / HTTP/1.1" 200 -
+127.0.0.1 - - [05/Aug/2025 11:02:28] "GET / HTTP/1.1" 200 -
+127.0.0.1 - - [05/Aug/2025 11:02:28] "GET / HTTP/1.1" 200 -
+127.0.0.1 - - [05/Aug/2025 11:03:04] "GET / HTTP/1.1" 304 -
+127.0.0.1 - - [05/Aug/2025 11:03:04] code 404, message File not found
+127.0.0.1 - - [05/Aug/2025 11:03:04] "GET /flutter_bootstrap.js HTTP/1.1" 404 -
+127.0.0.1 - - [05/Aug/2025 11:03:05] "GET / HTTP/1.1" 304 -
+127.0.0.1 - - [05/Aug/2025 11:03:05] code 404, message File not found
+127.0.0.1 - - [05/Aug/2025 11:03:05] "GET /flutter_bootstrap.js HTTP/1.1" 404 -
+127.0.0.1 - - [05/Aug/2025 11:03:07] "GET / HTTP/1.1" 304 -
+127.0.0.1 - - [05/Aug/2025 11:03:07] code 404, message File not found
+127.0.0.1 - - [05/Aug/2025 11:03:07] "GET /flutter_bootstrap.js HTTP/1.1" 404 -
+127.0.0.1 - - [05/Aug/2025 11:16:59] "GET / HTTP/1.1" 200 -
+127.0.0.1 - - [05/Aug/2025 11:17:13] "GET / HTTP/1.1" 200 -
+127.0.0.1 - - [05/Aug/2025 11:17:23] "GET / HTTP/1.1" 200 -
+127.0.0.1 - - [05/Aug/2025 11:17:43] "GET / HTTP/1.1" 200 -
+127.0.0.1 - - [05/Aug/2025 11:17:53] "GET / HTTP/1.1" 200 -

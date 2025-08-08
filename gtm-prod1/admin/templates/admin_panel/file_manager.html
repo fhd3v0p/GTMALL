@@ -1,0 +1,28 @@
+{% extends 'admin_panel/base.html' %}
+
+{% block title %}Файловый менеджер - GTM Admin Panel{% endblock %}
+
+{% block content %}
+<h2>📁 Файловый менеджер MinIO</h2>
+
+<div class="status-card">
+    <h3>🗂️ Структура файлов</h3>
+    <ul>
+        <li>📁 avatars</li>
+        <li>📁 gallery</li>
+        <li>📁 products</li>
+        <li>📁 documents</li>
+    </ul>
+</div>
+
+<div class="status-card">
+    <h3>📄 Содержимое файла</h3>
+    <p>Выберите файл для просмотра</p>
+</div>
+
+<div class="grid">
+    <a href="#" class="btn">📤 Загрузить файл</a>
+    <a href="#" class="btn">📋 Список файлов</a>
+    <a href="#" class="btn">🗑️ Удалить файл</a>
+</div>
+{% endblock %} 

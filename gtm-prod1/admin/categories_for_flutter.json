@@ -1,0 +1,368 @@
+{
+  "categories": [
+    "Accessories",
+    "Clothing",
+    "Cosmetics",
+    "Custom",
+    "GTM BRAND",
+    "Jewelry",
+    "Second",
+    "Shoes",
+    "Beauty",
+    "Fashion",
+    "Fitness",
+    "Hair",
+    "Makeup",
+    "Massage",
+    "Nails",
+    "Photography",
+    "Piercing",
+    "Tattoo",
+    "Косметология",
+    "Маникюр",
+    "Пирсинг",
+    "Татуировки"
+  ],
+  "product_categories": [
+    "Accessories",
+    "Clothing",
+    "Cosmetics",
+    "Custom",
+    "GTM BRAND",
+    "Jewelry",
+    "Second",
+    "Shoes"
+  ],
+  "service_categories": [
+    "Beauty",
+    "Fashion",
+    "Fitness",
+    "Hair",
+    "Makeup",
+    "Massage",
+    "Nails",
+    "Photography",
+    "Piercing",
+    "Tattoo",
+    "Косметология",
+    "Маникюр",
+    "Пирсинг",
+    "Татуировки"
+  ],
+  "detailed_categories": {
+    "products": [
+      {
+        "id": 14,
+        "name": "Accessories",
+        "type": "product",
+        "type_display": "Товар",
+        "created_at": "2025-08-05T10:40:11.596746"
+      },
+      {
+        "id": 13,
+        "name": "Clothing",
+        "type": "product",
+        "type_display": "Товар",
+        "created_at": "2025-08-05T10:40:11.596746"
+      },
+      {
+        "id": 15,
+        "name": "Cosmetics",
+        "type": "product",
+        "type_display": "Товар",
+        "created_at": "2025-08-05T10:40:11.596746"
+      },
+      {
+        "id": 259,
+        "name": "Custom",
+        "type": "product",
+        "type_display": "Товар",
+        "created_at": "2025-08-05T12:11:43.762461"
+      },
+      {
+        "id": 258,
+        "name": "GTM BRAND",
+        "type": "product",
+        "type_display": "Товар",
+        "created_at": "2025-08-05T12:11:43.758283"
+      },
+      {
+        "id": 12,
+        "name": "Jewelry",
+        "type": "product",
+        "type_display": "Товар",
+        "created_at": "2025-08-05T10:40:11.596746"
+      },
+      {
+        "id": 260,
+        "name": "Second",
+        "type": "product",
+        "type_display": "Товар",
+        "created_at": "2025-08-05T12:11:43.763219"
+      },
+      {
+        "id": 261,
+        "name": "Shoes",
+        "type": "product",
+        "type_display": "Товар",
+        "created_at": "2025-08-05T12:11:43.767489"
+      }
+    ],
+    "services": [
+      {
+        "id": 264,
+        "name": "Beauty",
+        "type": "service",
+        "type_display": "Услуга",
+        "created_at": "2025-08-05T12:11:43.774274"
+      },
+      {
+        "id": 10,
+        "name": "Fashion",
+        "type": "service",
+        "type_display": "Услуга",
+        "created_at": "2025-08-05T10:40:11.596746"
+      },
+      {
+        "id": 263,
+        "name": "Fitness",
+        "type": "service",
+        "type_display": "Услуга",
+        "created_at": "2025-08-05T12:11:43.773096"
+      },
+      {
+        "id": 8,
+        "name": "Hair",
+        "type": "service",
+        "type_display": "Услуга",
+        "created_at": "2025-08-05T10:40:11.596746"
+      },
+      {
+        "id": 7,
+        "name": "Makeup",
+        "type": "service",
+        "type_display": "Услуга",
+        "created_at": "2025-08-05T10:40:11.596746"
+      },
+      {
+        "id": 262,
+        "name": "Massage",
+        "type": "service",
+        "type_display": "Услуга",
+        "created_at": "2025-08-05T12:11:43.771118"
+      },
+      {
+        "id": 9,
+        "name": "Nails",
+        "type": "service",
+        "type_display": "Услуга",
+        "created_at": "2025-08-05T10:40:11.596746"
+      },
+      {
+        "id": 11,
+        "name": "Photography",
+        "type": "service",
+        "type_display": "Услуга",
+        "created_at": "2025-08-05T10:40:11.596746"
+      },
+      {
+        "id": 6,
+        "name": "Piercing",
+        "type": "service",
+        "type_display": "Услуга",
+        "created_at": "2025-08-05T10:40:11.596746"
+      },
+      {
+        "id": 5,
+        "name": "Tattoo",
+        "type": "service",
+        "type_display": "Услуга",
+        "created_at": "2025-08-05T10:40:11.596746"
+      },
+      {
+        "id": 4,
+        "name": "Косметология",
+        "type": "service",
+        "type_display": "Услуга",
+        "created_at": "2025-08-05T10:31:53.736736"
+      },
+      {
+        "id": 3,
+        "name": "Маникюр",
+        "type": "service",
+        "type_display": "Услуга",
+        "created_at": "2025-08-05T10:31:53.736736"
+      },
+      {
+        "id": 2,
+        "name": "Пирсинг",
+        "type": "service",
+        "type_display": "Услуга",
+        "created_at": "2025-08-05T10:31:53.736736"
+      },
+      {
+        "id": 1,
+        "name": "Татуировки",
+        "type": "service",
+        "type_display": "Услуга",
+        "created_at": "2025-08-05T10:31:53.736736"
+      }
+    ],
+    "all": [
+      {
+        "id": 14,
+        "name": "Accessories",
+        "type": "product",
+        "type_display": "Товар",
+        "created_at": "2025-08-05T10:40:11.596746"
+      },
+      {
+        "id": 13,
+        "name": "Clothing",
+        "type": "product",
+        "type_display": "Товар",
+        "created_at": "2025-08-05T10:40:11.596746"
+      },
+      {
+        "id": 15,
+        "name": "Cosmetics",
+        "type": "product",
+        "type_display": "Товар",
+        "created_at": "2025-08-05T10:40:11.596746"
+      },
+      {
+        "id": 259,
+        "name": "Custom",
+        "type": "product",
+        "type_display": "Товар",
+        "created_at": "2025-08-05T12:11:43.762461"
+      },
+      {
+        "id": 258,
+        "name": "GTM BRAND",
+        "type": "product",
+        "type_display": "Товар",
+        "created_at": "2025-08-05T12:11:43.758283"
+      },
+      {
+        "id": 12,
+        "name": "Jewelry",
+        "type": "product",
+        "type_display": "Товар",
+        "created_at": "2025-08-05T10:40:11.596746"
+      },
+      {
+        "id": 260,
+        "name": "Second",
+        "type": "product",
+        "type_display": "Товар",
+        "created_at": "2025-08-05T12:11:43.763219"
+      },
+      {
+        "id": 261,
+        "name": "Shoes",
+        "type": "product",
+        "type_display": "Товар",
+        "created_at": "2025-08-05T12:11:43.767489"
+      },
+      {
+        "id": 264,
+        "name": "Beauty",
+        "type": "service",
+        "type_display": "Услуга",
+        "created_at": "2025-08-05T12:11:43.774274"
+      },
+      {
+        "id": 10,
+        "name": "Fashion",
+        "type": "service",
+        "type_display": "Услуга",
+        "created_at": "2025-08-05T10:40:11.596746"
+      },
+      {
+        "id": 263,
+        "name": "Fitness",
+        "type": "service",
+        "type_display": "Услуга",
+        "created_at": "2025-08-05T12:11:43.773096"
+      },
+      {
+        "id": 8,
+        "name": "Hair",
+        "type": "service",
+        "type_display": "Услуга",
+        "created_at": "2025-08-05T10:40:11.596746"
+      },
+      {
+        "id": 7,
+        "name": "Makeup",
+        "type": "service",
+        "type_display": "Услуга",
+        "created_at": "2025-08-05T10:40:11.596746"
+      },
+      {
+        "id": 262,
+        "name": "Massage",
+        "type": "service",
+        "type_display": "Услуга",
+        "created_at": "2025-08-05T12:11:43.771118"
+      },
+      {
+        "id": 9,
+        "name": "Nails",
+        "type": "service",
+        "type_display": "Услуга",
+        "created_at": "2025-08-05T10:40:11.596746"
+      },
+      {
+        "id": 11,
+        "name": "Photography",
+        "type": "service",
+        "type_display": "Услуга",
+        "created_at": "2025-08-05T10:40:11.596746"
+      },
+      {
+        "id": 6,
+        "name": "Piercing",
+        "type": "service",
+        "type_display": "Услуга",
+        "created_at": "2025-08-05T10:40:11.596746"
+      },
+      {
+        "id": 5,
+        "name": "Tattoo",
+        "type": "service",
+        "type_display": "Услуга",
+        "created_at": "2025-08-05T10:40:11.596746"
+      },
+      {
+        "id": 4,
+        "name": "Косметология",
+        "type": "service",
+        "type_display": "Услуга",
+        "created_at": "2025-08-05T10:31:53.736736"
+      },
+      {
+        "id": 3,
+        "name": "Маникюр",
+        "type": "service",
+        "type_display": "Услуга",
+        "created_at": "2025-08-05T10:31:53.736736"
+      },
+      {
+        "id": 2,
+        "name": "Пирсинг",
+        "type": "service",
+        "type_display": "Услуга",
+        "created_at": "2025-08-05T10:31:53.736736"
+      },
+      {
+        "id": 1,
+        "name": "Татуировки",
+        "type": "service",
+        "type_display": "Услуга",
+        "created_at": "2025-08-05T10:31:53.736736"
+      }
+    ]
+  }
+}

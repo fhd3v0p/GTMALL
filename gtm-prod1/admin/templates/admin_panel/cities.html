@@ -1,0 +1,148 @@
+{% extends 'admin_panel/base.html' %}
+
+{% block title %}🏙️ Управление городами{% endblock %}
+
+{% block content %}
+<div class="container-fluid">
+    <div class="row">
+        <div class="col-12">
+            <div class="card">
+                <div class="card-header">
+                    <h3 class="card-title">🏙️ Управление городами</h3>
+                    <div class="card-tools">
+                        <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#addCityModal">
+                            <i class="fas fa-plus"></i> Добавить город
+                        </button>
+                    </div>
+                </div>
+                <div class="card-body">
+                    <div class="table-responsive">
+                        <table class="table table-hover">
+                            <thead>
+                                <tr>
+                                    <th>Город</th>
+                                    <th>Статус</th>
+                                    <th>Telegram-ссылка</th>
+                                    <th>Действия</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                {% for city in cities %}
+                                <tr>
+                                    <td>
+                                        <strong>{{ city.name }}</strong>
+                                    </td>
+                                    <td>
+                                        {% if city.active %}
+                                        <span class="badge badge-success">
+                                            <i class="fas fa-check"></i> Активен
+                                        </span>
+                                        {% else %}
+                                        <span class="badge badge-secondary">
+                                            <i class="fas fa-times"></i> Неактивен
+                                        </span>
+                                        {% endif %}
+                                    </td>
+                                    <td>
+                                        <a href="#" class="text-primary">
+                                            <i class="fab fa-telegram"></i> Telegram
+                                        </a>
+                                    </td>
+                                    <td>
+                                        <div class="btn-group">
+                                            <button class="btn btn-sm btn-outline-primary" onclick="editCity('{{ city.name }}')">
+                                                <i class="fas fa-edit"></i>
+                                            </button>
+                                            <button class="btn btn-sm btn-outline-success" onclick="toggleCity('{{ city.name }}')">
+                                                {% if city.active %}
+                                                <i class="fas fa-pause"></i>
+                                                {% else %}
+                                                <i class="fas fa-play"></i>
+                                                {% endif %}
+                                            </button>
+                                            <button class="btn btn-sm btn-outline-danger" onclick="deleteCity('{{ city.name }}')">
+                                                <i class="fas fa-trash"></i>
+                                            </button>
+                                        </div>
+                                    </td>
+                                </tr>
+                                {% empty %}
+                                <tr>
+                                    <td colspan="4" class="text-center py-4">
+                                        <i class="fas fa-city fa-2x text-muted mb-2"></i>
+                                        <p class="text-muted">Города не найдены</p>
+                                    </td>
+                                </tr>
+                                {% endfor %}
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Modal для добавления города -->
+<div class="modal fade" id="addCityModal" tabindex="-1">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title">🏙️ Добавить новый город</h5>
+                <button type="button" class="close" data-dismiss="modal">
+                    <span>&times;</span>
+                </button>
+            </div>
+            <div class="modal-body">
+                <form id="addCityForm">
+                    <div class="form-group">
+                        <label>Название города</label>
+                        <input type="text" class="form-control" name="name" required>
+                    </div>
+                    <div class="form-group">
+                        <label>Telegram-ссылка</label>
+                        <input type="url" class="form-control" name="telegram_link" placeholder="https://t.me/...">
+                    </div>
+                    <div class="form-group">
+                        <div class="custom-control custom-switch">
+                            <input type="checkbox" class="custom-control-input" id="cityActive" name="active" checked>
+                            <label class="custom-control-label" for="cityActive">Активен</label>
+                        </div>
+                    </div>
+                </form>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-dismiss="modal">Отмена</button>
+                <button type="button" class="btn btn-primary" onclick="saveCity()">Сохранить</button>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}
+
+{% block scripts %}
+<script>
+function editCity(name) {
+    // Логика редактирования города
+    alert('Редактирование города: ' + name);
+}
+
+function toggleCity(name) {
+    // Логика переключения статуса города
+    alert('Переключение статуса города: ' + name);
+}
+
+function deleteCity(name) {
+    if (confirm('Вы уверены, что хотите удалить город ' + name + '?')) {
+        // Логика удаления города
+        alert('Удаление города: ' + name);
+    }
+}
+
+function saveCity() {
+    // Логика сохранения города
+    alert('Сохранение города');
+    $('#addCityModal').modal('hide');
+}
+</script>
+{% endblock %} 
