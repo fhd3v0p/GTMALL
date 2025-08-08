@@ -1,32 +1,160 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <base href="/">
-    <meta charset="UTF-8" />
-    <meta content="IE=Edge" http-equiv="X-UA-Compatible" />
-    <meta name="description" content="Gotham's Top Model" />
-    <meta name="apple-mobile-web-app-capable" content="yes" />
-    <meta name="mobile-web-app-capable" content="yes" />
-    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" />
-    <link rel="manifest" href="manifest.json" />
-    <link rel="icon" type="image/png" href="favicon.png" />
-    <title>GTM</title>
-    <script defer src="flutter.js"></script>
-  </head>
-  <body>
-    <script>
-      window.addEventListener('load', function () {
-        // Не регистрируем ServiceWorker, чтобы избежать застревающих кешей
-        if ('serviceWorker' in navigator) {
-          // no-op
+<head>
+  <base href="/">
+
+  <meta charset="UTF-8">
+  <meta content="IE=Edge" http-equiv="X-UA-Compatible">
+  <meta name="description" content="Gotham's Top Model - AI поиск артистов">
+
+  <!-- Aggressive no-cache for Telegram Web App -->
+  <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate">
+  <meta http-equiv="Pragma" content="no-cache">
+  <meta http-equiv="Expires" content="0">
+
+  <!-- iOS / PWA fullscreen -->
+  <meta name="mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black">
+  <meta name="apple-mobile-web-app-title" content="GTM">
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+
+  <link rel="manifest" href="manifest.json">
+  <link rel="icon" type="image/png" href="favicon.png"/>
+  <title>Gotham's Top Model</title>
+
+  <!-- Telegram WebApp SDK -->
+  <script src="https://telegram.org/js/telegram-web-app.js?v=1.0.5"></script>
+  <script defer src="flutter.js"></script>
+
+  <style>
+    html, body {
+      margin: 0;
+      padding: 0;
+      height: 100%;
+      width: 100%;
+      background: #000;
+      /* Отключаем любые жесты прокрутки/refresh */
+      overscroll-behavior: none;
+      overscroll-behavior-y: none;
+      touch-action: none;
+    }
+    #loading {
+      position: fixed;
+      top: 0; left: 0;
+      width: 100vw; height: 100vh;
+      background: #000;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      z-index: 9999;
+      flex-direction: column;
+    }
+    .word {
+      opacity: 0;
+      font-family: 'NauryzKeds', sans-serif;
+      font-size: 54px;
+      font-weight: bold;
+      letter-spacing: 2px;
+      color: #d8d8d8;
+      transition: opacity 0.45s ease, transform 0.45s cubic-bezier(0.2, 0.8, 0.2, 1);
+      transform: translateY(-16px);
+    }
+    .gtm-letter {
+      color: #ffffff;
+      text-shadow: 0 0 8px rgba(255,255,255,0.6), 0 0 22px rgba(255,255,255,0.35);
+      filter: brightness(1.35);
+    }
+  </style>
+
+  <script>
+    // Полноэкранный режим и запрет скролла
+    (function() {
+      try {
+        if (window.Telegram && window.Telegram.WebApp) {
+          const tg = window.Telegram.WebApp;
+          tg.expand();
+          tg.ready();
         }
-        _flutter.loader.loadEntrypoint({}).then(function (engineInitializer) {
-          return engineInitializer.initializeEngine();
-        }).then(function (appRunner) {
-          return appRunner.runApp();
+        document.documentElement.style.overflow = 'hidden';
+        document.body.style.overflow = 'hidden';
+        document.documentElement.style.overscrollBehavior = 'none';
+        document.body.style.touchAction = 'none';
+      } catch (e) {}
+    })();
+
+    // Полное отключение ServiceWorker + очистка cache storage
+    (function() {
+      if ('serviceWorker' in navigator) {
+        navigator.serviceWorker.getRegistrations().then(function(regs) {
+          for (let r of regs) { r.unregister(); }
         });
+      }
+      if ('caches' in window) {
+        caches.keys().then(function(names) { for (let n of names) { caches.delete(n); } });
+      }
+    })();
+
+    // Анимация слов: GOTTAM'S / TOP / MODEL (циклически, пока Flutter не отрисует 1-й кадр)
+    function animateWords() {
+      const w1 = document.getElementById('w1');
+      const w2 = document.getElementById('w2');
+      const w3 = document.getElementById('w3');
+      if (!w1 || !w2 || !w3) return;
+      w1.style.opacity = 0; w2.style.opacity = 0; w3.style.opacity = 0;
+      w1.style.transform = 'translateY(-16px)';
+      w2.style.transform = 'translateY(-16px)';
+      w3.style.transform = 'translateY(-16px)';
+      setTimeout(() => { w1.style.opacity = 1; w1.style.transform = 'translateY(0)'; }, 250);
+      setTimeout(() => { w2.style.opacity = 1; w2.style.transform = 'translateY(0)'; }, 750);
+      setTimeout(() => { w3.style.opacity = 1; w3.style.transform = 'translateY(0)'; }, 1200);
+      setTimeout(() => { w1.style.opacity = 0; w2.style.opacity = 0; w3.style.opacity = 0; }, 2200);
+    }
+    let loaderRunning = true;
+    let loaderInterval = setInterval(animateWords, 2500);
+    document.addEventListener('DOMContentLoaded', animateWords);
+
+    // Скрыть лоадер, когда Flutter отрисовал первый кадр
+    document.addEventListener('flutter-first-frame', function() {
+      loaderRunning = false;
+      clearInterval(loaderInterval);
+      const el = document.getElementById('loading');
+      if (el) el.style.display = 'none';
+    });
+
+    // Фолбэк: если вдруг событие не пришло — скрыть через 10 секунд
+    setTimeout(function() {
+      if (!loaderRunning) return;
+      clearInterval(loaderInterval);
+      const el = document.getElementById('loading');
+      if (el) el.style.display = 'none';
+    }, 10000);
+
+    // Пресекаем скролл в любом месте
+    document.addEventListener('touchmove', function(e) { e.preventDefault(); e.stopPropagation(); }, { passive: false });
+  </script>
+</head>
+<body>
+  <!-- Loader: первые буквы G / T / M — подсвечены -->
+  <div id="loading">
+    <div style="display:flex;flex-direction:column;align-items:flex-start;">
+      <span id="w1" class="word"><span class="gtm-letter">G</span>OTTAM'S</span>
+      <span id="w2" class="word"><span class="gtm-letter">T</span>OP</span>
+      <span id="w3" class="word"><span class="gtm-letter">M</span>ODEL</span>
+    </div>
+  </div>
+
+  <!-- Инициализация Flutter (без регистрации SW) -->
+  <script>
+    window.addEventListener('load', function () {
+      _flutter.loader.loadEntrypoint({}).then(function (engineInitializer) {
+        return engineInitializer.initializeEngine();
+      }).then(function (appRunner) {
+        return appRunner.runApp();
       });
-    </script>
-  </body>
-  </html>
+    });
+  </script>
+  <script src="flutter_bootstrap.js" async></script>
+</body>
+</html>
 
