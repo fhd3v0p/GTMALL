@@ -11,7 +11,7 @@ import '../services/telegram_webapp_service.dart';
 import 'package:http/http.dart' as http;
 import '../api_config.dart';
 import 'package:shared_preferences/shared_preferences.dart';
-import '../services/api_service.dart' as ApiSvc;
+import '../services/supabase_service.dart';
 
 class GiveawayScreen extends StatefulWidget {
   const GiveawayScreen({super.key});
@@ -116,7 +116,7 @@ class _GiveawayScreenState extends State<GiveawayScreen> {
         headers: {'Content-Type': 'application/json'},
       );
       if (rpcResponse.statusCode == 200) {
-        final body = jsonDecode(rpcResponse.body ?? '0');
+        final body = jsonDecode(rpcResponse.body);
         final totalTickets = (body is int) ? body : int.tryParse(body.toString()) ?? 0;
         setState(() { _totalTickets = totalTickets; });
         await prefs.setInt('cached_total_tickets', totalTickets);
@@ -213,7 +213,7 @@ class _GiveawayScreenState extends State<GiveawayScreen> {
       if (userId == null) return;
       final response = await http.get(Uri.parse('${ApiConfig.apiBaseUrl}/giveaway_status?user_id=eq.$userId'));
       if (response.statusCode == 200) {
-        final data = jsonDecode(response.body ?? '[]');
+        final data = jsonDecode(response.body);
         if (data is List && data.isNotEmpty) {
           final status = data[0];
           final isInFolder = status['is_in_folder'] == true || status['is_in_folder'] == 1;
@@ -350,17 +350,16 @@ class _GiveawayScreenState extends State<GiveawayScreen> {
         return;
       }
 
-      // Получаем referral_code с сервера (создастся, если его нет)
+      // Получаем referral_code из Supabase по telegram_id
       String? referralCode;
-      final resp = await http.post(
-        Uri.parse('${ApiConfig.ratingApiBaseUrl}/api/referral-code'),
-        headers: ApiConfig.ratingApiHeaders,
-        body: jsonEncode({'telegram_id': int.tryParse(userId) ?? userId}),
-      );
-      if (resp.statusCode == 200) {
-        final body = jsonDecode(resp.body);
-        referralCode = body['referral_code'];
+      final telegramId = int.tryParse(userId);
+      if (telegramId == null) {
+        TelegramWebAppService.showAlert('Ошибка: некорректный Telegram ID');
+        return;
       }
+      final supabase = SupabaseService();
+      final user = await supabase.getUser(telegramId);
+      referralCode = user?['referral_code']?.toString();
       if (referralCode == null || referralCode.isEmpty) {
         TelegramWebAppService.showAlert('Не удалось получить реферальную ссылку. Повторите позже.');
         return;
@@ -733,8 +732,15 @@ $shareLink
         TelegramWebAppService.showAlert('Ошибка: не удалось определить пользователя');
         return;
       }
-      // Получаем/создаём реферальный код строго через API
-      final code = await ApiSvc.ApiService.getOrCreateReferralCode(userId);
+      // Получаем реферальный код из Supabase
+      final telegramId = int.tryParse(userId);
+      if (telegramId == null) {
+        TelegramWebAppService.showAlert('Ошибка: некорректный Telegram ID');
+        return;
+      }
+      final supabase = SupabaseService();
+      final user = await supabase.getUser(telegramId);
+      final code = user?['referral_code']?.toString();
       if (code == null || code.isEmpty) {
         TelegramWebAppService.showAlert('Не удалось получить реферальную ссылку. Повторите позже.');
         return;

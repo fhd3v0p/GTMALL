@@ -1,11 +1,7 @@
 import 'dart:async';
-import 'dart:convert';
-import 'dart:html' as html;
-import 'dart:js' as js;
 import 'package:flutter/material.dart';
-import 'package:http/http.dart' as http;
 import '../services/telegram_webapp_service.dart';
-import '../services/api_service.dart' as ApiSvc;
+import '../services/supabase_service.dart';
 
 class InviteFriendsScreen extends StatefulWidget {
   final String? referralCode;
@@ -33,8 +29,15 @@ class _InviteFriendsScreenState extends State<InviteFriendsScreen> {
     final userId = TelegramWebAppService.getUserId();
     if (userId != null) {
       try {
-        // Берём/создаём реферальный код строго через API (сервер генерирует/читает из БД)
-        final code = await ApiSvc.ApiService.getOrCreateReferralCode(userId);
+        final telegramId = int.tryParse(userId);
+        if (telegramId == null) {
+          throw Exception('Некорректный Telegram ID');
+        }
+
+        final supabase = SupabaseService();
+        final user = await supabase.getUser(telegramId);
+        final code = user?['referral_code']?.toString();
+
         if (code != null && code.isNotEmpty) {
           setState(() {
             _referralCode = code;
@@ -67,64 +70,9 @@ class _InviteFriendsScreenState extends State<InviteFriendsScreen> {
     }
   }
 
-  Future<bool> _showTelegramShareOptions() async {
-    try {
-      // Показываем простой диалог с опциями
-      final result = await TelegramWebAppService.showMainButtonPopup({
-        'title': 'Поделиться с друзьями',
-        'message': 'Выберите способ приглашения:',
-        'buttons': [
-          {
-            'id': 'copy_link',
-            'type': 'default',
-            'text': 'Скопировать ссылку'
-          },
-          {
-            'id': 'show_link',
-            'type': 'default',
-            'text': 'Показать ссылку'
-          },
-          {
-            'id': 'cancel',
-            'type': 'cancel',
-            'text': 'Отмена'
-          }
-        ],
-      });
+  // Убрано: не используется
 
-      if (result == true) {
-        // Поскольку showMainButtonPopup возвращает bool, используем fallback
-        return await _copyLinkToClipboard();
-      }
-      
-      return false;
-    } catch (e) {
-      print('Error showing share options: $e');
-      // Fallback: показываем ссылку в диалоге
-      _showLinkDialog();
-      return true;
-    }
-  }
-
-  Future<bool> _copyLinkToClipboard() async {
-    try {
-      final success = await TelegramWebAppService.copyToClipboard(_referralLink ?? '');
-      
-      if (success) {
-        _showSuccess('Ссылка скопирована! Теперь можете поделиться ею с друзьями.');
-        return true;
-      } else {
-        // Fallback: показываем ссылку в диалоге
-        _showLinkDialog();
-        return true;
-      }
-    } catch (e) {
-      print('Error copying link: $e');
-      // Fallback: показываем ссылку в диалоге
-      _showLinkDialog();
-      return true;
-    }
-  }
+  // Убрано: не используется
 
   void _showLinkDialog() {
     showDialog(
@@ -179,87 +127,9 @@ class _InviteFriendsScreenState extends State<InviteFriendsScreen> {
     );
   }
 
-  void _showBrowserInstructions() {
-    showDialog(
-      context: context,
-      builder: (context) => AlertDialog(
-        backgroundColor: Colors.black87,
-        title: const Text(
-          'Приглашение друзей',
-          style: TextStyle(color: Colors.white, fontFamily: 'NauryzKeds'),
-        ),
-        content: Column(
-          mainAxisSize: MainAxisSize.min,
-          crossAxisAlignment: CrossAxisAlignment.start,
-          children: [
-            const Text(
-              'Для приглашения друзей:',
-              style: TextStyle(color: Colors.white, fontFamily: 'NauryzKeds'),
-            ),
-            const SizedBox(height: 12),
-            const Text(
-              '1. Скопируйте ссылку ниже\n'
-              '2. Отправьте друзьям в Telegram\n'
-              '3. За каждого приглашенного друга получите +100 XP',
-              style: TextStyle(color: Colors.white70, fontFamily: 'NauryzKeds'),
-            ),
-            const SizedBox(height: 16),
-            Container(
-              padding: const EdgeInsets.all(12),
-              decoration: BoxDecoration(
-                color: Colors.grey[900],
-                border: Border.all(color: Colors.white24),
-              ),
-              child: SelectableText(
-                _referralLink ?? 'Ошибка генерации ссылки',
-                style: const TextStyle(
-                  color: Colors.white,
-                  fontFamily: 'monospace',
-                  fontSize: 12,
-                ),
-              ),
-            ),
-          ],
-        ),
-        actions: [
-          TextButton(
-            onPressed: () => Navigator.of(context).pop(),
-            child: const Text(
-              'Закрыть',
-              style: TextStyle(color: Color(0xFFFF6EC7)),
-            ),
-          ),
-        ],
-      ),
-    );
-  }
+  // Убрано: не используется
 
-  String _generateInviteText() {
-    return '''🖤 Привет! Нашёл крутую платформу — GOTHAM'S TOP MODEL! ✨
-
-🔥 Что тут происходит:
-• 🤖 AI-поиск мастеров по фото
-• 🖤 Запись к топ артистам: тату, пирсинг, окрашивание
-• 💸 Розыгрыши на >130,000₽
-• 💄 Скидки 8% на бьюти-услуги
-• 🎀 Подарочные сертификаты
-• 🗨️ Большой чат между мастерами и клиентами
-
-🌪️ А впереди:
-• 🧃 Дропы с лимитками и стилем
-• 🖤 Мемы и крутые коллабы
-• 🥀 Движ, интриги и сюрпризы
-
-🎁 Хочешь бонусы? Лови:
-$_referralLink
-
-💗 Присоединяйся — и будь в игре 🎲
-#GTM #GothamsTopModel #Giveaway''';
-  }
-
-  void _showError(String message) {
-    TelegramWebAppService.showAlert(message);
-  }
+  // Убрано: не используется
 
   void _showSuccess(String message) {
     TelegramWebAppService.showAlert(message);

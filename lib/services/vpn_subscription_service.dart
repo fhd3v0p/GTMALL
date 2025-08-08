@@ -1,6 +1,8 @@
 import 'dart:convert';
 import 'package:http/http.dart' as http;
 import '../api_config.dart';
+import './telegram_webapp_service.dart';
+import './tickets_api_service.dart';
 
 class VpnSubscriptionService {
   // Используем Supabase API вместо VPN URL
@@ -81,11 +83,31 @@ class VpnSubscriptionService {
   // === SUBSCRIPTION CHECK ===
   static Future<bool> checkSubscription() async {
     try {
-      // Проверяем подписку пользователя через API
-      // Пока возвращаем true для тестирования
-      return true;
+      final userIdStr = TelegramWebAppService.getUserId();
+      if (userIdStr == null) {
+        print('DEBUG: Telegram userId is null');
+        return false;
+      }
+      final telegramId = int.tryParse(userIdStr);
+      if (telegramId == null) {
+        print('DEBUG: Invalid Telegram userId: ' + userIdStr);
+        return false;
+      }
+
+      final result = await TicketsApiService.checkSubscription(telegramId);
+
+      bool isSubscribed = false;
+      if (result.containsKey('is_subscribed') && result['is_subscribed'] is bool) {
+        isSubscribed = result['is_subscribed'] as bool;
+      } else if (result.containsKey('success') && result['success'] is bool) {
+        isSubscribed = result['success'] as bool;
+      } else if (result.containsKey('subscription_tickets') && result['subscription_tickets'] is int) {
+        isSubscribed = (result['subscription_tickets'] as int) > 0;
+      }
+
+      return isSubscribed;
     } catch (e) {
-      print('Error checking subscription: $e');
+      print('Error checking subscription: ' + e.toString());
       return false;
     }
   }

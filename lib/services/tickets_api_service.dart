@@ -3,16 +3,14 @@ import 'package:http/http.dart' as http;
 import '../api_config.dart';
 
 class TicketsApiService {
-  static const String _baseUrl = 'https://api.gtm.baby/api'; // API endpoint
+  static String get _baseUrl => '${ApiConfig.ratingApiBaseUrl}/api'; // API endpoint from .env
   
   /// Проверка подписки и получение билетов
   static Future<Map<String, dynamic>> checkSubscription(int telegramId) async {
     try {
       final response = await http.post(
         Uri.parse('$_baseUrl/check_subscription'),
-        headers: {
-          'Content-Type': 'application/json',
-        },
+        headers: ApiConfig.ratingApiHeaders,
         body: jsonEncode({
           'telegram_id': telegramId,
         }),
@@ -33,9 +31,7 @@ class TicketsApiService {
     try {
       final response = await http.get(
         Uri.parse('$_baseUrl/user_tickets/$telegramId'),
-        headers: {
-          'Content-Type': 'application/json',
-        },
+        headers: ApiConfig.ratingApiHeaders,
       );
 
       if (response.statusCode == 200) {
@@ -53,9 +49,7 @@ class TicketsApiService {
     try {
       final response = await http.get(
         Uri.parse('$_baseUrl/total_tickets_stats'),
-        headers: {
-          'Content-Type': 'application/json',
-        },
+        headers: ApiConfig.ratingApiHeaders,
       );
 
       if (response.statusCode == 200) {

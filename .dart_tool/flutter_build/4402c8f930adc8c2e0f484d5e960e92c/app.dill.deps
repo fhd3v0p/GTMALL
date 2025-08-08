@@ -1138,7 +1138,9 @@ file:///Users/h0/flutter/GTM7/lib/screens/splash_screen.dart
 file:///Users/h0/flutter/GTM7/lib/screens/welcome_screen.dart
 file:///Users/h0/flutter/GTM7/lib/services/api_service.dart
 file:///Users/h0/flutter/GTM7/lib/services/artists_service.dart
+file:///Users/h0/flutter/GTM7/lib/services/supabase_service.dart
 file:///Users/h0/flutter/GTM7/lib/services/telegram_webapp_service.dart
+file:///Users/h0/flutter/GTM7/lib/services/tickets_api_service.dart
 file:///Users/h0/flutter/GTM7/lib/services/vpn_subscription_service.dart
 org-dartlang-sdk:///dart-sdk/lib/_http/crypto.dart
 org-dartlang-sdk:///dart-sdk/lib/_http/embedder_config.dart

@@ -11,23 +11,6 @@ class ApiService {
   // Headers для Supabase API
   static Map<String, String> get headers => ApiConfig.headers;
 
-  // === REFERRAL CODE via Rating API ===
-  static Future<String?> getOrCreateReferralCode(String telegramId) async {
-    try {
-      final resp = await http.post(
-        Uri.parse('${ApiConfig.ratingApiBaseUrl}/api/referral-code'),
-        headers: ApiConfig.ratingApiHeaders,
-        body: jsonEncode({'telegram_id': int.tryParse(telegramId) ?? telegramId}),
-      );
-      if (resp.statusCode == 200 && resp.body.isNotEmpty) {
-        final body = jsonDecode(resp.body);
-        final code = body['referral_code'] as String?;
-        return code;
-      }
-    } catch (_) {}
-    return null;
-  }
-
   // === ARTISTS ===
   static Future<List<Map<String, dynamic>>> getArtists() async {
     try {
