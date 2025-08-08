@@ -66,6 +66,12 @@ def get_webapp_keyboard() -> InlineKeyboardMarkup:
 
 
 async def get_or_create_referral_code(telegram_id: int) -> str:
+    # Сохраняем код в таблице referrals (и дублируем в users для обратной совместимости)
+    code = await supabase_client.get_or_create_referral_code_for_owner(telegram_id)
+    if code:
+        await supabase_client.update_user(telegram_id, {'referral_code': code})
+        return code
+    # fallback на users, если не удалось
     user = await supabase_client.get_user(telegram_id)
     if user and user.get('referral_code'):
         return user['referral_code']
@@ -76,14 +82,19 @@ async def get_or_create_referral_code(telegram_id: int) -> str:
 
 async def cmd_start(message: Message):
     user = message.from_user
-    # обработка реф-кода
+    # Создаём/обновляем пользователя в БД (до реф-логики)
+    await save_user(user.id, user.username, user.first_name, user.last_name)
+    # Генерируем собственный код в referrals, если ещё нет
+    _ = await get_or_create_referral_code(user.id)
+    # обработка реф-кода из /start <code>
     args = message.text.split()
     if len(args) > 1:
         referral_code = args[1]
-        # Начисляем реферал билет, если новый
-        existing = await supabase_client.get_user(user.id)
-        if existing is None:
-            await supabase_client.add_referral_ticket(referral_code)
+        # Начисляем билет пригласителю, если не самореферал и не дубль
+        try:
+            await supabase_client.add_referral_ticket(referral_code, referred_id=user.id)
+        except Exception as e:
+            logger.error(f"Ошибка начисления реф-билета: {e}")
     welcome_message = (
         f"☠️ Привет, {user.first_name}! ☠️\n\n"
         "👄 Добро пожаловать во Gotham's Top Model — платформу для поиска и бронирования лучших артистов в твоем городе!\n\n"
@@ -96,8 +107,7 @@ async def cmd_start(message: Message):
         "Нажми «🔮 Open GTM», чтобы ворваться!"
     )
     await message.answer(welcome_message, reply_markup=get_webapp_keyboard())
-    # save user
-    await save_user(user.id, user.username, user.first_name, user.last_name)
+    # пользователь уже сохранён выше
 
 
 async def save_user(user_id: int, username: str, first_name: str, last_name: str):

@@ -28,15 +28,15 @@ supabase_headers = {
 }
 
 SUBSCRIPTION_CHANNELS = [
-    -1002088959587,
-    -1001971855072,
-    -1002133674248,
-    -1001508215942,
-    -1001555462429,
-    -1002132954014,
-    -1001689395571,
-    -1001767997947,
-    -1001973736826,
+    { 'channel_id': -1002088959587, 'channel_username': 'rejmenyavseryoz', 'channel_name': 'Режь меня всерьёз' },
+    { 'channel_id': -1001971855072, 'channel_username': 'chchndra_tattoo', 'channel_name': 'Чучундра' },
+    { 'channel_id': -1002133674248, 'channel_username': 'naidenka_tattoo', 'channel_name': 'naidenka_tattoo' },
+    { 'channel_id': -1001508215942, 'channel_username': 'l1n_ttt', 'channel_name': 'Lin++' },
+    { 'channel_id': -1001555462429, 'channel_username': 'murderd0lll', 'channel_name': 'MurderdOll' },
+    { 'channel_id': -1002132954014, 'channel_username': 'poteryashkatattoo', 'channel_name': 'Потеряшка' },
+    { 'channel_id': -1001689395571, 'channel_username': 'EMI3MO', 'channel_name': 'EMI' },
+    { 'channel_id': -1001767997947, 'channel_username': 'bloodivamp', 'channel_name': 'bloodivamp' },
+    { 'channel_id': -1001973736826, 'channel_username': 'G_T_MODEL', 'channel_name': "Gothams top model" },
 ]
 
 @app.route('/api/referral-code', methods=['POST'])
@@ -117,7 +117,9 @@ def check_subscriptions():
         # Проверяем подписку на все каналы
         is_all = True
         not_subscribed = []
-        for chat_id in SUBSCRIPTION_CHANNELS:
+        subscribed_rows = []
+        for channel in SUBSCRIPTION_CHANNELS:
+            chat_id = channel['channel_id']
             url = f"https://api.telegram.org/bot{TELEGRAM_BOT_TOKEN}/getChatMember"
             resp = requests.get(url, params={'chat_id': chat_id, 'user_id': telegram_id}, timeout=15)
             if resp.status_code != 200:
@@ -126,9 +128,31 @@ def check_subscriptions():
                 continue
             member = resp.json().get('result', {})
             status = member.get('status')
-            if status not in ('member', 'administrator', 'creator'):
+            if status in ('member', 'administrator', 'creator'):
+                subscribed_rows.append({
+                    'telegram_id': int(telegram_id),
+                    'channel_id': channel['channel_id'],
+                    'channel_name': channel['channel_name'],
+                    'channel_username': channel['channel_username']
+                })
+            else:
                 is_all = False
                 not_subscribed.append(chat_id)
+
+        # Зафиксировать подписки в таблицу subscriptions (idempotent upsert)
+        if subscribed_rows:
+            try:
+                subs_headers = { **supabase_headers, 'Prefer': 'resolution=merge-duplicates' }
+                subs_resp = requests.post(
+                    f"{SUPABASE_URL}/rest/v1/subscriptions",
+                    headers=subs_headers,
+                    params={'on_conflict': 'telegram_id,channel_id'},
+                    json=subscribed_rows,
+                    timeout=20
+                )
+                # не прерываем поток даже при ошибке
+            except Exception:
+                pass
 
         # Вызываем RPC для начисления билета
         rpc_url = f"{SUPABASE_URL}/rest/v1/rpc/check_subscription_and_award_ticket"

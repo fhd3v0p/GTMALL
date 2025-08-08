@@ -120,6 +120,13 @@ class SupabaseClient:
         }
         return self._make_request('POST', 'referrals', referral_data)
     
+    async def get_referral_by_owner(self, telegram_id: int) -> Optional[Dict]:
+        """Получение записи из referrals по владельцу"""
+        result = self._make_request('GET', f'referrals?telegram_id=eq.{telegram_id}')
+        if isinstance(result, dict) and result.get('error'):
+            return None
+        return result[0] if result else None
+
     async def get_referral_by_code(self, referral_code: str) -> Optional[Dict]:
         """Получение реферала по коду"""
         result = self._make_request('GET', f'referrals?referral_code=eq.{referral_code}')
@@ -127,20 +134,63 @@ class SupabaseClient:
             return None
         return result[0] if result else None
     
-    async def add_referral_ticket(self, referral_code: str) -> Dict:
-        """Добавление билета за реферала"""
+    async def get_or_create_referral_code_for_owner(self, telegram_id: int) -> Optional[str]:
+        """Вернуть код владельца из referrals или создать новый"""
+        existing = await self.get_referral_by_owner(telegram_id)
+        if existing and existing.get('referral_code'):
+            return existing['referral_code']
+        import random, string
+        code = ''.join(random.choices(string.ascii_uppercase + string.digits, k=8))
+        resp = await self.create_referral_code(telegram_id, code)
+        if isinstance(resp, dict) and resp.get('error'):
+            return None
+        return code
+
+    async def get_referral_owner_id(self, referral_code: str) -> Optional[int]:
         referral = await self.get_referral_by_code(referral_code)
-        if referral:
-            referrer_id = referral['telegram_id']
-            user = await self.get_user(referrer_id)
-            if user and user.get('referral_tickets', 0) < 10:
-                new_referral_tickets = user.get('referral_tickets', 0) + 1
-                new_total_tickets = user.get('total_tickets', 0) + 1
-                return self._make_request('PATCH', f'users?telegram_id=eq.{referrer_id}', {
-                    'referral_tickets': new_referral_tickets,
-                    'total_tickets': new_total_tickets
-                })
-        return {}
+        if referral and 'telegram_id' in referral:
+            try:
+                return int(referral['telegram_id'])
+            except Exception:
+                return None
+        return None
+
+    async def has_referral_join(self, referrer_id: int, referred_id: int) -> bool:
+        result = self._make_request('GET', f'referral_joins?referrer_id=eq.{referrer_id}&referred_id=eq.{referred_id}')
+        if isinstance(result, dict) and result.get('error'):
+            return False
+        return len(result) > 0
+
+    async def record_referral_join(self, referrer_id: int, referred_id: int) -> Dict:
+        data = {'referrer_id': referrer_id, 'referred_id': referred_id}
+        return self._make_request('POST', 'referral_joins', data)
+
+    async def increment_referrer_ticket(self, referrer_id: int) -> Dict:
+        user = await self.get_user(referrer_id)
+        if not user:
+            return {}
+        current_ref = int(user.get('referral_tickets', 0) or 0)
+        if current_ref >= 10:
+            return {'message': 'referral cap reached'}
+        new_referral_tickets = current_ref + 1
+        new_total_tickets = int(user.get('total_tickets', 0) or 0) + 1
+        return self._make_request('PATCH', f'users?telegram_id=eq.{referrer_id}', {
+            'referral_tickets': new_referral_tickets,
+            'total_tickets': new_total_tickets
+        })
+
+    async def add_referral_ticket(self, referral_code: str, referred_id: int) -> Dict:
+        """Начисление билета за реферала с защитой от саморефералов и дублей"""
+        owner_id = await self.get_referral_owner_id(referral_code)
+        if not owner_id:
+            return {'error': 'invalid_referral_code'}
+        if int(owner_id) == int(referred_id):
+            return {'error': 'self_referral'}
+        if await self.has_referral_join(owner_id, referred_id):
+            return {'message': 'already_counted'}
+        # Запишем связь и увеличим билеты
+        _ = await self.record_referral_join(owner_id, referred_id)
+        return await self.increment_referrer_ticket(owner_id)
     
     async def get_artists(self) -> List[Dict]:
         """Получение всех артистов"""
