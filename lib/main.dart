@@ -2,12 +2,17 @@ import 'package:flutter/material.dart';
 import 'screens/splash_screen.dart';
 import 'services/telegram_webapp_service.dart';
 import 'package:flutter_dotenv/flutter_dotenv.dart';
+import 'package:supabase_flutter/supabase_flutter.dart';
 
 Future<void> main() async {
   WidgetsFlutterBinding.ensureInitialized();
   await dotenv.load(fileName: 'assets/.env');
 
-  print('DEBUG: Приложение запускается');
+  await Supabase.initialize(
+    url: dotenv.env['SUPABASE_URL']!,
+    anonKey: dotenv.env['SUPABASE_ANON_KEY']!,
+  );
+
   TelegramWebAppService.initializeWebApp();
   TelegramWebAppService.disableVerticalSwipe();
 

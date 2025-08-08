@@ -16,8 +16,13 @@ class TelegramWebAppService {
   static void disableVerticalSwipe() {
     if (!kIsWeb) return;
     try {
+      // Блокируем вертикальный скролл и pull-to-refresh
       html.document.documentElement?.style.overflow = 'hidden';
       html.document.body?.style.overflow = 'hidden';
+      html.document.documentElement?.style.setProperty('overscroll-behavior', 'none');
+      html.document.body?.style.setProperty('overscroll-behavior', 'none');
+      html.document.documentElement?.style.setProperty('touch-action', 'none');
+      html.document.body?.style.setProperty('touch-action', 'none');
     } catch (_) {}
   }
 

@@ -44,7 +44,7 @@ class _GiveawayScreenState extends State<GiveawayScreen> {
   int _giveawayTickets = 0; // сумма is_in_folder + invited_friends
   int _totalEarnedTickets = 0; // Общее количество заработанных билетов
 
-  String _telegramFolderUrl = 'https://t.me/addlist/qRX5VmLZF7E3M2U9';
+  String _telegramFolderUrl = 'https://t.me/addlist/6HRxDLe0Gdk2M2E1';
   final DateTime giveawayDate = DateTime(2025, 8, 15, 18, 0, 0); // 15 августа 2025, 18:00
 
   bool get _isTask1Done => _tickets >= 1;
@@ -93,33 +93,65 @@ class _GiveawayScreenState extends State<GiveawayScreen> {
           return;
         }
       }
-      // Берем total_tickets у пользователя
-      final response = await http.get(Uri.parse('${ApiConfig.apiBaseUrl}/users?telegram_id=eq.$userId&select=total_tickets,username'));
+      // Берем total_tickets и subscription_tickets у пользователя
+      final response = await http.get(Uri.parse('${ApiConfig.apiBaseUrl}/users?telegram_id=eq.$userId&select=total_tickets,subscription_tickets,username'));
       if (response.statusCode == 200) {
-        final data = jsonDecode(response.body ?? '[]');
+        final data = jsonDecode(response.body);
         if (data is List && data.isNotEmpty) {
           final user = data[0];
           final tickets = user['total_tickets'] ?? 0;
+          final subsTickets = user['subscription_tickets'] ?? 0;
           final username = user['username'] ?? '';
           setState(() {
             _tickets = tickets is int ? tickets : int.tryParse(tickets.toString()) ?? 0;
             _username = username;
+            // Обновляем индикатор папки строго по users.subscription_tickets
+            final int subs = subsTickets is int ? subsTickets : int.tryParse(subsTickets.toString()) ?? 0;
+            folderCounter = subs > 0 ? '1/1' : '0/1';
+            friendsCounterColor = subs > 0 ? Colors.green : Colors.white.withOpacity(0.7);
           });
           await prefs.setInt('cached_tickets_$userId', _tickets);
           await prefs.setString('cached_username_$userId', username);
           await prefs.setInt('last_ticket_check_$userId', now);
         }
       }
-      // Получаем сумму total_tickets по всем пользователям через RPC (Supabase): get_total_all_tickets
-      final rpcResponse = await http.post(
-        Uri.parse('${ApiConfig.apiBaseUrl}/rpc/get_total_all_tickets'),
-        headers: {'Content-Type': 'application/json'},
-      );
-      if (rpcResponse.statusCode == 200) {
-        final body = jsonDecode(rpcResponse.body);
-        final totalTickets = (body is int) ? body : int.tryParse(body.toString()) ?? 0;
-        setState(() { _totalTickets = totalTickets; });
-        await prefs.setInt('cached_total_tickets', totalTickets);
+      // Пытаемся получить total по всем пользователям из вью total_all_tickets
+      int? totalAll;
+      try {
+        final totalsResp = await http.get(
+          Uri.parse('${ApiConfig.apiBaseUrl}/total_all_tickets?select=*'),
+          headers: ApiConfig.headers,
+        );
+        if (totalsResp.statusCode == 200) {
+          final list = jsonDecode(totalsResp.body);
+          if (list is List && list.isNotEmpty) {
+            final row = list.first as Map<String, dynamic>;
+            // Ищем первое числовое поле
+            for (final entry in row.entries) {
+              final v = entry.value;
+              if (v is int) { totalAll = v; break; }
+              if (v is String) {
+                final parsed = int.tryParse(v);
+                if (parsed != null) { totalAll = parsed; break; }
+              }
+            }
+          }
+        }
+      } catch (_) {}
+      // Фоллбек: RPC
+      if (totalAll == null) {
+        final rpcResponse = await http.post(
+          Uri.parse('${ApiConfig.apiBaseUrl}/rpc/get_total_all_tickets'),
+          headers: {'Content-Type': 'application/json'},
+        );
+        if (rpcResponse.statusCode == 200) {
+          final body = jsonDecode(rpcResponse.body);
+          totalAll = (body is int) ? body : int.tryParse(body.toString());
+        }
+      }
+      if (totalAll != null) {
+        setState(() { _totalTickets = totalAll!; });
+        await prefs.setInt('cached_total_tickets', totalAll!);
       }
     } catch (e) {
       print('❌ [DEBUG] Error fetching tickets: $e');
@@ -147,52 +179,47 @@ class _GiveawayScreenState extends State<GiveawayScreen> {
       );
 
       if (response.statusCode == 200) {
-        final data = jsonDecode(response.body ?? '{}');
+        final data = jsonDecode(response.body);
         final bool success = data['success'] == true;
         final bool isAll = data['is_subscribed_to_all'] == true;
         final bool ticketAwarded = data['ticket_awarded'] == true;
-        final int subscriptionTickets = data['subscription_tickets'] is int ? data['subscription_tickets'] : 0;
-        final int totalTickets = data['total_tickets'] is int ? data['total_tickets'] : 0;
+        final int subscriptionTickets = (data['subscription_tickets'] is int) ? data['subscription_tickets'] as int : 0;
+        final int totalTickets = (data['total_tickets'] is int) ? data['total_tickets'] as int : 0;
 
         if (!success) {
           TelegramWebAppService.showAlert('❌ Ошибка проверки подписок');
         }
 
-          if (isAll) {
-          await _fetchUserTickets();
-          await _fetchGiveawayStatus();
-          setState(() {
-            folderCounter = '1/1';
-            folderCounterColor = Colors.green;
-          });
-            // Возвращаем цвет к стандартному через 5 секунд
-            Future.delayed(const Duration(seconds: 5), () {
-              if (mounted) {
-                setState(() {
-                  folderCounterColor = Colors.white.withOpacity(0.7);
-                });
-              }
+        // Немедленно обновляем визуально счётчики по ответу API
+        setState(() {
+          folderCounter = isAll ? '1/1' : '0/1';
+          folderCounterColor = isAll ? Colors.green : Colors.red;
+          // _tickets не обновляем из ответа API — берём только из Supabase в _fetchUserTickets()
+        });
+
+        // Мягкий откат цвета
+        Future.delayed(const Duration(seconds: 5), () {
+          if (mounted) {
+            setState(() {
+              folderCounterColor = Colors.white.withOpacity(0.7);
             });
+          }
+        });
+
+        // Сообщение пользователю
+        if (isAll) {
           if (ticketAwarded) {
             TelegramWebAppService.showAlert('✅ Подписка подтверждена! +1 билет начислен');
           } else {
             TelegramWebAppService.showAlert('✅ Подписка подтверждена! Билет уже начислялся ранее');
           }
         } else {
-          setState(() {
-            folderCounter = '0/1';
-            folderCounterColor = Colors.red;
-          });
           TelegramWebAppService.showAlert('❌ Недостаточно подписок! Подпишитесь на все каналы из папки');
-            // Возвращаем цвет к стандартному через 5 секунд
-            Future.delayed(const Duration(seconds: 5), () {
-              if (mounted) {
-                setState(() {
-                  folderCounterColor = Colors.white.withOpacity(0.7);
-                });
-              }
-            });
         }
+
+        // Фоново перечитываем состояние из Supabase (users.subscription_tickets и total_all_tickets)
+        await _fetchUserTickets();
+        await _fetchGiveawayStatus();
       } else {
         print('❌ [DEBUG] Failed API check subscriptions: ${response.statusCode}');
         TelegramWebAppService.showAlert('❌ Ошибка проверки подписки');
